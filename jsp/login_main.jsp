@@ -1,4 +1,4 @@
-<%@page import="com.codingbox.DTO.UserDTO"%>
+<%@page import="com.codingbox.web.dto.LoginDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -9,15 +9,15 @@
 </head>
 <body>
    <%
-   UserDTO member = (UserDTO)session.getAttribute("session_id") ;
+   LoginDTO member = (LoginDTO)session.getAttribute("session_id") ;
       
          if(member != null){ // 로그인 한 사람
    %>
     <script>
-       alert(" ${sessionScope.session_id.user_name} 님 안녕하세요!") ;
+       alert("<%= member.getUsername()%> 님 안녕하세요!") ;
     </script>
     <p>
-       <%= member.getUser_name()%> 님
+       <%= member.getUsername()%> 님 <%=member.getUserid() %>
        <input type="button" value = "로그아웃"
        onclick="location.href='logout_db.jsp'"/> 
        
