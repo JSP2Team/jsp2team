@@ -1,5 +1,5 @@
 <%@page import="com.codingbox.DTO.UserDTO"%>
-<%@page import="com.codingbox.DAO.UserDAO"%>
+<%@page import="com.codingbox.DAO.MyBatisDAO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -15,10 +15,10 @@
 	
 
 	<%
-		UserDAO udao = new UserDAO();
-		UserDTO udto = new UserDTO();
-		if(udao.join(member)){
-	%>	
+		MyBatisDAO udao = new MyBatisDAO();
+				UserDTO udto = new UserDTO();
+				if(udao.join(member)){
+		%>	
 	<script>
 		alert("회원가입 성공!");
 		location.href = "login.jsp";
