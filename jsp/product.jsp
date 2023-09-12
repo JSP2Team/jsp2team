@@ -409,44 +409,10 @@ footer p span{
 </header>
 
 <section>
-    <div id="slide001">
-        <div id="container">
-            <div class="slide_wrap">
-              <div class="slide_box">
-                <div class="slide_list clearfix">
-                    <span class="slideshow-container">
-                        <div class="Slidesbackground">
-                            <div class="mySlides fade">
-                                <img src="../file/메인 슬라이드 배너/메인 1 맨투맨/메인 1.png" class="slideshow-image">
-                            </div>
-                            <div class="mySlides fade">
-                                <img src="../file/메인 슬라이드 배너/메인 2 카라티/메인 2.png" class="slideshow-image">
-                            </div>
-                            <div class="mySlides fade">
-                                <img src="../file/메인 슬라이드 배너/메인 3 데일리웨어/메인 3.png" class="slideshow-image">
-                            </div>
-                        </div>
-                        <!-- // .slide_list -->
-                    </span>
-                </div>
-                <!-- // .slide_box -->
-                <div class="slide_btn_box">
-                    <button type="button" class="slide_btn_prev" onclick="prevSlide()">&lt;</button>
-                    <button type="button" class="slide_btn_next" onclick="nextSlide()">&gt;</button>
-                </div>
-                <!-- // .slide_btn_box -->
-                <ul class="slide_pagination"></ul>
-              <!-- // .slide_pagination -->
-            </div>
-            <!-- // .slide_wrap -->
-        </div>
-        <!-- // .container -->
-    </div>
-    
     <div class="new_design">
         <div class="new_design_radius">
             <p class="new_design_logo">
-                New Design
+                Product
             </p>
         </div>
         <br>
