@@ -5,9 +5,11 @@ public class UserDTO {
 	
 	private String userid;
 	private String userpw;
-	private String usertel;
 	private String username ;
+	private String usertel;
 	private String email;
+	private String regdate;
+	private boolean withdrawl;
 	public String getUserid() {
 		return userid;
 	}
@@ -20,17 +22,17 @@ public class UserDTO {
 	public void setUserpw(String userpw) {
 		this.userpw = userpw;
 	}
-	public String getUsertel() {
-		return usertel;
-	}
-	public void setUsertel(String usertel) {
-		this.usertel = usertel;
-	}
 	public String getUsername() {
 		return username;
 	}
 	public void setUsername(String username) {
 		this.username = username;
+	}
+	public String getUsertel() {
+		return usertel;
+	}
+	public void setUsertel(String usertel) {
+		this.usertel = usertel;
 	}
 	public String getEmail() {
 		return email;
@@ -50,8 +52,8 @@ public class UserDTO {
 	public void setWithdrawl(boolean withdrawl) {
 		this.withdrawl = withdrawl;
 	}
-	private String regdate;
-	private boolean withdrawl;
+	
 	
 }
+
 
