@@ -230,18 +230,18 @@ position: relative; /* 상대 위치 설정 */
   }
 
   .login-form h1 {
-    margin: 70px 0; 
+    margin: 70px 0; /* 수정: 위아래 margin 감소 */
     font-size: 32px;
     color: rgb(0, 0, 0);
     text-align: center;
-    margin-bottom: 50px; 
+    margin-bottom: 50px; /* 수정: 아래 margin 감소 */
   }
 
   .int-area {
     width: 400px;
     position: relative;
-    margin: 40px auto; 
-    text-align: center; 
+    margin: 40px auto; /* 수정: 위아래 margin 감소 */
+    text-align: center; /* 내용 가운데 정렬을 위해 text-align 추가 */
   }
 
   .int-area:first-child {
@@ -402,14 +402,14 @@ footer p span{
                 <!-- 마이페이지 -->
                 <li>
                     <a class="my_icon" href="">
-                        <img class="my_icon_img" src="../asset/file/icon_my_black.png">
+                        <img class="my_icon_img" src="./asset/file/icon_my_black.png">
                     </a>
                 </li>
                 &nbsp;&nbsp;
                 <!-- 장바구니 -->
                 <li>
                     <a class="cart_icon" href="">
-                        <img class="cart_icon_img" src="../asset/file/icon_cart_black.png">
+                        <img class="cart_icon_img" src="./asset/file/icon_cart_black.png">
                     </a>
                 </li>
                 &nbsp;&nbsp;
@@ -432,7 +432,7 @@ footer p span{
         <p>
             <a href="./asd.html">
                 <b>
-                    <img class="main_logo_img" src="../asset/file/1890799720.png">
+                    <img class="main_logo_img" src="./asset/file/1890799720.png">
                 </b>
             </a>
         </p>
@@ -468,14 +468,14 @@ footer p span{
 
 <section class="login-form" align="center">
     <h1>로그인</h1>
-    <form action="login_db.jsp" name="loginInfo" onsubmit="return checkValue()" method="post">
+    <form action="login_db" name="loginInfo" onsubmit="return checkValue()" method="post">
     
           <div class="int-area" align="center">
-            <input type="text" name="userid" id="id" autocomplete="off" required>
+            <input type="text" name="id" id="id" autocomplete="off" required>
             <label for="id">USER NAME</label>
         </div>
         <div class="int-area">
-            <input type="password" name="userpw" id="pw" autocomplete="off" required align="center">
+            <input type="password" name="pw" id="pw" autocomplete="off" required align="center">
             <label for="pw">PASSWORD</label>
         </div>
           <input type="checkbox" id="rememberMe" align="center">
@@ -486,10 +486,9 @@ footer p span{
         </div>
 
         <div class="btn-area">
-		<button id="btn" type="submit">LOGIN</button>
+            <button id="btn" type="submit">LOGIN</button>
         </div>
     </form>
-    
 </section>
 </div>
 
@@ -520,6 +519,5 @@ footer p span{
         }
     });
 </script>
-<script src="user.js"></script>
 </body>
 </html>
