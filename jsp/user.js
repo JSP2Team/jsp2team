@@ -52,6 +52,13 @@
 		 usertel.focus();
 		 return false;
 	 }
+	 const koreanPhoneNumberPattern = /^(02|0[3-9][0-9]{1,2}|010)[0-9]{3,4}[0-9]{4}$/;
+	 
+	 if (!koreanPhoneNumberPattern.test(usertel.value)) {
+    	alert("전화번호를 확인하세요");
+		usertel.focus();
+		return false;
+	} 
 	 
 	 // 비밀번호 == 비밀번호 확인
 	 if( userpw.value != userpw_re.value){
