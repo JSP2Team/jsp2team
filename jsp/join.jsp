@@ -4,6 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
+ <link rel="stylesheet" href="modal.css">
 <title>Insert title here</title>
 <style>
 
@@ -288,35 +289,30 @@ html, body {
     margin: 0 auto;
 }
 
-  .jcaption {
+  .caption {
     margin-top: 10px; /* 수정: 위 margin 감소 */
     text-align: center;
-    display: flex;
-    align-items: center; /* 수직 가운데 정렬을 위해 추가 */
-    justify-content: center; /* 수평 가운데 정렬을 위해 추가 */
   }
 
-  .jcaption a {
-    font-size: 50px;
+  .caption a {
+    font-size: 15px;
     color: #999;
     text-decoration: none;
   }
 
-	.jcheckbox {
-	    display: flex;
-	    align-items: center;
-	    justify-content: flex-start; /* 왼쪽 정렬로 수정 */
-	    margin-top: 10px;
-	    margin-bottom: 10px;
-	}
-	
-	.jcheckbox input[type="checkbox"] {
-	    float: left; /* 왼쪽으로 정렬하기 위해 float 속성 사용 */
-	    margin-right: 10px;
-	    font-size: 30px;
-	}
+  .checkbox {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    margin-top: 10px;
+  }
 
-
+  .checkbox input[type="checkbox"] {
+    margin-right: 5px;
+    font-size: 30px;
+    
+  }
+  
   .required-text1{
     color: red;
     margin-right: 220px;
@@ -350,13 +346,6 @@ html, body {
 		color: lightgray;
 		text-align: center;
 	}
-
-/*footer*/
-#wrap {
-min-height: 100vh; /* 화면 높이와 동일한 최소 높이 설정 */
-position: relative; /* 상대 위치 설정 */
-}
-
 	
 footer{
 	margin-left:0;
@@ -457,6 +446,24 @@ footer p span{
             color: white;
         }
 
+        .modal-content {
+            background-color: #fff;
+            position: absolute;
+            top: 50%; /* 화면 상단에서 50% 위치로 이동 */
+            left: 50%; /* 화면 왼쪽에서 50% 위치로 이동 */
+            transform: translate(-50%, -50%); /* 중앙 정렬을 위한 이동 */
+            padding: 20px;
+            box-shadow: 0px 0px 10px 0px #000;
+        }
+
+        /* 큰 "X" 버튼 스타일 */
+        .close {
+            position: absolute;
+            right: 10px;
+            top: 5px;
+            font-size: 40px;
+            cursor: pointer;
+        }
 </style>
  <script type="text/javascript">
     
@@ -571,7 +578,7 @@ footer p span{
     <hr class="logo_hr">
 </header>
 
-<section class="join-form">
+<section class="login-form" align="center">
     <h1>회원가입</h1>
     <div id="wrap">
         <form action="join_db.jsp" method="post" name="joinForm" id="joinform" onsubmit="return checkValue()">
@@ -595,7 +602,8 @@ footer p span{
             <div class="form_section">
                 <input type="checkbox" name="agree" id="agree" onchange="toggleCheckboxes(this.checked);">
                 <label for="agree">전체 약관 및 마케팅 수신에 동의합니다.</label>
-            </div>	
+            </div>
+        </div>	
                 <p class="line">----------------------------------------------------------------</p>
                 <div class="form_section">	
                     <input type="checkbox" id="us" name="us">
