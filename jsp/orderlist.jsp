@@ -272,8 +272,8 @@ footer p span{
 <link rel="shortcut icon" href="/file/1967448068">
         				
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="asset/css/lib.css" />
-<link rel="stylesheet" type="text/css" href="asset/css/skin_common.css" />
+<link rel="stylesheet" type="text/css" href="../asset/css/lib.css" />
+<link rel="stylesheet" type="text/css" href="../asset/css/skin_common.css" />
     
 <link rel="stylesheet" type="text/css" href="https://storage.clickn.co.kr//css/modules/module_mypage.css?v=20230704">
         
@@ -300,14 +300,14 @@ footer p span{
                 <!-- 마이페이지 -->
                 <li>
                     <a class="my_icon" href="">
-                        <img class="my_icon_img" src="./asset/file/icon_my_black.png">
+                        <img class="my_icon_img" src="../asset/file/icon_my_black.png">
                     </a>
                 </li>
                 &nbsp;&nbsp;
                 <!-- 장바구니 -->
                 <li>
                     <a class="cart_icon" href="">
-                        <img class="cart_icon_img" src="./asset/file/icon_cart_black.png">
+                        <img class="cart_icon_img" src="../asset/file/icon_cart_black.png">
                     </a>
                 </li>
                 &nbsp;&nbsp;
@@ -330,7 +330,7 @@ footer p span{
         <p>
             <a href="./asd.html">
                 <b>
-                    <img class="main_logo_img" src="./asset/file/1890799720.png">
+                    <img class="main_logo_img" src="../asset/file/1890799720.png">
                 </b>
             </a>
         </p>

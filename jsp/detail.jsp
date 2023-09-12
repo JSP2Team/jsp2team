@@ -283,19 +283,19 @@ html {
 }
 
 </style>
-<link rel="stylesheet" type="text/css" href="./asset/css/skin_common1.css" />
-<link rel="stylesheet" type="text/css" href="./asset/css/skin_common1.css" />
-    <link rel="stylesheet" type="text/css" href="./asset/css/common.css" />
+<link rel="stylesheet" type="text/css" href="../asset/css/skin_common1.css" />
+<link rel="stylesheet" type="text/css" href="../asset/css/skin_common1.css" />
+    <link rel="stylesheet" type="text/css" href="../asset/css/common.css" />
     <link
       rel="stylesheet"
       type="text/css"
-      href="./asset/css/modules/module_product.css"
+      href="../asset/css/modules/module_product.css"
     />
-    <link rel="stylesheet" type="text/css" href="./asset/css/lib1.css" />
+    <link rel="stylesheet" type="text/css" href="../asset/css/lib1.css" />
     <link
       rel="stylesheet"
       type="text/css"
-      href="./asset/vendors/Swiper/swiper.min1.css"
+      href="../asset/vendors/Swiper/swiper.min1.css"
     />
 <script src="https://kit.fontawesome.com/d69fb28507.js" crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-3.4.1.js"
@@ -323,14 +323,14 @@ crossorigin="anonymous"></script>
                 <!-- 마이페이지 -->
                 <li>
                     <a class="my_icon" href="">
-                        <img class="my_icon_img" src="./asset/file/icon_my_black.png">
+                        <img class="my_icon_img" src="../asset/file/icon_my_black.png">
                     </a>
                 </li>
                 &nbsp;&nbsp;
                 <!-- 장바구니 -->
                 <li>
                     <a class="cart_icon" href="">
-                        <img class="cart_icon_img" src="./asset/file/icon_cart_black.png">
+                        <img class="cart_icon_img" src="../asset/file/icon_cart_black.png">
                     </a>
                 </li>
                 &nbsp;&nbsp;
@@ -353,7 +353,7 @@ crossorigin="anonymous"></script>
         <p>
             <a href="./asd.html">
                 <b>
-                    <img class="main_logo_img" src="./asset/file/1890799720.png">
+                    <img class="main_logo_img" src="../asset/file/1890799720.png">
                 </b>
             </a>
         </p>
@@ -411,7 +411,7 @@ crossorigin="anonymous"></script>
                   <!-- 상품 썸네일 -->
                   <div class="thumbnail_wrap">
                     <div class="noimage hide">
-                      <img src="./images/product/noimage.png" alt="" />
+                      <img src="../images/product/noimage.png" alt="" />
                     </div>
 
                     <div class="prod_view_sl swiper-box">
@@ -430,7 +430,7 @@ crossorigin="anonymous"></script>
                             role="group"
                             aria-label="1 / 3"
                           >
-                            <img src="./file/img/mantoman/man1.png " alt="이미지1" />
+                            <img src="../file/img/mantoman/man1.png " alt="이미지1" />
                           </li>
                           <li
                             class="swiper-slide swiper-slide-next"
@@ -438,7 +438,7 @@ crossorigin="anonymous"></script>
                             role="group"
                             aria-label="2 / 3"
                           >
-                            <img src="./file/img/mantoman/man2.png" alt="이미지2" />
+                            <img src="../file/img/mantoman/man2.png" alt="이미지2" />
                           </li>
                           <li
                             class="swiper-slide"
@@ -446,7 +446,7 @@ crossorigin="anonymous"></script>
                             role="group"
                             aria-label="3 / 3"
                           >
-                            <img src="./file/img/mantoman/man3.png" alt="이미지3" />
+                            <img src="../file/img/mantoman/man3.png" alt="이미지3" />
                           </li>
                         </ul>
                         <span
@@ -499,7 +499,7 @@ crossorigin="anonymous"></script>
                             role="group"
                             aria-label="1 / 3"
                           >
-                            <img src="./file/img/mantoman/man1.png" alt="이미지1" />
+                            <img src="../file/img/mantoman/man1.png" alt="이미지1" />
                           </li>
                           <li
                             class="swiper-slide swiper-slide-visible swiper-slide-next"
@@ -507,7 +507,7 @@ crossorigin="anonymous"></script>
                             role="group"
                             aria-label="2 / 3"
                           >
-                            <img src="./file/img/mantoman/man2.png" alt="이미지2" />
+                            <img src="../file/img/mantoman/man2.png" alt="이미지2" />
                           </li>
                           <li
                             class="swiper-slide swiper-slide-visible"
@@ -515,7 +515,7 @@ crossorigin="anonymous"></script>
                             role="group"
                             aria-label="3 / 3"
                           >
-                            <img src="./file/img/mantoman/man3.png" alt="이미지3" />
+                            <img src="../file/img/mantoman/man3.png" alt="이미지3" />
                           </li>
                         </ul>
                         <span

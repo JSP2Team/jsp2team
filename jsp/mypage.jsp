@@ -301,9 +301,9 @@ footer p span{
 
 <link rel="stylesheet" href="community.css">
 
-<link rel="stylesheet" type="text/css" href="asset/css/skin_common.css" />
+<link rel="stylesheet" type="text/css" href="../asset/css/skin_common.css" />
 
-<link rel="stylesheet" type="text/css" href="asset/css/modules/module_mypage.css"/>
+<link rel="stylesheet" type="text/css" href="../asset/css/modules/module_mypage.css"/>
     
 <link rel="stylesheet" type="text/css" href="https://storage.clickn.co.kr//css/modules/special_common.css?v=20230704">
 <link rel="stylesheet" type="text/css" href="https://storage.clickn.co.kr//css/modules/module_mypage.css?v=20230704">
@@ -331,14 +331,14 @@ footer p span{
                 <!-- 마이페이지 -->
                 <li>
                     <a class="my_icon" href="">
-                        <img class="my_icon_img" src="./asset/file/icon_my_black.png">
+                        <img class="my_icon_img" src="../asset/file/icon_my_black.png">
                     </a>
                 </li>
                 &nbsp;&nbsp;
                 <!-- 장바구니 -->
                 <li>
                     <a class="cart_icon" href="">
-                        <img class="cart_icon_img" src="./asset/file/icon_cart_black.png">
+                        <img class="cart_icon_img" src="../asset/file/icon_cart_black.png">
                     </a>
                 </li>
                 &nbsp;&nbsp;
@@ -359,9 +359,9 @@ footer p span{
         <!-- 헤더 로고 -->
     <div id="main_logo">
         <p>
-            <a href="./asd.html">
+            <a href="../asd.html">
                 <b>
-                    <img class="main_logo_img" src="./asset/file/1890799720.png">
+                    <img class="main_logo_img" src="../asset/file/1890799720.png">
                 </b>
             </a>
         </p>

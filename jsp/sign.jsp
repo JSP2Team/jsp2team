@@ -327,7 +327,7 @@ html, body {
 </style>
 <link rel="stylesheet" href="community.css">
 
-<link rel="stylesheet" type="text/css" href="asset/css/modules/module_mypage.css"/>
+<link rel="stylesheet" type="text/css" href="../asset/css/modules/module_mypage.css"/>
 
 <script src="https://kit.fontawesome.com/d69fb28507.js" crossorigin="anonymous"></script>
 
@@ -367,14 +367,14 @@ html, body {
                 <!-- 마이페이지 -->
                 <li>
                     <a class="my_icon" href="../shoppingmall/mypage.html">
-                        <img class="my_icon_img" src="./asset/file/icon_my_black.png">
+                        <img class="my_icon_img" src="../asset/file/icon_my_black.png">
                     </a>
                 </li>
                 &nbsp;&nbsp;
                 <!-- 장바구니 -->
                 <li>
                     <a class="cart_icon" href="../shoppingmall/orderlist.html">
-                        <img class="cart_icon_img" src="./asset/file/icon_cart_black.png">
+                        <img class="cart_icon_img" src="../asset/file/icon_cart_black.png">
                     </a>
                 </li>
                 &nbsp;&nbsp;
@@ -397,7 +397,7 @@ html, body {
         <p>
             <a href="../shoppingmall/main.html">
                 <b>
-                    <img class="main_logo_img" src="./asset/file/1890799720.png">
+                    <img class="main_logo_img" src="../asset/file/1890799720.png">
                 </b>
             </a>
         </p>

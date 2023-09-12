@@ -21,12 +21,12 @@
 		%>	
 	<script>
 		alert("회원가입 성공!");
-		location.href = "login.jsp";
+		location.href = "/mall/jsp/login.jsp";
 	</script>	
 	<% } else { // 회원가입 실패 %>
 	<script>
 		 alert("회원가입 실패!");
-		 location.href = "join.jsp";
+		 location.href = "/mall/jsp/join.jsp";
 	</script>			
 	<%}  %>
 </body>
