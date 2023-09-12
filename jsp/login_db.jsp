@@ -1,6 +1,6 @@
-<%@page import="com.codingbox.DAO.MyBatisDAO"%>
 <%@page import="com.codingbox.DTO.UserDTO"%>
-<%@page import="com.codingbox.DAO.UserDAO"%>
+<%@page import="com.codingbox.web.dto.LoginDTO"%>
+<%@page import="com.codingbox.web.dao.LoginDAO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -11,7 +11,7 @@
 </head>
 <body>
    <%
-        MyBatisDAO mdao = new MyBatisDAO();
+        LoginDAO mdao = new LoginDAO();
         String userid = request.getParameter("userid");
         String userpw = request.getParameter("userpw");
       

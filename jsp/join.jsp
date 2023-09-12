@@ -490,7 +490,7 @@ footer p span{
 <section class="join-form">
     <h1>회원가입</h1>
     <div id="wrap">
-        <form action="join_db.jsp" method="post" name="joinForm" id="joinform">
+        <form action="/mall/join.bo" method="post" name="joinForm" id="joinform">
             <div class="jint-area">
                 <input type="text" name="userid" id="userid" autocomplete="off" required>
                 <label for="id">아이디</label>
@@ -508,7 +508,7 @@ footer p span{
                 <label for="id">이름</label>
             </div>
             <div class="jint-area">
-                <input type="text" name="usertel" id="usertel" autocomplete="off" required>
+                <input type="text" name="userphone" id="userphone" autocomplete="off" required>
                 <label for="id">전화번호</label>
             </div>
             <div class="jint-area">

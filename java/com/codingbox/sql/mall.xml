@@ -6,14 +6,8 @@
 	<insert id="join"
 		parameterType="com.codingbox.DTO.UserDTO">
 		INSERT INTO USERS
-		VALUES (#{userid}, #{userpw}, #{username}, #{usertel}, #{email}, sysdate, default)
+		VALUES (#{userid}, #{userpw}, #{username}, #{userphone}, #{email}, sysdate, default)
 	</insert>
-	
-	<!-- 로그인 -->
-	<select id="login" parameterType="hashmap" resultType="com.codingbox.DTO.UserDTO">
-		SELECT * FROM USERS
-		WHERE USER_ID = #{userid} AND USER_PWD = #{userpw}
-	</select>
 </mapper>
 
 
