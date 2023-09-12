@@ -7,6 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+
  <%
  	session.removeAttribute("session_id");
  	response.sendRedirect("join.jsp");
