@@ -40,9 +40,9 @@
 	 }
 	 
 	 // 이름 "" 체크, alert(),focus()
-	 if( username.value == ""){
+	 if( user_name.value == ""){
 		 alert("이름을 입력하세요");
-		 username.focus();
+		 user_name.focus();
 		 return false;
 	 }
 	 

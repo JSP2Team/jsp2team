@@ -14,10 +14,10 @@
          if(member != null){ // 로그인 한 사람
    %>
     <script>
-       alert(" ${sessionScope.session_id.username} 님 안녕하세요!") ;
+       alert(" ${sessionScope.session_id.user_name} 님 안녕하세요!") ;
     </script>
     <p>
-       <%= member.getUsername()%> 님
+       <%= member.getUser_name()%> 님
        <input type="button" value = "로그아웃"
        onclick="location.href='logout_db.jsp'"/> 
        

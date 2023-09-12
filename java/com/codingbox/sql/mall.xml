@@ -6,7 +6,7 @@
 	<insert id="join"
 		parameterType="com.codingbox.DTO.UserDTO">
 		INSERT INTO USERS
-		VALUES (#{userid}, #{userpw}, #{username}, #{usertel}, #{email}, sysdate, default)
+		VALUES (#{userid}, #{userpw}, #{user_name}, #{usertel}, #{email}, sysdate, default)
 	</insert>
 	
 	<!-- 로그인 -->

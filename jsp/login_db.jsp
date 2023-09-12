@@ -11,7 +11,7 @@
 </head>
 <body>
    <%
-        MyBatisDAO mdao = new MyBatisDAO();
+   		MyBatisDAO mdao = new MyBatisDAO();
         String userid = request.getParameter("userid");
         String userpw = request.getParameter("userpw");
       
