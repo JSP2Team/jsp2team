@@ -9,8 +9,8 @@ import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.annotation.WebFilter;
 
-@WebFilter("*.ma")
-public class CharacterEncodingFilter implements Filter {
+@WebFilter("*.us")
+public class CharacterEncodingUserFilter implements Filter {
 
 	@Override
 	public void doFilter(ServletRequest arg0, 

@@ -1,10 +1,10 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join</title>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
 <style>
 
 html, body {
@@ -218,32 +218,32 @@ html, body {
     position: absolute;
 }
 
-/*회원가입 내용*/
+/* 회원가입 내용 */
 .join-form {
     position: relative;
     z-index: 2;
-  }
+}
 
-  .join-form h1 {
+.join-form h1 {
     margin: 70px 0; /* 수정: 위아래 margin 감소 */
     font-size: 32px;
     color: rgb(0, 0, 0);
     text-align: center;
     margin-bottom: 50px; /* 수정: 아래 margin 감소 */
-  }
+}
 
-  .jint-area {
+.jint-area {
     width: 400px;
     position: relative;
     margin: 40px auto; /* 수정: 위아래 margin 감소 */
     text-align: center; /* 내용 가운데 정렬을 위해 text-align 추가 */
-  }
+}
 
-  .jint-area:first-child {
+.jint-area:first-child {
     margin-top: 0;
-  }
+}
 
-  .jint-area input {
+.jint-area input {
     width: 100%;
     padding: 20px 10px 10px;
     background-color: transparent;
@@ -252,28 +252,31 @@ html, body {
     font-size: 18px;
     color: rgb(0, 0, 0);
     outline: none;
-  }
+}
 
-  .jint-area label {
+.jint-area label {
     position: absolute;
     left: 10px;
     top: 15px;
     font-size: 18px;
     color: #999;
     transition: top .5s ease;
-  }
+}
 
-  .jint-area input:focus+label, .int-area input:valid+label {
+/* 수정된 부분: 입력값이 있을 때만 label을 위로 이동 */
+.jint-area input:focus + label,
+.int-area input:valid + label,
+.jint-area input.not-empty + label {
     top: -15px; /* 입력란 위로 이동하여 숨김 */
-  }
+}
 
-  .jbtn-area {
-    margin-top: 40px; 
+.jbtn-area {
+    margin-top: 40px;
     margin-bottom: 30px;
     text-align: center;
-  }
+}
 
-  .jbtn-area .button {
+.jbtn-area button {
     width: 400px;
     height: 50px;
     background: rgb(74, 73, 80);
@@ -283,7 +286,7 @@ html, body {
     border-radius: 25px;
     display: block;
     margin: 0 auto;
-  }
+}
 
   .jcaption {
     margin-top: 10px; /* 수정: 위 margin 감소 */
@@ -398,10 +401,66 @@ footer p span{
     margin-left: 100px;
 	margin-bottom: 10px;	
 }
+#modal.modal-overlay {
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            left: 0;
+            top: 0;
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.25);
+            backdrop-filter: blur(1.5px);
+            -webkit-backdrop-filter: blur(1.5px);
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            z-index: 999;
+        }
+        #modal .modal-window {
+            background: rgb(32, 23, 191);
+            box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+            backdrop-filter: blur( 13.5px );
+            -webkit-backdrop-filter: blur( 13.5px );
+            border-radius: 10px;
+            border: none;
+            width: 400px;
+            height: 500px;
+            position: relative;
+            top: -100px;
+            padding: 10px;
+        }
+        #modal .title {
+            padding-left: 10px;
+            display: inline;
+            text-shadow: 1px 1px 2px gray;
+            color: white;
+            
+        }
+        #modal .title h2 {
+            display: inline;
+        }
+        #modal .close-area {
+            display: inline;
+            float: right;
+            padding-right: 10px;
+            cursor: pointer;
+            text-shadow: 1px 1px 2px gray;
+            color: white;
+        }
+        
+        #modal .content {
+            margin-top: 20px;
+            padding: 0px 10px;
+            text-shadow: 1px 1px 2px gray;
+            color: white;
+        }
 
 </style>
 <script src="https://kit.fontawesome.com/d69fb28507.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
 <div id="wrap">
 <header>
@@ -490,28 +549,24 @@ footer p span{
 <section class="join-form">
     <h1>회원가입</h1>
     <div id="wrap">
-        <form action="join_db.jsp" method="post" name="joinForm" id="joinform">
+        <form action="" method="post">
             <div class="jint-area">
-                <input type="text" name="userid" id="userid" autocomplete="off" required>
+                <input type="text" name="id" id="id" autocomplete="off" required>
                 <label for="id">아이디</label>
             </div>
             <div class="jint-area">
-                <input type="password" name="userpw" id="userpw" autocomplete="off" required>
+                <input type="password" name="pw" id="pw" autocomplete="off" required>
                 <label for="pw">비밀번호</label>
             </div>
             <div class="jint-area">
-                <input type="password" name="userpw_re" id="userpw_re" autocomplete="off" required>
+                <input type="password" name="pw_re" id="pw_re" autocomplete="off" required>
                 <label for="pw_re">비밀번호 확인</label>
             </div>
-            <div class="jint-area">
-                <input type="text" name="username" id="username" autocomplete="off" required>
-                <label for="id">이름</label>
+            <div class="jint-area" style="display: none;">
+                <input type="text" name="email" id="email" autocomplete="off" required>
+                <label for="email">이메일주소</label>
             </div>
-            <div class="jint-area">
-                <input type="text" name="usertel" id="usertel" autocomplete="off" required>
-                <label for="id">전화번호</label>
-            </div>
-            <div class="jint-area">
+             <div class="jint-area" >
                 <input type="text" name="email" id="email" autocomplete="off" required>
                 <label for="email">이메일주소</label>
             </div>
@@ -524,21 +579,18 @@ footer p span{
                 <div class="form_section">	
                     <input type="checkbox" id="us" name="us">
                     <label for="us">이용 약관<span class="required-text1">(필수)</span></label>
-                    <a class="agree_ch" href="./check_use copy 2.html">보기</a>
+                    <button id="btn-modal">보기</button>
                 </div>
                 
                 <div class="form_section">	
                     <input type="checkbox" id="per" name="per">
                     <label for="per">개인정보 수집 및 이용<span class="required-text2">(필수)</span></label>
-                    <a class="agree_ch2" href="">보기</a>
+                    <a class="agree_ch2" href="./check_use2.html">보기</a>
                 </div>
             <p class="line">----------------------------------------------------------------</p>
             
             <div class="jbtn-area">
-                <!-- <button id="btn" type="submit">가입하기</button> -->
-                <p>
-                <input type="button" class="button" value="가입하기" onclick="sendit();" />
-                </p>
+                <button id="btn" type="submit">가입하기</button>
             </div>
         </form>
     </div>
@@ -558,24 +610,100 @@ footer p span{
         <span>COPYRIGHT (c) (주)2렇게잘하조 ALL RIGHTS RESERVED.</span>
     </p>
 </footer>	
+<div id="modal" class="modal-overlay">
+        <div class="modal-window">
+            <div class="title">
+                <h2>개인정보 수집 및 이용(필수)</h2>
+            </div>
+            <div class="close-area">X</div>
+            <div class="content">
+                <p>
+2렇게잘하죠는 귀하의 개인정보를 보호하고자 최선의 노력을 다하고 있습니다. 이에 개인정보 제공 동의서를 통해 귀하의 개인정보를 수집 및 이용하는데 필요한 동의를 받고자 합니다. 아래 내용을 주의 깊게 읽어 주시기 바랍니다.
+
+1. 개인정보의 수집 및 이용목적
+   - 귀하가 제공하는 개인정보는 다음 목적을 위해 수집 및 이용됩니다:
+     - 상품 배송 및 주문 처리
+     - 서비스 제공 및 운영
+     - 고객 문의 처리
+     - 이벤트 및 프로모션 안내
+
+2. 수집하는 개인정보 항목
+   - [수집 항목 명시, 예: 이름, 주소, 전화번호, 이메일 주소, 생년월일 등]
+
+3. 개인정보 보유 및 이용기간
+   - 귀하의 개인정보는 목적 달성 후 또는 법적 의무 이행이 끝난 후에는 즉시 파기될 예정이나, 관련 법률 및 규정에 따라 보존해야 하는 경우에는 해당 기간 동안 보관됩니다.
+
+4. 개인정보의 제공 및 공유
+   - [귀하의 개인정보를 제3자와 공유 또는 제공하는 경우, 그 내용 명시]
+
+5. 동의 철회
+   - 귀하는 언제든지 제공한 개인정보에 대한 동의를 철회할 수 있으며, 동의 철회 시 개인정보 처리와 관련한 일체의 활동이 중단됩니다.
+
+6. 개인정보 보호책임자
+   - [개인정보 보호책임자의 이름과 연락처 명시]
+
+본 동의서는 귀하의 개인정보 보호를 위한 중요한 내용을 담고 있으며, 개인정보 보호에 대한 귀하의 이해를 돕기 위해 제공되었습니다. 
+			</p>
+                
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const loremIpsum = document.getElementById("lorem-ipsum")
+		const modal = document.getElementById("modal")
+
+		function modalOn() {
+		    modal.style.display = "flex"
+		}
+		
+		function isModalOn() {
+		    return modal.style.display === "flex"
+		    
+		}
+		
+		function modalOff() {
+		    modal.style.display = "none"
+		}
+		
+		
+		const btnModal = document.getElementById("btn-modal")
+		btnModal.addEventListener("click", e => {
+		    modalOn()
+		})
+		
+		const closeBtn = modal.querySelector(".close-area")
+		closeBtn.addEventListener("click", e => {
+		    modalOff()
+		})
+		
+		modal.addEventListener("click", e => {
+		    const evTarget = e.target
+		    if(evTarget.classList.contains("modal-overlay")) {
+		        modalOff()
+		    }
+		})
+		
+		window.addEventListener("keyup", e => {
+		    if(isModalOn() && e.key === "Escape") {
+		        modalOff()
+		    }
+		})
+    </script>
     
 <script>
+
+	
     // 추가: 전체 약관 동의 체크박스 상태에 따라 다른 체크박스를 선택/해제
     function toggleCheckboxes(checked) {
         document.getElementById('us').checked = checked;
         document.getElementById('per').checked = checked;
     }
 
-    // URL에서 동의 상태를 읽어와서 체크박스 상태를 설정
-    const urlParams = new URLSearchParams(window.location.search);
-        const agreed = urlParams.get("agreed");
-
-        if (agreed === "true") {
-            document.getElementById("us").checked = true;
-        }
-        
-        
 </script>
-<script src="user.js"></script>
+
+
+
+
 </body>
 </html>
