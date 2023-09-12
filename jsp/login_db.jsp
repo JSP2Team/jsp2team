@@ -23,13 +23,13 @@
    %>
       <script>
          // alert("로그인 성공") ;
-         location.href = "login_main.jsp" ;
+         location.href = "main_login.jsp" ;
       </script>
       
    
    <%    } else { // 로그인실패 %>
       <script>
-         alert("로그인 실패") ;
+         alert("다시 로그인 해주세요.") ;
          location.href = "login.jsp" ;
       </script>
       
