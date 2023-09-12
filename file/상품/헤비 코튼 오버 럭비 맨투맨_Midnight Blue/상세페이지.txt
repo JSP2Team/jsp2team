@@ -1,0 +1,38 @@
+<div class="right_contents product_info_contents">
+    <p class="title-box font-mss">Info<span class="korSub">정보</span></p>
+        <div class="n-report-wrap">
+        <div class="n-report">
+            <button type="button" class="btn-report" onclick="reportReviewsPop('/app/cs/report_pop/PRO/2038497')">
+                <span>무신사는 공정한 경쟁을 통한 신뢰 있는 상품을 제공하고자 합니다. 상품에 문제가 있는 경우 알려 주세요.</span>
+                <em><i class="ic-18-stencil-report"></i>신고</em>
+            </button>
+        </div>
+    </div>
+
+    <!-- [D] 공식 배너 -->
+    
+
+        
+            <!-- 상품 상단 이벤트 배너 -->
+
+    
+    <div class="detail_product_info view-all" id="detail_view">
+                    <div class="detail_product_info_item">
+                <img alt="라퍼지스토어(LAFUDGESTORE) [23FW ver.]헤비 코튼 오버 럭비 맨투맨_Midnight Blue" title="" src="https://lafudgestorew.cafe24.com/web/upload/2023/0901/1122.jpg"><img alt="라퍼지스토어(LAFUDGESTORE) [23FW ver.]헤비 코튼 오버 럭비 맨투맨_Midnight Blue" title="" src="https://lafudgestorew.cafe24.com/web/upload/2023/0830/rugby_nv_01.png"> <img alt="라퍼지스토어(LAFUDGESTORE) [23FW ver.]헤비 코튼 오버 럭비 맨투맨_Midnight Blue" title="" src="https://lafudgestorew.cafe24.com/web/upload/2023/0830/rugby_nv_02.jpg">
+            </div>
+        
+        <div class="detail_product_info_item">
+            
+                                                        <img src="//image.msscdn.net/images/event_banner/2023090411112100000015321.jpg" alt="" class="detailEventBottomBanner">
+                            
+                                </div>
+    </div>
+
+        <div class="btn-more btn-close">
+        <button type="button" onclick="detailViewMore(this);"><span>상품정보 접기<i class="ic-30-line-arrow-top"></i></span></button>
+    </div>
+    
+    <!--#fit 피팅-->
+    <div id="sizeFitting" style="display:none"></div>
+    <!--//피팅-->
+</div>
