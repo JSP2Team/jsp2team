@@ -8,6 +8,9 @@ public class UserDTO {
 	private String email;
 	private String user_name ;
 	private String usertel;
+	private String username ;
+	private String userphone;
+	private String email;
 	private String regdate;
 	private boolean withdrawl;
 	public String getUserid() {
@@ -21,6 +24,18 @@ public class UserDTO {
 	}
 	public void setUserpw(String userpw) {
 		this.userpw = userpw;
+	}
+	public String getUsername() {
+		return username;
+	}
+	public void setUsername(String username) {
+		this.username = username;
+	}
+	public String getUserphone() {
+		return userphone;
+	}
+	public void setUserphone(String userphone) {
+		this.userphone = userphone;
 	}
 	public String getEmail() {
 		return email;
@@ -53,4 +68,6 @@ public class UserDTO {
 		this.withdrawl = withdrawl;
 	}
 	
+}
+
 }
