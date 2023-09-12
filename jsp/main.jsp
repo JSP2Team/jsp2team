@@ -487,13 +487,13 @@ footer p span{
                     <span class="slideshow-container">
                         <div class="Slidesbackground">
                             <div class="mySlides fade">
-                                <img src="./메인 슬라이드 배너/메인 1 맨투맨/메인 1.png" class="slideshow-image">
+                                <img src="../file/메인 슬라이드 배너/메인 1 맨투맨/메인 1.png" class="slideshow-image">
                             </div>
                             <div class="mySlides fade">
-                                <img src="./메인 슬라이드 배너/메인 2 카라티/메인 2.png" class="slideshow-image">
+                                <img src="../file/메인 슬라이드 배너/메인 2 카라티/메인 2.png" class="slideshow-image">
                             </div>
                             <div class="mySlides fade">
-                                <img src="./메인 슬라이드 배너/메인 3 데일리웨어/메인 3.png" class="slideshow-image">
+                                <img src="../file/메인 슬라이드 배너/메인 3 데일리웨어/메인 3.png" class="slideshow-image">
                             </div>
                         </div>
                         <!-- // .slide_list -->
@@ -524,7 +524,7 @@ footer p span{
         <div class="new_design_img">
             <span class="new_design_img_1">
                 <a href="./detail.html">
-                    <img class="product_img" src="./file/img/mantoman/man1.png">
+                    <img class="product_img" src="../file/img/mantoman/man1.png">
                     <div class="img_into">
                         <p>[Case] twenty,twenty two.2022</p>
                         <hr>
@@ -534,7 +534,7 @@ footer p span{
             </span>
             <span class="new_design_img_2">
                 <a href="">
-                    <img class="product_img" src="./상품/Tel Que Tu Es Sweatshirt, Purple/상품 밑 4.png">
+                    <img class="product_img" src="../file/상품/Tel Que Tu Es Sweatshirt, Purple/상품 밑 4.png">
                     <div class="img_into">
                         <p>[Case] twenty,twenty two.2022</p>
                         <hr>
@@ -544,7 +544,7 @@ footer p span{
             </span>
             <span class="new_design_img_3">
                 <a href="">
-                    <img class="product_img" src="./상품/베이베어 웜레드 맨투맨 블랙/베이베어 웜레드 맨투맨 블랙.png">
+                    <img class="product_img" src="../file/상품/베이베어 웜레드 맨투맨 블랙/베이베어 웜레드 맨투맨 블랙.png">
                     <div class="img_into">
                         <p>[Case] twenty,twenty two.2022</p>
                         <hr class="new_design_hr">
@@ -554,7 +554,7 @@ footer p span{
             </span>
             <span class="new_design_img_4">
                 <a href="">
-                    <img class="product_img" src="./상품/아플리케 작은 로고 맨투맨/상품 밑 3.png">
+                    <img class="product_img" src="../file/상품/아플리케 작은 로고 맨투맨/상품 밑 3.png">
                     <div class="img_into">
                         <p>[Case] twenty,twenty two.2022</p>
                         <hr>
@@ -566,7 +566,7 @@ footer p span{
             <div class="new_design_img2">
             <span class="new_design_img_5">
                 <a href="">
-                    <img class="product_img" src="./상품/어센틱 에버그린 맨투맨 멜란지/어센틱 에버그린 맨투맨 멜란지.png">
+                    <img class="product_img" src="../file/상품/어센틱 에버그린 맨투맨 멜란지/어센틱 에버그린 맨투맨 멜란지.png">
                     <div class="img_into">
                         <p>[Case] twenty,twenty two.2022</p>
                         <hr>
@@ -576,7 +576,7 @@ footer p span{
             </span>
             <span class="new_design_img_6">
                 <a href="">
-                    <img class="product_img" src="./상품/유니 세미오버 레인보우 홀스 스웻셔츠/유니 세미오버 레인보우 홀스 스웻셔츠.png">
+                    <img class="product_img" src="../file/상품/유니 세미오버 레인보우 홀스 스웻셔츠/유니 세미오버 레인보우 홀스 스웻셔츠.png">
                     <div class="img_into">
                         <p>[Case] twenty,twenty two.2022</p>
                         <hr>
@@ -586,7 +586,7 @@ footer p span{
             </span>
             <span class="new_design_img_7">
                 <a href="">
-                    <img class="product_img" src="./상품/헤비 코튼 오버 럭비 맨투맨_Midnight Blue/헤비 코튼 오버 럭비 맨투맨_Midnight Blue.png">
+                    <img class="product_img" src="../file/상품/헤비 코튼 오버 럭비 맨투맨_Midnight Blue/헤비 코튼 오버 럭비 맨투맨_Midnight Blue.png">
                     <div class="img_into">
                         <p>[Case] twenty,twenty two.2022</p>
                         <hr>
@@ -596,7 +596,7 @@ footer p span{
             </span>
             <span class="new_design_img_8">
                 <a href="">
-                    <img class="product_img" src="./상품/RETRIEVER FRIENDS CREWNECK/RETRIEVER FRIENDS CREWNECK [NAVY] .png">
+                    <img class="product_img" src="../file/상품/RETRIEVER FRIENDS CREWNECK/RETRIEVER FRIENDS CREWNECK [NAVY] .png">
                     <div class="img_into">
                         <p>[Case] twenty,twenty two.2022</p>
                         <hr>

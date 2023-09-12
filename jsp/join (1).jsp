@@ -218,37 +218,32 @@ html, body {
     position: absolute;
 }
 
-/*footer*/
-#wrap {
-min-height: 100vh; /* 화면 높이와 동일한 최소 높이 설정 */
-position: relative; /* 상대 위치 설정 */
-}
-
-.login-form {
+/*회원가입 내용*/
+.join-form {
     position: relative;
     z-index: 2;
   }
 
-  .login-form h1 {
-    margin: 70px 0; 
+  .join-form h1 {
+    margin: 70px 0; /* 수정: 위아래 margin 감소 */
     font-size: 32px;
     color: rgb(0, 0, 0);
     text-align: center;
-    margin-bottom: 50px; 
+    margin-bottom: 50px; /* 수정: 아래 margin 감소 */
   }
 
-  .int-area {
+  .jint-area {
     width: 400px;
     position: relative;
-    margin: 40px auto; 
-    text-align: center; 
+    margin: 40px auto; /* 수정: 위아래 margin 감소 */
+    text-align: center; /* 내용 가운데 정렬을 위해 text-align 추가 */
   }
 
-  .int-area:first-child {
+  .jint-area:first-child {
     margin-top: 0;
   }
 
-  .int-area input {
+  .jint-area input {
     width: 100%;
     padding: 20px 10px 10px;
     background-color: transparent;
@@ -259,7 +254,7 @@ position: relative; /* 상대 위치 설정 */
     outline: none;
   }
 
-  .int-area label {
+  .jint-area label {
     position: absolute;
     left: 10px;
     top: 15px;
@@ -268,16 +263,17 @@ position: relative; /* 상대 위치 설정 */
     transition: top .5s ease;
   }
 
-  .int-area input:focus+label, .int-area input:valid+label {
+  .jint-area input:focus+label, .int-area input:valid+label {
     top: -15px; /* 입력란 위로 이동하여 숨김 */
   }
 
-  .btn-area {
+  .jbtn-area {
     margin-top: 40px; 
-    margin-bottom: 30px;/* 수정: 위 margin 감소 */
+    margin-bottom: 30px;
+    text-align: center;
   }
 
-  .btn-area button {
+  .jbtn-area .button {
     width: 400px;
     height: 50px;
     background: rgb(74, 73, 80);
@@ -285,31 +281,79 @@ position: relative; /* 상대 위치 설정 */
     font-size: 20px;
     border: none;
     border-radius: 25px;
+    display: block;
+    margin: 0 auto;
   }
 
-  .caption {
+  .jcaption {
     margin-top: 10px; /* 수정: 위 margin 감소 */
     text-align: center;
+    display: flex;
+    align-items: center; /* 수직 가운데 정렬을 위해 추가 */
+    justify-content: center; /* 수평 가운데 정렬을 위해 추가 */
   }
 
-  .caption a {
-    font-size: 15px;
+  .jcaption a {
+    font-size: 50px;
     color: #999;
     text-decoration: none;
   }
 
-  .checkbox {
-    display: flex;
-    align-items: center;
-    justify-content: left;
-    margin-top: 10px;
+	.jcheckbox {
+	    display: flex;
+	    align-items: center;
+	    justify-content: flex-start; /* 왼쪽 정렬로 수정 */
+	    margin-top: 10px;
+	    margin-bottom: 10px;
+	}
+	
+	.jcheckbox input[type="checkbox"] {
+	    float: left; /* 왼쪽으로 정렬하기 위해 float 속성 사용 */
+	    margin-right: 10px;
+	    font-size: 30px;
+	}
+
+
+  .required-text1{
+    color: red;
+    margin-right: 220px;
+  }
+  .required-text2{
+    color: red;
+    margin-right: 130px;
+  }
+  
+    .form_section {
+    width: 400px;
+    position: relative;
+    margin:auto; /* 수정: 위아래 margin 감소 */
+    text-align: left; /* 내용 가운데 정렬을 위해 text-align 추가 */
+}
+
+  .form_section {
+    margin-top: 40px; 
+    margin-bottom: 30px;
+  }
+  
+  .agree_ch {
+	  color: #999;
   }
 
-  .checkbox input[type="checkbox"] {
-    margin-right: 5px;
-    font-size: 30px;
-    
+	.agree_ch2 {
+	  color: #999;
   }
+
+	.line{
+		color: lightgray;
+		text-align: center;
+	}
+
+/*footer*/
+#wrap {
+min-height: 100vh; /* 화면 높이와 동일한 최소 높이 설정 */
+position: relative; /* 상대 위치 설정 */
+}
+
 	
 footer{
 	margin-left:0;
@@ -356,29 +400,6 @@ footer p span{
 }
 
 </style>
-<%
-        // 인코딩 처리
-        request.setCharacterEncoding("euc-kr"); 
- %>
- <script type="text/javascript">
-    
-        function checkValue()
-        {
-            inputForm = eval("document.loginInfo");
-            if(!inputForm.userid.value)
-            {
-                alert("아이디를 입력하세요");    
-                inputForm.userid.focus();
-                return false;
-            }
-            if(!inputForm.userpw.value)
-            {
-                alert("비밀번호를 입력하세요");    
-                inputForm.userpw.focus();
-                return false;
-            }
-        }
-</script>
 <script src="https://kit.fontawesome.com/d69fb28507.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -466,30 +487,61 @@ footer p span{
     <hr class="logo_hr">
 </header>
 
-<section class="login-form" align="center">
-    <h1>로그인</h1>
-    <form action="login_db.jsp" name="loginInfo" onsubmit="return checkValue()" method="post">
-    
-          <div class="int-area" align="center">
-            <input type="text" name="userid" id="userid" autocomplete="off" required>
-            <label for="userid">USER NAME</label>
-        </div>
-        <div class="int-area">
-            <input type="password" name="userpw" id="userpw" autocomplete="off" required align="center">
-            <label for="userpw">PASSWORD</label>
-        </div>
-          <input type="checkbox" id="rememberMe" align="center">
-          <label for="rememberMe">아이디 저장</label>
-          
-        <div class="caption">
-            <a href="">아이디 찾기 |</a> <a href="">비밀번호 찾기 |</a> <a href="">회원가입</a>
-        </div>
+<section class="join-form">
+    <h1>회원가입</h1>
+    <div id="wrap">
+        <form action="/mall/jsp/join.bo" method="post" name="joinForm" id="joinform">
+            <div class="jint-area">
+                <input type="text" name="userid" id="userid" autocomplete="off" required>
+                <label for="id">아이디</label>
+            </div>
+            <div class="jint-area">
+                <input type="password" name="userpw" id="userpw" autocomplete="off" required>
+                <label for="pw">비밀번호</label>
+            </div>
+            <div class="jint-area">
+                <input type="password" name="userpw_re" id="userpw_re" autocomplete="off" required>
+                <label for="pw_re">비밀번호 확인</label>
+            </div>
+            <div class="jint-area">
+                <input type="text" name="username" id="username" autocomplete="off" required>
+                <label for="id">이름</label>
+            </div>
+            <div class="jint-area">
+                <input type="text" name="usertel" id="usertel" autocomplete="off" required>
+                <label for="id">전화번호</label>
+            </div>
+            <div class="jint-area">
+                <input type="text" name="email" id="email" autocomplete="off" required>
+                <label for="email">이메일주소</label>
+            </div>
 
-        <div class="btn-area">
-		<button id="btn" type="submit">LOGIN</button>
-        </div>
-    </form>
-    
+            <div class="form_section">
+                <input type="checkbox" name="agree" id="agree" onchange="toggleCheckboxes(this.checked);">
+                <label for="agree">전체 약관 및 마케팅 수신에 동의합니다.</label>
+            </div>	
+                <p class="line">----------------------------------------------------------------</p>
+                <div class="form_section">	
+                    <input type="checkbox" id="us" name="us" class="ckbox">
+                    <label for="us">이용 약관<span class="required-text1">(필수)</span></label>
+                    <a class="agree_ch" href="./check_use copy 2.html">보기</a>
+                </div>
+                
+                <div class="form_section">	
+                    <input type="checkbox" id="per" name="per" class="ckbox">
+                    <label for="per">개인정보 수집 및 이용<span class="required-text2">(필수)</span></label>
+                    <a class="agree_ch2" href="">보기</a>
+                </div>
+            <p class="line">----------------------------------------------------------------</p>
+            
+            <div class="jbtn-area">
+                <!-- <button id="btn" type="submit">가입하기</button> -->
+                <p>
+                <input type="button" class="button" value="가입하기" onclick="sendit();" />
+                </p>
+            </div>
+        </form>
+    </div>
 </section>
 </div>
 
@@ -506,19 +558,23 @@ footer p span{
         <span>COPYRIGHT (c) (주)2렇게잘하조 ALL RIGHTS RESERVED.</span>
     </p>
 </footer>	
-
+    
 <script>
-    let id = $('#id');
-    let pw = $('#pw');
-    let btn = $('#btn');
+    // 추가: 전체 약관 동의 체크박스 상태에 따라 다른 체크박스를 선택/해제
+    function toggleCheckboxes(checked) {
+        document.getElementById('us').checked = checked;
+        document.getElementById('per').checked = checked;
+    }
 
-    $(btn).on('click', function() {
-        if ($(id).val() == "") {
-            alert('아이디를 입력하세요');
-        } else if ($(pw).val() == "") {
-            alert('비밀번호를 입력하세요')
+    // URL에서 동의 상태를 읽어와서 체크박스 상태를 설정
+    const urlParams = new URLSearchParams(window.location.search);
+        const agreed = urlParams.get("agreed");
+
+        if (agreed === "true") {
+            document.getElementById("us").checked = true;
         }
-    });
+        
+        
 </script>
 <script src="user.js"></script>
 </body>
