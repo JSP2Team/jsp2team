@@ -9,7 +9,7 @@ import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.annotation.WebFilter;
 
-@WebFilter("*.ma")
+@WebFilter("*.bo")
 public class CharacterEncodingFilter implements Filter {
 
 	@Override
