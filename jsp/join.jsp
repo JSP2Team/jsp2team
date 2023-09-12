@@ -522,13 +522,13 @@ footer p span{
             </div>	
                 <p class="line">----------------------------------------------------------------</p>
                 <div class="form_section">	
-                    <input type="checkbox" id="us" name="us">
+                    <input type="checkbox" id="us" name="us" class="ckbox">
                     <label for="us">이용 약관<span class="required-text1">(필수)</span></label>
                     <a class="agree_ch" href="./check_use copy 2.html">보기</a>
                 </div>
                 
                 <div class="form_section">	
-                    <input type="checkbox" id="per" name="per">
+                    <input type="checkbox" id="per" name="per" class="ckbox">
                     <label for="per">개인정보 수집 및 이용<span class="required-text2">(필수)</span></label>
                     <a class="agree_ch2" href="">보기</a>
                 </div>
