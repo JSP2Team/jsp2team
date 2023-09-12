@@ -1,0 +1,421 @@
+.hand {
+  cursor: pointer;
+}
+
+.p0 {
+  padding: 0 !important;
+}
+.pb0 {
+  padding-bottom: 0 !important;
+}
+.m0 {
+  margin: 0 !important;
+}
+
+.mt5 {
+  margin-top: 5px !important;
+}
+.ml5 {
+  margin-left: 5px !important;
+}
+.mb5 {
+  margin-bottom: 5px !important;
+}
+.mr5 {
+  margin-right: 5px !important;
+}
+
+.pt5 {
+  padding-top: 5px !important;
+}
+.pl5 {
+  padding-left: 5px !important;
+}
+.pb5 {
+  padding-bottom: 5px !important;
+}
+.pr5 {
+  padding-right: 5px !important;
+}
+
+.mt10 {
+  margin-top: 10px !important;
+}
+.mb10 {
+  margin-bottom: 10px !important;
+}
+.ml10 {
+  margin-left: 10px !important;
+}
+.mr10 {
+  margin-right: 10px !important;
+}
+
+.mr8 {
+  margin-right: 8px !important;
+}
+
+.mt15 {
+  margin-top: 15px !important;
+}
+.mb15 {
+  margin-bottom: 15px !important;
+}
+.ml15 {
+  margin-left: 15px !important;
+}
+.mr15 {
+  margin-right: 15px !important;
+}
+
+.pt10 {
+  padding-top: 10px !important;
+}
+.pl10 {
+  padding-left: 10px !important;
+}
+.pb10 {
+  padding-bottom: 10px !important;
+}
+.pr10 {
+  padding-right: 10px !important;
+}
+
+.mt20 {
+  margin-top: 20px !important;
+}
+.mb20 {
+  margin-bottom: 20px !important;
+}
+.ml20 {
+  margin-left: 20px !important;
+}
+.mr20 {
+  margin-right: 20px !important;
+}
+
+.pt20 {
+  padding-top: 20px !important;
+}
+.pb20 {
+  padding-bottom: 20px !important;
+}
+.pl20 {
+  padding-left: 20px !important;
+}
+.pr20 {
+  padding-right: 20px !important;
+}
+
+.mt25 {
+  margin-top: 25px !important;
+}
+.mb25 {
+  margin-bottom: 25px !important;
+}
+.ml25 {
+  margin-left: 25px !important;
+}
+.mr25 {
+  margin-right: 25px !important;
+}
+
+.mt30 {
+  margin-top: 30px !important;
+}
+.mb30 {
+  margin-bottom: 30px !important;
+}
+.ml30 {
+  margin-left: 30px !important;
+}
+.mr30 {
+  margin-right: 30px !important;
+}
+
+.pt30 {
+  padding-top: 30px !important;
+}
+.pb30 {
+  padding-bottom: 30px !important;
+}
+.pl30 {
+  padding-left: 30px !important;
+}
+.pr30 {
+  padding-right: 30px !important;
+}
+
+.mt50 {
+  margin-top: 50px !important;
+}
+.mb50 {
+  margin-bottom: 50px !important;
+}
+.ml50 {
+  margin-left: 50px !important;
+}
+.mr50 {
+  margin-right: 50px !important;
+}
+
+.pt50 {
+  padding-top: 50px !important;
+}
+.pb50 {
+  padding-bottom: 50px !important;
+}
+.pl50 {
+  padding-left: 50px !important;
+}
+.pr50 {
+  padding-right: 50px !important;
+}
+
+.mt100 {
+  margin-top: 100px !important;
+}
+.mb100 {
+  margin-bottom: 100px !important;
+}
+.ml100 {
+  margin-left: 100px !important;
+}
+.mr100 {
+  margin-right: 100px !important;
+}
+
+.pt100 {
+  padding-top: 100px !important;
+}
+.pb100 {
+  padding-bottom: 100px !important;
+}
+.pl100 {
+  padding-left: 100px !important;
+}
+.pr100 {
+  padding-right: 100px !important;
+}
+
+.mg-center {
+  margin: 0 auto;
+}
+.lh30 {
+  line-height: 30px;
+}
+.inline_block {
+  display: inline-block;
+}
+.relative {
+  position: relative;
+}
+
+.text-left {
+  text-align: left;
+}
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+
+.vertical-top {
+  vertical-align: top;
+}
+.vertical-middle {
+  vertical-align: middle;
+}
+
+.hide {
+  display: none;
+}
+.hide_i {
+  display: none !important;
+}
+.events_none {
+  pointer-events: none;
+}
+
+.black {
+  color: #000;
+}
+.blue {
+  color: blue !important;
+}
+.red {
+  color: red !important;
+}
+.bold,
+.b {
+  font-weight: 600 !important;
+}
+.u {
+  text-decoration: underline;
+}
+.nowrap {
+  white-space: nowrap;
+}
+.relative {
+  position: relative;
+}
+
+table.table-outborded {
+  width: 100%;
+}
+table.table-outborded tbody tr {
+  border: 1px solid #000000;
+}
+table.table-outborded tbody tr.notify {
+  border: none;
+}
+table.table-outborded tbody tr.notify td {
+  height: 25px;
+  padding: 0;
+  padding-left: 10px;
+}
+table.table-outborded tbody th,
+table.table-outborded tbody td {
+  height: 50px;
+  padding: 10px;
+}
+
+input.transfer-form,
+select.transfer-form {
+  border: none;
+  width: 100%;
+  height: 100%;
+}
+.agree_view_btn {
+  cursor: pointer;
+  color: #1e88e5;
+  text-decoration: underline;
+}
+
+/* captcha */
+.captcha-lay .captcha-image {
+  width: 70%;
+  height: 50px;
+  display: inline-block;
+}
+.captcha-lay .captcha-reload {
+  width: 29%;
+  height: 50px;
+  display: inline-block;
+}
+.captcha-lay .captcha-input {
+  margin-top: 5px;
+  height: 30px;
+}
+.captcha-lay .captcha-input input {
+  height: 30px;
+}
+
+.wx100 {
+  width: 100% !important;
+}
+.wx85 {
+  width: 85% !important;
+}
+.wx80 {
+  width: 80% !important;
+}
+.wx75 {
+  width: 75% !important;
+}
+.wx70 {
+  width: 70% !important;
+}
+.wx50 {
+  width: 50% !important;
+}
+.wx30 {
+  width: 30% !important;
+}
+.hx100 {
+  height: 100%;
+}
+.w50 {
+  width: 50px !important;
+}
+.w70 {
+  width: 70px !important;
+}
+.w80 {
+  width: 80px !important;
+}
+.w100 {
+  width: 100px !important;
+}
+.w110 {
+  width: 110px !important;
+}
+.w150 {
+  width: 150px !important;
+}
+.w180 {
+  width: 180px !important;
+}
+.w200 {
+  width: 200px !important;
+}
+.w300 {
+  width: 300px !important;
+}
+.w500 {
+  width: 500px !important;
+}
+.w600 {
+  width: 600px !important;
+}
+
+.h150 {
+  height: 150px !important;
+}
+
+@media screen and (max-width: 1100px) {
+  .w500,
+  .w600 {
+    width: 100% !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .wx75,
+  .wx50 {
+    width: 100% !important;
+  }
+}
+
+/* 게시물 동영상 반응형 삽입 */
+.fr-video iframe {
+  max-width: 100%;
+}
+.fr_video_wrap {
+  display: block;
+}
+.fr_video_wrap .fr-video {
+  display: block !important;
+  position: relative !important;
+  padding-bottom: 56.25% !important;
+}
+.fr_video_wrap .fr-video iframe {
+  position: absolute !important;
+  left: 0 !important;
+  top: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+p[style*="text-align: left"] > .fr_video_wrap,
+p[style*="text-align:left"] > .fr_video_wrap {
+  margin: 0 auto 0 0;
+}
+p[style*="text-align: center"] > .fr_video_wrap,
+p[style*="text-align:center"] > .fr_video_wrap {
+  margin: 0 auto;
+}
+p[style*="text-align: right"] > .fr_video_wrap,
+p[style*="text-align:right"] > .fr_video_wrap {
+  margin: 0 0 0 auto;
+}
