@@ -14,8 +14,6 @@
 		SELECT * FROM USERS
 		WHERE USER_ID = #{userid} AND USER_PWD = #{userpw}
 	</select>
-		VALUES (#{userid}, #{userpw}, #{username}, #{userphone}, #{email}, sysdate, default)
-	</insert>
 </mapper>
 
 
