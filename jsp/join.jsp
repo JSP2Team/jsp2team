@@ -445,14 +445,14 @@ footer p span{
                 <!-- 마이페이지 -->
                 <li>
                     <a class="my_icon" href="">
-                        <img class="my_icon_img" src="./asset/file/icon_my_black.png">
+                        <img class="my_icon_img" src="../asset/file/icon_my_black.png">
                     </a>
                 </li>
                 &nbsp;&nbsp;
                 <!-- 장바구니 -->
                 <li>
                     <a class="cart_icon" href="">
-                        <img class="cart_icon_img" src="./asset/file/icon_cart_black.png">
+                        <img class="cart_icon_img" src="../asset/file/icon_cart_black.png">
                     </a>
                 </li>
                 &nbsp;&nbsp;
@@ -475,7 +475,7 @@ footer p span{
         <p>
             <a href="./asd.html">
                 <b>
-                    <img class="main_logo_img" src="./asset/file/1890799720.png">
+                    <img class="main_logo_img" src="../asset/file/1890799720.png">
                 </b>
             </a>
         </p>
@@ -544,13 +544,13 @@ footer p span{
             </div>
                 <p class="line">----------------------------------------------------------------</p>
                 <div class="form_section">	
-                    <input type="checkbox" id="us" name="us">
+                    <input type="checkbox" id="us" name="us" class="ckbox">
                     <label for="us">이용 약관<span class="required-text1">(필수)</span></label>
                     <a class="agree_ch" id="openModalBtn" href="#">보기</a>
                 </div>
                 
                 <div class="form_section">	
-                    <input type="checkbox" id="per" name="per">
+                    <input type="checkbox" id="per" name="per" class="ckbox">
                     <label for="per">개인정보 수집 및 이용<span class="required-text2">(필수)</span></label>
                     <a class="agree_ch2" id="openModalBtn2" href="#">보기</a>
                 </div>
@@ -707,6 +707,24 @@ footer p span{
             }
         });
     </script>
+    
+<script>
+    // 추가: 전체 약관 동의 체크박스 상태에 따라 다른 체크박스를 선택/해제
+    function toggleCheckboxes(checked) {
+        document.getElementById('us').checked = checked;
+        document.getElementById('per').checked = checked;
+    }
+
+    // URL에서 동의 상태를 읽어와서 체크박스 상태를 설정
+    const urlParams = new URLSearchParams(window.location.search);
+        const agreed = urlParams.get("agreed");
+
+        if (agreed === "true") {
+            document.getElementById("us").checked = true;
+        }
+        
+        
+</script>
 <script src="user.js"></script>
 </body>
 </html>
