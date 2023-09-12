@@ -20,7 +20,7 @@ public class JoinAction implements Action{
 		
 		udto.setUserid( request.getParameter("userid") );
 		udto.setUserpw(request.getParameter("userpw"));
-		udto.setUsername( request.getParameter("username") );
+		udto.setUser_name( request.getParameter("user_name") );
 		udto.setUsertel( request.getParameter("usertel") );
 		udto.setEmail( request.getParameter("email") );
 		udto.setRegdate( request.getParameter("regdate") );

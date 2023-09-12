@@ -17,7 +17,7 @@
 	<%
 		UserDAO udao = new UserDAO();
 		UserDTO udto = new UserDTO();
-		if(udao.join(member)){
+		if(udao.join(udto)){
 	%>	
 	<script>
 		alert("회원가입 성공!");
