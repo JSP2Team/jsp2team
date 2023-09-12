@@ -1,9 +1,10 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detail</title>
+<meta charset="UTF-8">
+<title>Insert title here</title>
 <style>
 
 .fixed_tab_menu {
@@ -410,7 +411,7 @@ crossorigin="anonymous"></script>
                   <!-- 상품 썸네일 -->
                   <div class="thumbnail_wrap">
                     <div class="noimage hide">
-                      <img src="./images/product/noimage.png" alt="" />
+                      <img src="../images/product/noimage.png" alt="" />
                     </div>
 
                     <div class="prod_view_sl swiper-box">
@@ -437,7 +438,7 @@ crossorigin="anonymous"></script>
                             role="group"
                             aria-label="2 / 3"
                           >
-                            <img src="./file/img/mantoman/man2.png" alt="이미지2" />
+                            <img src="../file/img/mantoman/man2.png" alt="이미지2" />
                           </li>
                           <li
                             class="swiper-slide"
@@ -445,7 +446,7 @@ crossorigin="anonymous"></script>
                             role="group"
                             aria-label="3 / 3"
                           >
-                            <img src="./file/img/mantoman/man3.png" alt="이미지3" />
+                            <img src="../file/img/mantoman/man3.png" alt="이미지3" />
                           </li>
                         </ul>
                         <span
@@ -498,7 +499,7 @@ crossorigin="anonymous"></script>
                             role="group"
                             aria-label="1 / 3"
                           >
-                            <img src="./file/img/mantoman/man1.png" alt="이미지1" />
+                            <img src="../file/img/mantoman/man1.png" alt="이미지1" />
                           </li>
                           <li
                             class="swiper-slide swiper-slide-visible swiper-slide-next"
@@ -506,7 +507,7 @@ crossorigin="anonymous"></script>
                             role="group"
                             aria-label="2 / 3"
                           >
-                            <img src="./file/img/mantoman/man2.png" alt="이미지2" />
+                            <img src="../file/img/mantoman/man2.png" alt="이미지2" />
                           </li>
                           <li
                             class="swiper-slide swiper-slide-visible"
@@ -514,7 +515,7 @@ crossorigin="anonymous"></script>
                             role="group"
                             aria-label="3 / 3"
                           >
-                            <img src="./file/img/mantoman/man3.png" alt="이미지3" />
+                            <img src="../file/img/mantoman/man3.png" alt="이미지3" />
                           </li>
                         </ul>
                         <span

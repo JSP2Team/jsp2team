@@ -218,99 +218,17 @@ html, body {
     position: absolute;
 }
 
+table{
+    margin: 0 auto;
+    width: 900px;
+}
+
 /*footer*/
 #wrap {
 min-height: 100vh; /* 화면 높이와 동일한 최소 높이 설정 */
 position: relative; /* 상대 위치 설정 */
 }
 
-.login-form {
-    position: relative;
-    z-index: 2;
-  }
-
-  .login-form h1 {
-    margin: 70px 0; 
-    font-size: 32px;
-    color: rgb(0, 0, 0);
-    text-align: center;
-    margin-bottom: 50px; 
-  }
-
-  .int-area {
-    width: 400px;
-    position: relative;
-    margin: 40px auto; 
-    text-align: center; 
-  }
-
-  .int-area:first-child {
-    margin-top: 0;
-  }
-
-  .int-area input {
-    width: 100%;
-    padding: 20px 10px 10px;
-    background-color: transparent;
-    border: none;
-    border-bottom: 1px solid #999;
-    font-size: 18px;
-    color: rgb(0, 0, 0);
-    outline: none;
-  }
-
-  .int-area label {
-    position: absolute;
-    left: 10px;
-    top: 15px;
-    font-size: 18px;
-    color: #999;
-    transition: top .5s ease;
-  }
-
-  .int-area input:focus+label, .int-area input:valid+label {
-    top: -15px; /* 입력란 위로 이동하여 숨김 */
-  }
-
-  .btn-area {
-    margin-top: 40px; 
-    margin-bottom: 30px;/* 수정: 위 margin 감소 */
-  }
-
-  .btn-area button {
-    width: 400px;
-    height: 50px;
-    background: rgb(74, 73, 80);
-    color: rgb(255, 255, 255);
-    font-size: 20px;
-    border: none;
-    border-radius: 25px;
-  }
-
-  .caption {
-    margin-top: 10px; /* 수정: 위 margin 감소 */
-    text-align: center;
-  }
-
-  .caption a {
-    font-size: 15px;
-    color: #999;
-    text-decoration: none;
-  }
-
-  .checkbox {
-    display: flex;
-    align-items: center;
-    justify-content: left;
-    margin-top: 10px;
-  }
-
-  .checkbox input[type="checkbox"] {
-    margin-right: 5px;
-    font-size: 30px;
-    
-  }
-	
 footer{
 	margin-left:0;
 	width: 100%;
@@ -356,29 +274,6 @@ footer p span{
 }
 
 </style>
-<%
-        // 인코딩 처리
-        request.setCharacterEncoding("euc-kr"); 
- %>
- <script type="text/javascript">
-    
-        function checkValue()
-        {
-            inputForm = eval("document.loginInfo");
-            if(!inputForm.userid.value)
-            {
-                alert("아이디를 입력하세요");    
-                inputForm.userid.focus();
-                return false;
-            }
-            if(!inputForm.userpw.value)
-            {
-                alert("비밀번호를 입력하세요");    
-                inputForm.userpw.focus();
-                return false;
-            }
-        }
-</script>
 <script src="https://kit.fontawesome.com/d69fb28507.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -402,7 +297,7 @@ footer p span{
                 <!-- 마이페이지 -->
                 <li>
                     <a class="my_icon" href="">
-                        <img class="my_icon_img" src="../asset/file/icon_my_black.png">
+                        <img class="my_icon_img" src="../asset/file/icon-my-black.jpg">
                     </a>
                 </li>
                 &nbsp;&nbsp;
@@ -466,30 +361,51 @@ footer p span{
     <hr class="logo_hr">
 </header>
 
-<section class="login-form" align="center">
-    <h1>로그인</h1>
-    <form action="login_db.jsp" name="loginInfo" onsubmit="return checkValue()" method="post">
-    
-          <div class="int-area" align="center">
-            <input type="text" name="userid" id="id" autocomplete="off" required>
-            <label for="id">USER NAME</label>
-        </div>
-        <div class="int-area">
-            <input type="password" name="userpw" id="pw" autocomplete="off" required align="center">
-            <label for="pw">PASSWORD</label>
-        </div>
-          <input type="checkbox" id="rememberMe" align="center">
-          <label for="rememberMe">아이디 저장</label>
-          
-        <div class="caption">
-            <a href="">아이디 찾기 |</a> <a href="">비밀번호 찾기 |</a> <a href="">회원가입</a>
-        </div>
-
-        <div class="btn-area">
-		<button id="btn" type="submit">LOGIN</button>
-        </div>
-    </form>
-    
+<section>
+    <div>
+        <form action="${pageContext.request.contextPath}/board/BoardWriteOK.bo" method="post" name="boardForm">
+          <table class="community" style="width: 900px; border: 0px;">
+            <tr align="center" valign="middle">
+              <!-- <td><h3>MVC 게시판</h3></td> -->
+            </tr>
+          </table>
+          <table border="1" style="border-collapse:collapse;">
+                <tr height="30px">
+                   <th align="center" width="150px">
+                      제 목
+                   </th>
+                   <td>
+                      <input name="boardtitle" size="50" maxlength="100" value="" placeholder="제목을 입력하세요">
+                   </td>
+                </tr>
+                <tr height="30px">
+                   <th align="center" width="150px">
+                      글쓴이
+                   </th>
+                   <td>
+                      <input name="username" size="10" maxlength="20" value="" placeholder="이름을 입력하세요">
+                   </td>
+                </tr>
+                <tr height="300px">
+                   <th align="center" width="150px">
+                      내 용
+                   </th>
+                   <td>
+                      <textarea name="boardcontent" style="width:700px;height:250px;"></textarea>               
+                   </td>
+                </tr>
+             </table>
+             <table style="border: 0px;">
+               <tr align="right" valign="middle">
+                 <td>
+                   <a href="../community2/community2.html">[등록]</a>
+                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                   <a href="../community2/community2.html">[목록]</a>
+                 </td>
+               </tr>
+             </table>
+        </form>
+    </div>
 </section>
 </div>
 
@@ -506,20 +422,6 @@ footer p span{
         <span>COPYRIGHT (c) (주)2렇게잘하조 ALL RIGHTS RESERVED.</span>
     </p>
 </footer>	
-
-<script>
-    let id = $('#id');
-    let pw = $('#pw');
-    let btn = $('#btn');
-
-    $(btn).on('click', function() {
-        if ($(id).val() == "") {
-            alert('아이디를 입력하세요');
-        } else if ($(pw).val() == "") {
-            alert('비밀번호를 입력하세요')
-        }
-    });
-</script>
-<script src="user.js"></script>
+    
 </body>
 </html>

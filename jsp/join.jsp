@@ -423,14 +423,14 @@ footer p span{
                 <!-- 마이페이지 -->
                 <li>
                     <a class="my_icon" href="">
-                        <img class="my_icon_img" src="./asset/file/icon_my_black.png">
+                        <img class="my_icon_img" src="../asset/file/icon_my_black.png">
                     </a>
                 </li>
                 &nbsp;&nbsp;
                 <!-- 장바구니 -->
                 <li>
                     <a class="cart_icon" href="">
-                        <img class="cart_icon_img" src="./asset/file/icon_cart_black.png">
+                        <img class="cart_icon_img" src="../asset/file/icon_cart_black.png">
                     </a>
                 </li>
                 &nbsp;&nbsp;
@@ -453,7 +453,7 @@ footer p span{
         <p>
             <a href="./asd.html">
                 <b>
-                    <img class="main_logo_img" src="./asset/file/1890799720.png">
+                    <img class="main_logo_img" src="../asset/file/1890799720.png">
                 </b>
             </a>
         </p>
@@ -490,7 +490,7 @@ footer p span{
 <section class="join-form">
     <h1>회원가입</h1>
     <div id="wrap">
-        <form action="join_db.jsp" method="post" name="joinForm" id="joinform">
+        <form action="/mall/jsp/join.bo" method="post" name="joinForm" id="joinform">
             <div class="jint-area">
                 <input type="text" name="userid" id="userid" autocomplete="off" required>
                 <label for="id">아이디</label>

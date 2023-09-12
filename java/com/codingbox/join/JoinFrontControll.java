@@ -26,10 +26,10 @@ public class JoinFrontControll extends HttpServlet{
 		String responseURI = null;
 		ActionForward forward = null;
 		
-		if(requestURI.equals("/mall/join.bo")) {
+		if(requestURI.equals("/mall/jsp/join.bo")) {
 			forward = new JoinAction().execute(request, response);
-		} else if(requestURI.equals("/mall/login.bo")) {
-			forward = new ActionForward(false, "/mall/login.jsp");
+		} else if(requestURI.equals("/mall/jsp/login.bo")) {
+			forward = new ActionForward(false, "/mall/jsp/login.jsp");
 		}
 		
 		// 일괄처리

@@ -21,7 +21,7 @@ public class JoinAction implements Action{
 		udto.setUserid( request.getParameter("userid") );
 		udto.setUserpw(request.getParameter("userpw"));
 		udto.setUsername( request.getParameter("username") );
-		udto.setUserphone( request.getParameter("userphone") );
+		udto.setUsertel( request.getParameter("usertel") );
 		udto.setEmail( request.getParameter("email") );
 		udto.setRegdate( request.getParameter("regdate") );
 		udto.setWithdrawl( Boolean.parseBoolean(request.getParameter("withdrawl")) );
@@ -30,10 +30,10 @@ public class JoinAction implements Action{
 		forward.setRedirect(true);
 		if( udao.join(udto) ) {
 			// 회원가입 성공
-			forward.setPath("/mall/login.jsp");
+			forward.setPath("/mall/jsp/login.jsp");
 		} else {
 			// 회원가입 실패
-			forward.setPath("/mall/join.jsp");
+			forward.setPath("/mall/jsp/join.jsp");
 		}
 		
 		return forward;

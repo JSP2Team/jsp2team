@@ -218,99 +218,57 @@ html, body {
     position: absolute;
 }
 
+.clear{
+    text-align: center;
+    font-size: 45px;
+    color: #383838;
+    margin: 100px;
+}
+
+.btn {
+        display: flex;
+        justify-content: center; /* 버튼을 가로로 가운데 정렬합니다. */
+    }
+.btn_ul {
+        list-style: none; /* 기본 목록 스타일 제거 */
+        padding: 0; /* 기본 패딩 제거 */
+        display: flex; /* 목록 항목을 가로로 정렬하기 위해 flex로 설정합니다. */
+        justify-content: center; /* 목록 항목을 가로로 가운데 정렬합니다. */
+    }
+.btn_li {
+        margin: 0 10px; /* 필요한 경우 버튼 사이의 간격을 조절합니다. */
+        width: 200px;
+    }
+
+.conti{
+    border: 1px solid #f1504e;
+    width: 200px;
+    height: 50px;
+    padding: 5px 10px;
+    color: #f1504e;
+    font-size: 20px;
+    font-weight: bold;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.list{
+    width: 200px;
+    height: 50px;
+    padding: 5px 10px;
+    background-color: #f1504e;
+    color: aliceblue;
+    font-size: 20px;
+    font-weight: bold;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+
 /*footer*/
 #wrap {
 min-height: 100vh; /* 화면 높이와 동일한 최소 높이 설정 */
 position: relative; /* 상대 위치 설정 */
 }
 
-.login-form {
-    position: relative;
-    z-index: 2;
-  }
-
-  .login-form h1 {
-    margin: 70px 0; 
-    font-size: 32px;
-    color: rgb(0, 0, 0);
-    text-align: center;
-    margin-bottom: 50px; 
-  }
-
-  .int-area {
-    width: 400px;
-    position: relative;
-    margin: 40px auto; 
-    text-align: center; 
-  }
-
-  .int-area:first-child {
-    margin-top: 0;
-  }
-
-  .int-area input {
-    width: 100%;
-    padding: 20px 10px 10px;
-    background-color: transparent;
-    border: none;
-    border-bottom: 1px solid #999;
-    font-size: 18px;
-    color: rgb(0, 0, 0);
-    outline: none;
-  }
-
-  .int-area label {
-    position: absolute;
-    left: 10px;
-    top: 15px;
-    font-size: 18px;
-    color: #999;
-    transition: top .5s ease;
-  }
-
-  .int-area input:focus+label, .int-area input:valid+label {
-    top: -15px; /* 입력란 위로 이동하여 숨김 */
-  }
-
-  .btn-area {
-    margin-top: 40px; 
-    margin-bottom: 30px;/* 수정: 위 margin 감소 */
-  }
-
-  .btn-area button {
-    width: 400px;
-    height: 50px;
-    background: rgb(74, 73, 80);
-    color: rgb(255, 255, 255);
-    font-size: 20px;
-    border: none;
-    border-radius: 25px;
-  }
-
-  .caption {
-    margin-top: 10px; /* 수정: 위 margin 감소 */
-    text-align: center;
-  }
-
-  .caption a {
-    font-size: 15px;
-    color: #999;
-    text-decoration: none;
-  }
-
-  .checkbox {
-    display: flex;
-    align-items: center;
-    justify-content: left;
-    margin-top: 10px;
-  }
-
-  .checkbox input[type="checkbox"] {
-    margin-right: 5px;
-    font-size: 30px;
-    
-  }
-	
 footer{
 	margin-left:0;
 	width: 100%;
@@ -356,29 +314,14 @@ footer p span{
 }
 
 </style>
-<%
-        // 인코딩 처리
-        request.setCharacterEncoding("euc-kr"); 
- %>
- <script type="text/javascript">
-    
-        function checkValue()
-        {
-            inputForm = eval("document.loginInfo");
-            if(!inputForm.userid.value)
-            {
-                alert("아이디를 입력하세요");    
-                inputForm.userid.focus();
-                return false;
-            }
-            if(!inputForm.userpw.value)
-            {
-                alert("비밀번호를 입력하세요");    
-                inputForm.userpw.focus();
-                return false;
-            }
-        }
-</script>
+
+<link rel="stylesheet" type="text/css" href="https://designskin57.clickn.co.kr/css/lib.css?v=20230907" />
+
+<link rel="stylesheet" type="text/css" href="../asset/css/skin_common2.css" />	
+
+<link rel="stylesheet" type="text/css" href="https://storage.clickn.co.kr//css/modules/module_order.css">
+<link rel="stylesheet" type="text/css" href="https://storage.clickn.co.kr//css/modules/special_common.css">
+
 <script src="https://kit.fontawesome.com/d69fb28507.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -430,7 +373,7 @@ footer p span{
         <!-- 헤더 로고 -->
     <div id="main_logo">
         <p>
-            <a href="./asd.html">
+            <a href="../asd.html">
                 <b>
                     <img class="main_logo_img" src="../asset/file/1890799720.png">
                 </b>
@@ -466,30 +409,50 @@ footer p span{
     <hr class="logo_hr">
 </header>
 
-<section class="login-form" align="center">
-    <h1>로그인</h1>
-    <form action="login_db.jsp" name="loginInfo" onsubmit="return checkValue()" method="post">
-    
-          <div class="int-area" align="center">
-            <input type="text" name="userid" id="id" autocomplete="off" required>
-            <label for="id">USER NAME</label>
+<section>
+    <div class="skin_layout_container skin_layout_container2">
+        <div class="front_main_area">
+            <div id="skinMainWrap" class="skin_main_wrap">
+                <div class="skin_main_container skin_main_container1">
+                    <!-- ===================== Skin Main ===================== -->
+                    <div id="skinMainSection" class="skin_main_section">
+<div class="skin_block" data-module-id="module-cart" data-module-type="special" data-is-empty="no" data-starting-normalblock="no">
+<div class='special_module' data-module-name="cart_A001" data-module-parents="cart_A001" data-content-type1="cart" data-content-type2="cart" data-background-color='' data-background-image='' data-background-image-options='' data-background-attachment='' data-background-filter=''>
+<div class='module_wrap' data-layout-fullsize='no'>
+    <div class='module_container' data-padding-top='60' data-padding-bottom='80'>
+        <div class="order_head">
+            <h2 class="page_tit">주문완료</h2>
+            <ul class="steps">
+                <li>장바구니</li>
+                <li>주문/결제</li>
+                <li class="on">주문완료</li>
+            </ul>
+        </div><!--// order_head -->
+        <div>
+            <p class="clear">결제가 정상적으로 완료되었습니다.</p>
         </div>
-        <div class="int-area">
-            <input type="password" name="userpw" id="pw" autocomplete="off" required align="center">
-            <label for="pw">PASSWORD</label>
+        <div class="btn">
+            <ui class="btn_ul">
+                <li class="btn_li">
+                    <button class="conti">쇼핑 계속하기</button>
+                </li>
+                <li class="btn_li">
+                    <button class="list">구매내역 확인</button>
+                </li>
+            </ui>
         </div>
-          <input type="checkbox" id="rememberMe" align="center">
-          <label for="rememberMe">아이디 저장</label>
-          
-        <div class="caption">
-            <a href="">아이디 찾기 |</a> <a href="">비밀번호 찾기 |</a> <a href="">회원가입</a>
-        </div>
+        
 
-        <div class="btn-area">
-		<button id="btn" type="submit">LOGIN</button>
-        </div>
-    </form>
-    
+            
+
+            
+            
+        </div><!--// order_body -->
+    </div>
+</div>
+</div>
+
+
 </section>
 </div>
 
@@ -506,20 +469,6 @@ footer p span{
         <span>COPYRIGHT (c) (주)2렇게잘하조 ALL RIGHTS RESERVED.</span>
     </p>
 </footer>	
-
-<script>
-    let id = $('#id');
-    let pw = $('#pw');
-    let btn = $('#btn');
-
-    $(btn).on('click', function() {
-        if ($(id).val() == "") {
-            alert('아이디를 입력하세요');
-        } else if ($(pw).val() == "") {
-            alert('비밀번호를 입력하세요')
-        }
-    });
-</script>
-<script src="user.js"></script>
+  
 </body>
 </html>

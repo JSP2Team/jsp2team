@@ -1,9 +1,10 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<meta charset="UTF-8">
+<title>Insert title here</title>
 <style>
  
 /*헤더*/
@@ -323,25 +324,13 @@ html, body {
     width: 1000px;
 }
 
-
-
-
-
-
-
 </style>
 <link rel="stylesheet" href="community.css">
 
-<!-- <link rel="stylesheet" type="text/css" href="asset/css/skin_common.css" /> -->
-
 <link rel="stylesheet" type="text/css" href="../asset/css/modules/module_mypage.css"/>
-    
-<!-- <link rel="stylesheet" type="text/css" href="https://storage.clickn.co.kr//css/modules/special_common.css?v=20230704">
-<link rel="stylesheet" type="text/css" href="https://storage.clickn.co.kr//css/modules/module_mypage.css?v=20230704"> -->
-<!-- <link rel="stylesheet" type="text/css" href="asset/css/modules/order.css" -->
 
 <script src="https://kit.fontawesome.com/d69fb28507.js" crossorigin="anonymous"></script>
-<link rel="stylesheet" type="text/css" href="asset/css/skin_common2.css" />   .
+
 
     <link rel="stylesheet" type="text/css" href="../shoppingmall/asset/js/postcode.js">
     <link rel="stylesheet" type="text/css" href="../shoppingmall/asset/css/modules/order.css">
@@ -355,39 +344,6 @@ html, body {
         }
     </style>
 
-		<script>
-		var LOGIN_TYPE = 'non-members';
-							LOGIN_TYPE = 'members';
-		
-		var PAGE_CODE = 'Skin.orders.create';
-		var PAGE_MODE = 'real';
-
-					var HEADER_CONFIG = {"layout_type":"type1","header_module_name":"header_A006","header_module_parents":"header_A001","header_submenu_design":"design5","header_submenu_direction":"right","header_logo":"\/file\/1890799720","login_menu":"yes","login_menu_name":"LOGIN","logout_menu_name":"LOGOUT","join_menu_name":"JOIN","login_before_greeting":"WELCOME!","login_after_greeting":"님 환영합니다!","navigation_fontsize":"16","util_menu":"no","header_brightness":"light","header_bgcolor":"#ffffff","navigation_color":"#1337b1","navigation_font":"Poppins","shopping_menuorder":null,"shopping_my":"yes","shopping_cart":"yes","shopping_search":"yes","page_code":"Skin.mypages","util_link":"[{\"name\":\"MYPAGE\",\"address\":\"\\\/members\\\/mypage\\\/info\",\"target\":\"_self\"},{\"name\":\"CS CENTER\",\"address\":\"#\",\"target\":\"_self\"},{\"name\":\"SITEMAP\",\"address\":\"#\",\"target\":\"_self\"}]","gnb_menu":"1","mypage_menu":"4"};
-							var FOOTER_CONFIG = {"footer_module_name":"footer_A022","footer_module_parents":"footer_A001","footer_textfield1":"yes","footer_textfield1_source":"<div data-text-editable=\"true\" class=\"\"><p style=\"color: rgb(248, 248, 248);\"><span style=\"font-size:15px; font-weight:500;\">고객센터<\/span><\/p><p style=\"color: rgb(248, 248, 248);\"><span style=\"color: rgb(164, 164, 164);\"><br><\/span><\/p><p style=\"color: rgb(248, 248, 248);\"><span style=\"color: rgb(255, 255, 255); font-weight: 300;\">서울특별시<\/span><\/p><p style=\"color: rgb(248, 248, 248);\">0000@0000.co.kr<\/p><p data-f-id=\"pbf\" style=\"text-align: center; font-size: 14px; margin-top: 30px; opacity: 0.65; color: rgb(248, 248, 248);\">Powered by <a href=\"https:\/\/www.froala.com\/wysiwyg-editor?pb=1\" title=\"Froala Editor\">Froala Editor<\/a><\/p><\/div>","footer_textfield2":"no","footer_textfield2_source":null,"footer_menu":"yes","footer_logo_src":"\/file\/1365760461","footer_info":"yes","footer_hosting":"yes","footer_copyright":"yes","footer_copyright_source":"<p style=\"color: rgb(248, 248, 248);\"><span style=\"font-size:12px;\">COPYRIGHT (c) (주)회사명 ALL RIGHTS RESERVED.<\/span><\/p><p style=\"color: rgb(248, 248, 248);\"><br><\/p><p data-f-id=\"pbf\" style=\"text-align: center; font-size: 14px; margin-top: 30px; opacity: 0.65; color: rgb(248, 248, 248);\">Powered by <a href=\"https:\/\/www.froala.com\/wysiwyg-editor?pb=1\" title=\"Froala Editor\">Froala Editor<\/a><\/p>","footer_escro":"no","footer_brightness":"dark","footer_bgcolor2":"#1337b1","footer_fontcolor":"#F8F8F8","save_seq":"14","save_mode":"real","escro":"[{\"img_src\":\"\\\/file\\\/1150927385\",\"link_address\":\"#kicc_escrow\",\"link_target\":\"_blank\"}]","fnb_menu":"2"};
-							var BLOCK_LAYOUTS = '';
-							var BLOCK_CONTENTS = '';
-							var BASIC_CONFIG = {"site_name":"Phonecase Shop","co_name":"(주)회사명","ceo_name":"홍길동","co_phone":"0000-0000","co_email":"0000@0000.co.kr","co_zipcode":"00000","co_address":"서울특별시","co_address_detail":"","co_regist_num":"000-00-00000","co_it_num":"0000-0000","site_desc":null,"co_nation":"kr","co_fax":null,"timezone":"Asia\/Seoul","date_format":"Y.m.d","currency":"krw","sns_img":null,"fav_img":"\/file\/1967448068","map_type":"direct","fav_img_tmp":"\/file\/722590674","co_category":"","co_category_item":""};
-		
-					var MAP_CONFIG = {"map_type":"direct","map_service_type":"kakao","map_api":{"naver":{"client_id":null,"client_secret":null},"kakao":{"api_key":null},"google":{"api_key":null}},"map_feature":{"map_marker_icon":null,"map_zoom":null,"map_zoom_control":null},"map_script":{"KAKAO":"https:\/\/dapi.kakao.com\/v2\/maps\/sdk.js?libraries=services,clusterer,drawing&appkey=","NAVER":"https:\/\/openapi.map.naver.com\/openapi\/v3\/maps.js?submodules=geocoder&ncpClientId=","GOOGLE":"https:\/\/maps.googleapis.com\/maps\/api\/js?key="}};
-		
-		var PAGE_CONFIG = '';
-
-					var _PATH = "\/orders" ;
-		
-		var MODULES_STORAGE_BASE_URI = "https:\/\/storage.clickn.co.kr\/" ;
-
-		var jcv = '20230907';
-		
-		</script>
-	
-		
-		
-		<script>		
-		var USER = "hansamk97"
-		const SITE_CONFIG_OPTION = {"rightClick":"N","mouseDrag":"N","mobileZoom":"Y"}
-		</script>
-
-        
 		
 </head>
 <body>
@@ -411,14 +367,14 @@ html, body {
                 <!-- 마이페이지 -->
                 <li>
                     <a class="my_icon" href="../shoppingmall/mypage.html">
-                        <img class="my_icon_img" src="./asset/file/icon_my_black.png">
+                        <img class="my_icon_img" src="../asset/file/icon_my_black.png">
                     </a>
                 </li>
                 &nbsp;&nbsp;
                 <!-- 장바구니 -->
                 <li>
                     <a class="cart_icon" href="../shoppingmall/orderlist.html">
-                        <img class="cart_icon_img" src="./asset/file/icon_cart_black.png">
+                        <img class="cart_icon_img" src="../asset/file/icon_cart_black.png">
                     </a>
                 </li>
                 &nbsp;&nbsp;
@@ -717,6 +673,7 @@ html, body {
         <span>COPYRIGHT (c) (주)2렇게잘하조 ALL RIGHTS RESERVED.</span>
     </p>
 </footer>	
-
+<script src="/join.js"></script>
+<script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 </body>
 </html>

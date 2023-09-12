@@ -218,99 +218,64 @@ html, body {
     position: absolute;
 }
 
+/*메인 뉴브랜드*/
+.new_design{
+        background-color: #eef1f6;
+        margin: 20px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+}
+
+
+
+.new_design_logo{
+        text-align: center;
+        font-size: 30px;
+        line-height: 0.5    ;
+        
+        color: #1337b1;
+        font-weight: bold;
+}
+/*메인 뉴브랜드 로고*/
+
+/*메인 뉴브랜드 제품*/
+.new_design_img{
+        display: flex;
+        justify-content: space-between;
+        margin-left: 150px;
+        margin-right: 150px;
+        text-align: center;
+}
+
+.new_design_img2{
+        display: flex;
+        justify-content: space-between;
+        margin-left: 150px;
+        margin-right: 150px;
+        text-align: center;
+}
+
+.product_img{
+        width: 380px;
+        height: 532px;   
+}
+
+.new_design_hr{
+    width: 380px;
+}
+
+.img_into{
+    text-align: left;
+    color: #1337b1;
+}
+/*메인 뉴브랜드 제품*/
+
 /*footer*/
 #wrap {
 min-height: 100vh; /* 화면 높이와 동일한 최소 높이 설정 */
 position: relative; /* 상대 위치 설정 */
 }
 
-.login-form {
-    position: relative;
-    z-index: 2;
-  }
-
-  .login-form h1 {
-    margin: 70px 0; 
-    font-size: 32px;
-    color: rgb(0, 0, 0);
-    text-align: center;
-    margin-bottom: 50px; 
-  }
-
-  .int-area {
-    width: 400px;
-    position: relative;
-    margin: 40px auto; 
-    text-align: center; 
-  }
-
-  .int-area:first-child {
-    margin-top: 0;
-  }
-
-  .int-area input {
-    width: 100%;
-    padding: 20px 10px 10px;
-    background-color: transparent;
-    border: none;
-    border-bottom: 1px solid #999;
-    font-size: 18px;
-    color: rgb(0, 0, 0);
-    outline: none;
-  }
-
-  .int-area label {
-    position: absolute;
-    left: 10px;
-    top: 15px;
-    font-size: 18px;
-    color: #999;
-    transition: top .5s ease;
-  }
-
-  .int-area input:focus+label, .int-area input:valid+label {
-    top: -15px; /* 입력란 위로 이동하여 숨김 */
-  }
-
-  .btn-area {
-    margin-top: 40px; 
-    margin-bottom: 30px;/* 수정: 위 margin 감소 */
-  }
-
-  .btn-area button {
-    width: 400px;
-    height: 50px;
-    background: rgb(74, 73, 80);
-    color: rgb(255, 255, 255);
-    font-size: 20px;
-    border: none;
-    border-radius: 25px;
-  }
-
-  .caption {
-    margin-top: 10px; /* 수정: 위 margin 감소 */
-    text-align: center;
-  }
-
-  .caption a {
-    font-size: 15px;
-    color: #999;
-    text-decoration: none;
-  }
-
-  .checkbox {
-    display: flex;
-    align-items: center;
-    justify-content: left;
-    margin-top: 10px;
-  }
-
-  .checkbox input[type="checkbox"] {
-    margin-right: 5px;
-    font-size: 30px;
-    
-  }
-	
 footer{
 	margin-left:0;
 	width: 100%;
@@ -356,29 +321,6 @@ footer p span{
 }
 
 </style>
-<%
-        // 인코딩 처리
-        request.setCharacterEncoding("euc-kr"); 
- %>
- <script type="text/javascript">
-    
-        function checkValue()
-        {
-            inputForm = eval("document.loginInfo");
-            if(!inputForm.userid.value)
-            {
-                alert("아이디를 입력하세요");    
-                inputForm.userid.focus();
-                return false;
-            }
-            if(!inputForm.userpw.value)
-            {
-                alert("비밀번호를 입력하세요");    
-                inputForm.userpw.focus();
-                return false;
-            }
-        }
-</script>
 <script src="https://kit.fontawesome.com/d69fb28507.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -466,30 +408,134 @@ footer p span{
     <hr class="logo_hr">
 </header>
 
-<section class="login-form" align="center">
-    <h1>로그인</h1>
-    <form action="login_db.jsp" name="loginInfo" onsubmit="return checkValue()" method="post">
+<section>
+    <div id="slide001">
+        <div id="container">
+            <div class="slide_wrap">
+              <div class="slide_box">
+                <div class="slide_list clearfix">
+                    <span class="slideshow-container">
+                        <div class="Slidesbackground">
+                            <div class="mySlides fade">
+                                <img src="../file/메인 슬라이드 배너/메인 1 맨투맨/메인 1.png" class="slideshow-image">
+                            </div>
+                            <div class="mySlides fade">
+                                <img src="../file/메인 슬라이드 배너/메인 2 카라티/메인 2.png" class="slideshow-image">
+                            </div>
+                            <div class="mySlides fade">
+                                <img src="../file/메인 슬라이드 배너/메인 3 데일리웨어/메인 3.png" class="slideshow-image">
+                            </div>
+                        </div>
+                        <!-- // .slide_list -->
+                    </span>
+                </div>
+                <!-- // .slide_box -->
+                <div class="slide_btn_box">
+                    <button type="button" class="slide_btn_prev" onclick="prevSlide()">&lt;</button>
+                    <button type="button" class="slide_btn_next" onclick="nextSlide()">&gt;</button>
+                </div>
+                <!-- // .slide_btn_box -->
+                <ul class="slide_pagination"></ul>
+              <!-- // .slide_pagination -->
+            </div>
+            <!-- // .slide_wrap -->
+        </div>
+        <!-- // .container -->
+    </div>
     
-          <div class="int-area" align="center">
-            <input type="text" name="userid" id="id" autocomplete="off" required>
-            <label for="id">USER NAME</label>
+    <div class="new_design">
+        <div class="new_design_radius">
+            <p class="new_design_logo">
+                New Design
+            </p>
         </div>
-        <div class="int-area">
-            <input type="password" name="userpw" id="pw" autocomplete="off" required align="center">
-            <label for="pw">PASSWORD</label>
+        <br>
+        &nbsp;
+        <div class="new_design_img">
+            <span class="new_design_img_1">
+                <a href="./detail.html">
+                    <img class="product_img" src="../file/img/mantoman/man1.png">
+                    <div class="img_into">
+                        <p>[Case] twenty,twenty two.2022</p>
+                        <hr>
+                        <p>14000원</p>
+                    </div>
+                </a>
+            </span>
+            <span class="new_design_img_2">
+                <a href="">
+                    <img class="product_img" src="../file/상품/Tel Que Tu Es Sweatshirt, Purple/상품 밑 4.png">
+                    <div class="img_into">
+                        <p>[Case] twenty,twenty two.2022</p>
+                        <hr>
+                        <p>14000원</p>
+                    </div>
+                </a>
+            </span>
+            <span class="new_design_img_3">
+                <a href="">
+                    <img class="product_img" src="../file/상품/베이베어 웜레드 맨투맨 블랙/베이베어 웜레드 맨투맨 블랙.png">
+                    <div class="img_into">
+                        <p>[Case] twenty,twenty two.2022</p>
+                        <hr class="new_design_hr">
+                        <p>14000원</p>
+                    </div>
+                </a>
+            </span>
+            <span class="new_design_img_4">
+                <a href="">
+                    <img class="product_img" src="../file/상품/아플리케 작은 로고 맨투맨/상품 밑 3.png">
+                    <div class="img_into">
+                        <p>[Case] twenty,twenty two.2022</p>
+                        <hr>
+                        <p>14000원</p>
+                    </div>
+                </a>
+            </span>
+            </div>
+            <div class="new_design_img2">
+            <span class="new_design_img_5">
+                <a href="">
+                    <img class="product_img" src="../file/상품/어센틱 에버그린 맨투맨 멜란지/어센틱 에버그린 맨투맨 멜란지.png">
+                    <div class="img_into">
+                        <p>[Case] twenty,twenty two.2022</p>
+                        <hr>
+                        <p>14000원</p>
+                    </div>
+                </a>
+            </span>
+            <span class="new_design_img_6">
+                <a href="">
+                    <img class="product_img" src="../file/상품/유니 세미오버 레인보우 홀스 스웻셔츠/유니 세미오버 레인보우 홀스 스웻셔츠.png">
+                    <div class="img_into">
+                        <p>[Case] twenty,twenty two.2022</p>
+                        <hr>
+                        <p>14000원</p>
+                    </div>
+                </a>
+            </span>
+            <span class="new_design_img_7">
+                <a href="">
+                    <img class="product_img" src="../file/상품/헤비 코튼 오버 럭비 맨투맨_Midnight Blue/헤비 코튼 오버 럭비 맨투맨_Midnight Blue.png">
+                    <div class="img_into">
+                        <p>[Case] twenty,twenty two.2022</p>
+                        <hr>
+                        <p>14000원</p>
+                    </div>
+                </a>
+            </span>
+            <span class="new_design_img_8">
+                <a href="">
+                    <img class="product_img" src="../file/상품/RETRIEVER FRIENDS CREWNECK/RETRIEVER FRIENDS CREWNECK [NAVY] .png">
+                    <div class="img_into">
+                        <p>[Case] twenty,twenty two.2022</p>
+                        <hr>
+                        <p>14000원</p>
+                    </div>
+                </a>
+            </span>
         </div>
-          <input type="checkbox" id="rememberMe" align="center">
-          <label for="rememberMe">아이디 저장</label>
-          
-        <div class="caption">
-            <a href="">아이디 찾기 |</a> <a href="">비밀번호 찾기 |</a> <a href="">회원가입</a>
-        </div>
-
-        <div class="btn-area">
-		<button id="btn" type="submit">LOGIN</button>
-        </div>
-    </form>
-    
+    </div>
 </section>
 </div>
 
@@ -506,20 +552,6 @@ footer p span{
         <span>COPYRIGHT (c) (주)2렇게잘하조 ALL RIGHTS RESERVED.</span>
     </p>
 </footer>	
-
-<script>
-    let id = $('#id');
-    let pw = $('#pw');
-    let btn = $('#btn');
-
-    $(btn).on('click', function() {
-        if ($(id).val() == "") {
-            alert('아이디를 입력하세요');
-        } else if ($(pw).val() == "") {
-            alert('비밀번호를 입력하세요')
-        }
-    });
-</script>
-<script src="user.js"></script>
+    
 </body>
 </html>
