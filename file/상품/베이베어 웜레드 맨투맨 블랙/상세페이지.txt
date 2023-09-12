@@ -1,0 +1,37 @@
+<div class="right_contents product_info_contents">
+    <p class="title-box font-mss">Info<span class="korSub">정보</span></p>
+        <div class="n-report-wrap">
+        <div class="n-report">
+            <button type="button" class="btn-report" onclick="reportReviewsPop('/app/cs/report_pop/PRO/3529960')">
+                <span>무신사는 공정한 경쟁을 통한 신뢰 있는 상품을 제공하고자 합니다. 상품에 문제가 있는 경우 알려 주세요.</span>
+                <em><i class="ic-18-stencil-report"></i>신고</em>
+            </button>
+        </div>
+    </div>
+
+    <!-- [D] 공식 배너 -->
+    
+
+        
+            <!-- 상품 상단 이벤트 배너 -->
+
+    
+    <div class="detail_product_info view-all" id="detail_view">
+                    <div class="detail_product_info_item">
+                <p align="center"><img alt="몬스터리퍼블릭(MONSTER REPUBLIC) 베이베어 웜레드 맨투맨 블랙" title="" src="https://monremade.hgodo.com/monster/promotion_musinsa.jpg"><br><img alt="몬스터리퍼블릭(MONSTER REPUBLIC) 베이베어 웜레드 맨투맨 블랙" title="" src="https://monremade.hgodo.com/monster/monsterrepublic_brand_info_001.jpg"><br><img alt="몬스터리퍼블릭(MONSTER REPUBLIC) 베이베어 웜레드 맨투맨 블랙" title="" src="https://monremade.hgodo.com/monster/monsterrepublic_brand_info_002.jpg"><br><img alt="몬스터리퍼블릭(MONSTER REPUBLIC) 베이베어 웜레드 맨투맨 블랙" title="" src="https://monremade.hgodo.com/monster/monsterrepublic_brand_info_003.jpg"><br><img alt="몬스터리퍼블릭(MONSTER REPUBLIC) 베이베어 웜레드 맨투맨 블랙" title="" src="https://monremade.hgodo.com/monster/t_shirt_event_01.jpg"><br><img alt="몬스터리퍼블릭(MONSTER REPUBLIC) 베이베어 웜레드 맨투맨 블랙" title="" src="https://monremade.hgodo.com/monster/t_shirt_event_02.jpg"><br><img alt="몬스터리퍼블릭(MONSTER REPUBLIC) 베이베어 웜레드 맨투맨 블랙" title="" src="https://monremade.hgodo.com/monster/23_mtm_intro_main_01.jpg"><br><img alt="몬스터리퍼블릭(MONSTER REPUBLIC) 베이베어 웜레드 맨투맨 블랙" title="" src="https://monremade.hgodo.com/monster/23_mtm_intro_main_02.jpg"><br><img alt="몬스터리퍼블릭(MONSTER REPUBLIC) 베이베어 웜레드 맨투맨 블랙" title="" src="https://monremade.hgodo.com/monster/23_mtm_intro_main_03.jpg"><br><img alt="몬스터리퍼블릭(MONSTER REPUBLIC) 베이베어 웜레드 맨투맨 블랙" title="" src="https://monremade.hgodo.com/monster/23_mtm_intro_main_04.jpg"><br><img alt="몬스터리퍼블릭(MONSTER REPUBLIC) 베이베어 웜레드 맨투맨 블랙" title="" src="https://monremade.hgodo.com/monster/23_mtm_intro_main_05.jpg"><br><img alt="몬스터리퍼블릭(MONSTER REPUBLIC) 베이베어 웜레드 맨투맨 블랙" title="" src="https://monremade.hgodo.com/monster/20_mtm_babebear_red_black_950_01.jpg"><br><img alt="몬스터리퍼블릭(MONSTER REPUBLIC) 베이베어 웜레드 맨투맨 블랙" title="" src="https://monremade.hgodo.com/monster/20_mtm_babebear_red_black_950_02.jpg"><br><img alt="몬스터리퍼블릭(MONSTER REPUBLIC) 베이베어 웜레드 맨투맨 블랙" title="" src="https://monremade.hgodo.com/monster/20_mtm_babebear_red_black_950_03.jpg"><br><img alt="몬스터리퍼블릭(MONSTER REPUBLIC) 베이베어 웜레드 맨투맨 블랙" title="" src="https://monremade.hgodo.com/monster/20_mtm_babebear_red_black_950_04.jpg"><br><img alt="몬스터리퍼블릭(MONSTER REPUBLIC) 베이베어 웜레드 맨투맨 블랙" title="" src="https://monremade.hgodo.com/monster/20_mtm_babebear_red_black_950_05.jpg"><br><img alt="몬스터리퍼블릭(MONSTER REPUBLIC) 베이베어 웜레드 맨투맨 블랙" title="" src="https://monremade.hgodo.com/monster/20_mtm_babebear_red_black_950_06.jpg"><br><img alt="몬스터리퍼블릭(MONSTER REPUBLIC) 베이베어 웜레드 맨투맨 블랙" title="" src="https://monremade.hgodo.com/monster/mtm_model_info_black_23fw.jpg"><br><img alt="몬스터리퍼블릭(MONSTER REPUBLIC) 베이베어 웜레드 맨투맨 블랙" title="" src="https://monremade.hgodo.com/monster/23_mtm_size_info.jpg"></p>
+            </div>
+        
+        <div class="detail_product_info_item">
+            
+                        
+                                </div>
+    </div>
+
+        <div class="btn-more btn-close">
+        <button type="button" onclick="detailViewMore(this);"><span>상품정보 접기<i class="ic-30-line-arrow-top"></i></span></button>
+    </div>
+    
+    <!--#fit 피팅-->
+    <div id="sizeFitting" style="display:none"></div>
+    <!--//피팅-->
+</div>
