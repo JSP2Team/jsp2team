@@ -5,6 +5,8 @@
 <configuration>
 	<typeAliases>
 		<typeAlias type="com.codingbox.DTO.UserDTO" alias="userdto" />
+		<typeAlias type="com.codingbox.DTO.ReplyDTO" alias="replydto" />
+
 	</typeAliases>
 	<environments default="development">
 		<environment id="development">
