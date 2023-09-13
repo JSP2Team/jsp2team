@@ -23,7 +23,7 @@
    %>
       <script>
          // alert("로그인 성공") ;
-         location.href = "main_login.jsp" ;
+         location.href = "main.jsp" ;
       </script>
       
    
