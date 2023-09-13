@@ -403,25 +403,25 @@ footer p span{
                 &nbsp;&nbsp;
                 <!-- 로그인 -->
                 <li>
-                    <a class="header_login" href="">login</a>
+                    <a class="header_login" href="login.jsp">login</a>
                 </li>
                 &nbsp;&nbsp;
                 <!-- 회원가입 -->
                 <li >
-                    <a class="header_join" href="">join</a>
+                    <a class="header_join" href="join.jsp">join</a>
                 </li>
                 &nbsp;&nbsp;
                 <!-- 마이페이지 -->
                 <li>
-                    <a class="my_icon" href="">
-                        <img class="my_icon_img" src="./asset/file/icon_my_black.png">
+                    <a class="my_icon" href="mypage.jsp">
+                        <img class="my_icon_img" src="../asset/file/icon_my_black.png">
                     </a>
                 </li>
                 &nbsp;&nbsp;
                 <!-- 장바구니 -->
                 <li>
-                    <a class="cart_icon" href="">
-                        <img class="cart_icon_img" src="./asset/file/icon_cart_black.png">
+                    <a class="cart_icon" href="cart.jsp">
+                        <img class="cart_icon_img" src="../asset/file/icon_cart_black.png">
                     </a>
                 </li>
                 &nbsp;&nbsp;
@@ -442,9 +442,9 @@ footer p span{
         <!-- 헤더 로고 -->
     <div id="main_logo">
         <p>
-            <a href="./asd.html">
+            <a href="main.jsp">
                 <b>
-                    <img class="main_logo_img" src="./asset/file/1890799720.png">
+                    <img class="main_logo_img" src="../asset/file/1890799720.png">
                 </b>
             </a>
         </p>
@@ -454,24 +454,24 @@ footer p span{
     <div class="menu">
         <ul>
             <li>
-                <a class="category" href="">ABOUT</a>
+                <a class="category" >ABOUT</a>
             </li>
             <li>
-                <a class="category" href="">SHOP</a>
+                <a class="category" href="product.jsp">SHOP</a>
                 <ul>
                     <li>
-                        <a class="category" href="">BEST</a>
+                        <a class="category" href="product.jsp">BEST</a>
                     </li>
                     <li>
-                        <a class="category" href="">NEW</a>
+                        <a class="category" href="product.jsp">NEW</a>
                     </li>
                 </ul>
             </li>
             <li>
-                <a class="category" href="">ARCHIVE</a>
+                <a class="category" >ARCHIVE</a>
             </li>
             <li>
-                <a class="category" href="">COMMUNITY</a>
+                <a class="category" href="community.jsp">COMMUNITY</a>
             </li>
         </ul>
     </div>
@@ -673,8 +673,34 @@ footer p span{
     }
     //슬라이드 화면 전환
 
-    // 검색버튼
-   
+   // 로그인 버튼 클릭 시
+function login() {
+    // 로그인 로직을 수행하고, 성공 시 아래의 코드를 실행합니다.
+
+    // 서버에서 로그인 상태를 확인하고 값을 설정합니다.
+    // 예: 로그인 상태가 "true"라면
+    const isLoggedIn = true;
+
+    if (isLoggedIn) {
+        document.getElementById("loginButton").style.display = "none"; // 로그인 버튼 숨기기
+        document.getElementById("logoutButton").style.display = "block"; // 로그아웃 버튼 표시
+    }
+}
+
+// 로그아웃 버튼 클릭 시
+function logout() {
+    // 로그아웃 로직을 수행하고, 성공 시 아래의 코드를 실행합니다.
+
+    // 서버에서 로그인 상태를 확인하고 값을 설정합니다.
+    // 예: 로그인 상태가 "false"라면
+    const isLoggedIn = false;
+
+    if (!isLoggedIn) {
+        document.getElementById("logoutButton").style.display = "none"; // 로그아웃 버튼 숨기기
+        document.getElementById("loginButton").style.display = "block"; // 로그인 버튼 표시
+    }
+}
+
 
 </script>
 </body>

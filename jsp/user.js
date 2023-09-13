@@ -151,6 +151,34 @@ function checkId(userid){
 		}
 	}
 }
+
+function checkId(userid){
+        //alert(userid);
+	if(userid == ""){
+		alert("아이디를 입력해주세요.");
+		userid.focus();
+		return false;
+	}else{
+		// ajax통신
+		let xhr = new XMLHttpRequest();
+		xhr.open("GET", "idcheck.jsp?userid="+userid, true);
+		xhr.send();
+		xhr.onreadystatechange = function() {
+			// 응답
+			if( xhr.readyState === XMLHttpRequest.DONE &&
+					xhr.status === 200){
+				if( xhr.responseText.trim() == "ok" ){
+					//ok
+					alert("사용할 수 있는 아이디 입니다.");
+				}else{
+					// not-ok
+					alert("사용할 수 없는 아이디 입니다.");
+				}
+			}
+		}
+	}
+}
+
 	 function Postcode() {
         new daum.Postcode({
             oncomplete: function(data) {
