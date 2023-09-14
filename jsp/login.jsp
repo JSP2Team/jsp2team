@@ -479,7 +479,7 @@ footer p span{
 
 <section class="login-form" align="center">
     <h1>로그인</h1>
-    <form action="login_db.jsp" name="loginInfo" onsubmit="logincheck()" method="post">
+    <form action="loginOk.bo" name="loginInfo" onsubmit="logincheck()" method="post">
     
           <div class="int-area" align="center">
             <input type="text" name="userid" id="userid" autocomplete="off" required>
@@ -498,7 +498,6 @@ footer p span{
 
         <div class="btn-area">
 		<button id="btn" type="submit">LOGIN</button>
-		<!-- <input type="button" class="button" value="LOGIN" onclick="logincheck();" /> -->
         </div>
     </form>
     
@@ -518,20 +517,6 @@ footer p span{
         <span>COPYRIGHT (c) (주)2렇게잘하조 ALL RIGHTS RESERVED.</span>
     </p>
 </footer>	
-
-<script>
-    let id = $('#id');
-    let pw = $('#pw');
-    let btn = $('#btn');
-
-    $(btn).on('click', function() {
-        if ($(id).val() == "") {
-            alert('아이디를 입력하세요');
-        } else if ($(pw).val() == "") {
-            alert('비밀번호를 입력하세요')
-        }
-    });
-</script>
 
 <script src="user.js"></script>
 </body>
