@@ -918,6 +918,7 @@ crossorigin="anonymous"></script>
                                   type="button"
                                   class="btn_resp size_d color1 btn_add_cart"
                                   data-create_type="add"
+                                  href="cart.jsp"
                                 >
                                   장바구니
                                 </button>

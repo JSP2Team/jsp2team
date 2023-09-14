@@ -1,3 +1,4 @@
+<%@page import="com.codingbox.DTO.UserDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -388,6 +389,13 @@ footer p span{
         <div class="header">
             <ul class="login_section">
                 <li class="header_wel">Welcome!</li>
+                <%
+		   		UserDTO member = (UserDTO)session.getAttribute("session_id") ;
+		      
+		         if(member != null){ // 로그인 한 사람
+		  		 %>
+                <li class="header_come" style="display: none;"> <%= member.getUser_name()%> 님 환영합니다.</li>
+                <% } %>
                 &nbsp;&nbsp;
                 <!-- 로그인 -->
                 <li>
@@ -397,6 +405,9 @@ footer p span{
                 <!-- 회원가입 -->
                 <li >
                     <a class="header_join" href="join.jsp">join</a>
+                </li>
+                <li >
+                    <input type="button" class="header_logout" value="logout" href="./" style="display: none;" onclick="logout();"/>
                 </li>
                 &nbsp;&nbsp;
                 <!-- 마이페이지 -->
@@ -468,7 +479,7 @@ footer p span{
 
 <section class="login-form" align="center">
     <h1>로그인</h1>
-    <form action="login_db.jsp" name="loginInfo" onsubmit="return checkValue()" method="post">
+    <form action="login_db.jsp" name="loginInfo" onsubmit="logincheck()" method="post">
     
           <div class="int-area" align="center">
             <input type="text" name="userid" id="userid" autocomplete="off" required>
@@ -487,6 +498,7 @@ footer p span{
 
         <div class="btn-area">
 		<button id="btn" type="submit">LOGIN</button>
+		<!-- <input type="button" class="button" value="LOGIN" onclick="logincheck();" /> -->
         </div>
     </form>
     
@@ -520,6 +532,7 @@ footer p span{
         }
     });
 </script>
+
 <script src="user.js"></script>
 </body>
 </html>

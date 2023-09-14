@@ -1,3 +1,4 @@
+<%@page import="com.codingbox.DTO.UserDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -400,17 +401,24 @@ footer p span{
         <div class="header">
             <ul class="login_section">
                 <li class="header_wel">Welcome!</li>
-                &nbsp;&nbsp;
-                <!-- 로그인 -->
-                <li>
-                    <a class="header_login" href="login.jsp">login</a>
-                </li>
-                &nbsp;&nbsp;
-                <!-- 회원가입 -->
-                <li >
-                    <a class="header_join" href="join.jsp">join</a>
-                </li>
-                &nbsp;&nbsp;
+			        <li class="header_come" style="display: none;"></li>
+			        &nbsp;&nbsp;
+			        <!-- 로그인 -->
+			        <li>
+			            <a class="header_login" href="login.jsp">login</a>
+			        </li>
+			        &nbsp;&nbsp;
+			        <!-- 회원가입 -->
+			        <li>
+			            <a class="header_join" href="join.jsp">join</a>
+			        </li>
+			        
+			        <li>
+			            <input type="button" class="header_logout" value="logout" style="display: none;" onclick="logout();"/>
+			        </li>
+			        <!-- 사용자 userid 표시 -->
+			        <li class="header_userid"></li>
+			     &nbsp;&nbsp;
                 <!-- 마이페이지 -->
                 <li>
                     <a class="my_icon" href="mypage.jsp">
@@ -596,7 +604,7 @@ footer p span{
             </span>
             <span class="new_design_img_8">
                 <a href="">
-                    <img class="product_img" src="../file/상품/RETRIEVER FRIENDS CREWNECK/RETRIEVER FRIENDS CREWNECK [NAVY] .png">
+                    <img class="product_img" src="../file/상품/RETRIEVER FRIENDS CREWNECK/navy.png">
                     <div class="img_into">
                         <p>[Case] twenty,twenty two.2022</p>
                         <hr>
@@ -673,35 +681,10 @@ footer p span{
     }
     //슬라이드 화면 전환
 
-   // 로그인 버튼 클릭 시
-function login() {
-    // 로그인 로직을 수행하고, 성공 시 아래의 코드를 실행합니다.
 
-    // 서버에서 로그인 상태를 확인하고 값을 설정합니다.
-    // 예: 로그인 상태가 "true"라면
-    const isLoggedIn = true;
-
-    if (isLoggedIn) {
-        document.getElementById("loginButton").style.display = "none"; // 로그인 버튼 숨기기
-        document.getElementById("logoutButton").style.display = "block"; // 로그아웃 버튼 표시
-    }
-}
-
-// 로그아웃 버튼 클릭 시
-function logout() {
-    // 로그아웃 로직을 수행하고, 성공 시 아래의 코드를 실행합니다.
-
-    // 서버에서 로그인 상태를 확인하고 값을 설정합니다.
-    // 예: 로그인 상태가 "false"라면
-    const isLoggedIn = false;
-
-    if (!isLoggedIn) {
-        document.getElementById("logoutButton").style.display = "none"; // 로그아웃 버튼 숨기기
-        document.getElementById("loginButton").style.display = "block"; // 로그인 버튼 표시
-    }
-}
 
 
 </script>
+
 </body>
 </html>

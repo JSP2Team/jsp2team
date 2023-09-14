@@ -99,58 +99,65 @@
  }
  
  //로그인시 validation check
-function logincheck(){
-	
-	let frm = document.frm;
-	let userid = frm.userid
-	let userpw = frm.userpw
-	
-	// 아이디 "", alert
-	if( userid.value == ""){
-		alert("아이디를 입력하세요.");
-		userid.focus();
-		return false;
-	}
-	
-	// 비밀번호 "", alert
-	if( userpw.value == ""){
-		alert("비밀번호를 입력하세요.");
-		userpw.focus();
-		return false;
-	}
-	
-	frm.submit();
+
+function logincheck() {
+    let frm = document.frm;
+    let userid = frm.userid;
+    let userpw = frm.userpw;
+    
+    // 아이디 "", alert
+    if (userid.value == "") {
+        alert("아이디를 입력하세요.");
+        userid.focus();
+        return false;
+    }
+
+    // 비밀번호 "", alert
+    if (userpw.value == "") {
+        alert("비밀번호를 입력하세요.");
+        userpw.focus();
+        return false;
+    }
+
+    
+
+    frm.submit();
 }
 
-//아이디 중복체크
-function checkId(userid){
-	//alert(userid);
-	if(userid == ""){
-		alert("아이디를 입력해주세요.");
-		userid.focus();
-		return false;
-	}else{
-		// ajax통신
-		let xhr = new XMLHttpRequest();
-		xhr.open("GET", "idcheck.jsp?userid="+userid, true);
-		xhr.send();
-		xhr.onreadystatechange = function() {
-			// 응답
-			if( xhr.readyState = XMLHttpRequest.DONE &&
-					xhr.status == 200){
-				if( xhr.responseText.trim() == "ok" ){
-					//ok
-					document.getElementById("text").innerHTML
-						=	"사용할 수 있는 아이디 입니다.";
-				}else{
-					// not-ok
-					document.getElementById("text").innerHTML
-						=	"사용할 수 없는 아이디 입니다.";
-				}
-			}
-		}
-	}
+window.onload = function () {
+    // 세션에서 사용자 정보 객체 가져오기
+    const userObj = <%= session.getAttribute("session_id") %>;
+
+    // 사용자 아이디를 가져올 수 있는지 확인
+    if (userObj && userObj.getUserid) {
+        const userid = userObj.getUserid();
+
+        // 사용자 아이디를 헤더에 표시
+        const header_userid = document.querySelector('.header_userid');
+        if (userid) {
+            header_userid.textContent = userid + ' 님 환영합니다.';
+            header_userid.style.display = 'inline-block';
+
+            // 로그인 상태일 때의 버튼 설정
+            const loginButton = document.querySelector('.header_login');
+            const joinButton = document.querySelector('.header_join');
+            const logoutButton = document.querySelector('.header_logout');
+            const header_wel = document.querySelector('.header_wel');
+            const header_come = document.querySelector('.header_come');
+
+            loginButton.style.display = 'none';
+            joinButton.style.display = 'none';
+            logoutButton.style.display = 'inline-block';
+            header_wel.style.display = 'none';
+            header_come.style.display = 'inline-block';
+        } else {
+            header_userid.style.display = 'none';
+        }
+    }
+
+    // 나머지 헤더 요소와 관련된 코드는 여기에 계속 추가하세요.
 }
+
 
 function checkId(userid){
         //alert(userid);
