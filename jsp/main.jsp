@@ -401,13 +401,7 @@ footer p span{
         <div class="header">
             <ul class="login_section">
                 <li class="header_wel">Welcome!</li>
-			        <li class="header_come" style="display: none;">
-				        <%= session.getAttribute("user_name") %>
-				        님 환영합니다.
-			        </li>
-			        <li>
-			        	<a><%= session.getAttribute("user_name") %></a>
-			        </li>
+			        <li class="header_come" style="display: none;"></li>
 			        &nbsp;&nbsp;
 			        <!-- 로그인 -->
 			        <li>
@@ -422,6 +416,8 @@ footer p span{
 			        <li>
 			            <input type="button" class="header_logout" value="logout" style="display: none;" onclick="logout();"/>
 			        </li>
+			        <!-- 사용자 userid 표시 -->
+			        <li class="header_userid"></li>
 			     &nbsp;&nbsp;
                 <!-- 마이페이지 -->
                 <li>
@@ -684,7 +680,11 @@ footer p span{
         showSlides(); // 이전 슬라이드 표시
     }
     //슬라이드 화면 전환
+
+
+
+
 </script>
-<script src="user.js"></script>
+
 </body>
 </html>

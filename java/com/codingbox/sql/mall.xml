@@ -10,8 +10,8 @@
 	</insert>
 	
 	<!-- 로그인 -->
-	<select id="login" parameterType="hashmap" resultType="_int">
-		SELECT count(*) FROM USERS
+	<select id="login" parameterType="hashmap" resultType="com.codingbox.DTO.UserDTO">
+		SELECT * FROM USERS
 		WHERE USER_ID = #{userid} AND USER_PWD = #{userpw}
 	</select>
 	
@@ -19,10 +19,6 @@
 		SELECT count(*) FROM USERS
 		WHERE USER_ID = #{userid}
 	</select>
-	
-	<select id="getUserInfo" resultType="com.codingbox.DTO.UserDTO">
-        SELECT * FROM users WHERE USER_ID = #{userid}
-    </select>
 
 	<!-- 후기 -->
 	<insert id="addReply" parameterType="replydto">
@@ -43,6 +39,14 @@
 	<delete id="deleteReply" parameterType="_int">
 		DELETE FROM productReivews WHERE pr_key = #{pr_key}
 	</delete>
+	
+	<!-- 결제 -->
+	<insert id="order" parameterType="orderdto">
+		INSERT INTO totalOrder
+		VALUES (totalOrder_seq.NEXTVAL, #{user_id}, #{prod_key}, #{order_cnt}, #{order_price}, #{order_name},
+		 #{order_zipcode}, #{order_addr}, #{order_addr_detail}, #{order_tel}, #{order_req}, sysdate )
+			
+	</insert>	
 </mapper>
 
 

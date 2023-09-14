@@ -1,5 +1,7 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
+ <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>  
 <!DOCTYPE html>
 <html>
 <head>
@@ -501,26 +503,27 @@ html, body {
 
             <div class="order_body payment">
                 <h3 class="sub_tit">주문 상품</h3>
-                <form name="frm-order-form" id="frm-order-form">
+                <form action="${pageContext.request.contextPath}/jsp/sign.si" method="post" name="frm-order-form" id="frm-order-form" >
                     
-                    <input type="hidden" name="_token" value="G0cuB0qK9avsl81b7VZsOwsLpRyhDkKSRbGRmCxK">
+<!--                     <input type="hidden" name="_token" value="G0cuB0qK9avsl81b7VZsOwsLpRyhDkKSRbGRmCxK"> -->
 
                     
-                    <input type="hidden" name="member_seq" value="7">
+<!--                     <input type="hidden" name="member_seq" value="7"> -->
                                             
-                    <input type="hidden" id="payment_waiting_days" value="3">
+<!--                     <input type="hidden" id="payment_waiting_days" value="3"> -->
 
                     
-                    <input type="hidden" name="page_opened_date" value="2023-09-07 14:05:18">
+<!--                     <input type="hidden" name="page_opened_date" value="2023-09-07 14:05:18"> -->
 
                     <div id="div-order-products" class="list_board list_prod">
                         <ul class="thead">
                             <li class="item_order">상품정보</li>
                             <li class="item_count" style="width:100px;">수량</li>
-                            <!-- <li class="item_count" style="width:160px;">할인</li> -->
+
                             <li class="item_count" style="width:160px;">상품금액</li>
                         </ul>
-                    </div><!--// list_board -->
+                    </div>
+                    <!--// list_board -->
 
                     <div id="div-orderer-info" class="payment_info">
                         <div class="info_area">
@@ -529,13 +532,13 @@ html, body {
                                 <ul class="form_list">
                                     <li class="half">
                                         <label for="orderer_name">이름</label>
-                                        <input type="text" placeholder="이름" name="orderer_name" data-field="member_name" data-attr="value"></li>
+                                        <input type="text" placeholder="이름" name="order_name" data-field="member_name" data-attr="value"></li>
                                     <li class="half">
                                         <label for="orderer_phone">연락처</label>
                                       
-                                        <input type="text" class="onlyNumberInput" name="orderer_phone" placeholder="- 없이 숫자만 입력" data-field="member_phone" data-attr="value" data-onlyNumberType="regOnlyNumber">
+                                        <input type="text" class="onlyNumberInput" name="order_tel" placeholder="- 없이 숫자만 입력" data-field="member_phone" data-attr="value" data-onlyNumberType="regOnlyNumber">
                                     </li>
-                                    <li>
+                                    <li class="half">
                                         <label for="orderer_email">이메일</label>
                                         <input type="email" name="orderer_email" placeholder="이메일주소" data-field="member_email" data-attr="value">
                                     </li>
@@ -634,7 +637,7 @@ html, body {
                                             <button type="button" class="btn_agree_detail btn-show-layer" data-key="member_agree">보기</button>
                                         </p>
                                     </div>
-                                    <div id="create_order_button_lay" class="wrap_btn_payment"><button type="button" id="PaymentLibrary_PayButton" class="payment-lib-pay-button">결제하기</button></div>
+                                    <div id="create_order_button_lay" class="wrap_btn_payment"><button type="submit" id="PaymentLibrary_PayButton" class="payment-lib-pay-button">결제하기</button></div>
                                 </div>
                             </div><!--// price_box -->
                         </div><!--// price_area -->
