@@ -34,5 +34,9 @@
       </script>
       
    <% } %>
+   <script>
+    const userid = <%= session.getAttribute("session_id").getUserid() %>;
+</script>
+ 
 </body>
 </html>
