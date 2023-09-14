@@ -287,10 +287,7 @@ element.style {
     vertical-align: middle;
     transition: border-color 0.2s, background-color 0.2s;
 }
-/* @media only screen and (max-width: 1279px){
-body, th, td, input, select, textarea, button, pre {
-    font-size: calc( 15px - ( 1280px - 100vw ) * 0.0007247 );
-}} */
+
 
 body, h1, h2, h3, h4, h5, h6, th, td, input, select, textarea, button, pre {
     font-size: 15px;
@@ -316,10 +313,7 @@ html, body {
   padding: 0;
   height: 100%;
 }
-/* .logo_hr{
-    color: black;
-    font-weight: bold;
-} */
+
 .manghal{
     width: 1000px;
 }
@@ -327,12 +321,12 @@ html, body {
 </style>
 <link rel="stylesheet" href="community.css">
 
-<link rel="stylesheet" type="text/css" href="../asset/css/modules/module_mypage.css"/>
+<link rel="stylesheet" type="text/css" href="../asset/css/modules/ asset/css/modules/module_mypage.css"/>
 
 <script src="https://kit.fontawesome.com/d69fb28507.js" crossorigin="anonymous"></script>
 
 
-    <link rel="stylesheet" type="text/css" href="../shoppingmall/asset/js/postcode.js">
+    <link rel="stylesheet" type="text/css" href="../asset/js/postcode.js">
     <link rel="stylesheet" type="text/css" href="../shoppingmall/asset/css/modules/order.css">
     <link rel="stylesheet" type="text/css" href="https://storage.clickn.co.kr//css/modules/module_order.css">
     <link rel="stylesheet" type="text/css" href="https://storage.clickn.co.kr//css/modules/special_common.css">
@@ -373,7 +367,7 @@ html, body {
                 &nbsp;&nbsp;
                 <!-- 장바구니 -->
                 <li>
-                    <a class="cart_icon" href="cart.jsp">
+                    <a class="cart_icon" href="orderlist.jsp">
                         <img class="cart_icon_img" src="../asset/file/icon_cart_black.png">
                     </a>
                 </li>
@@ -407,24 +401,24 @@ html, body {
     <div class="menu">
         <ul>
             <li>
-                <a class="category" >ABOUT</a>
+                <a class="category" href="">ABOUT</a>
             </li>
             <li>
-                <a class="category" href="product.jsp">SHOP</a>
+                <a class="category" href="">SHOP</a>
                 <ul>
                     <li>
-                        <a class="category" href="product.jsp">BEST</a>
+                        <a class="category" href="">BEST</a>
                     </li>
                     <li>
-                        <a class="category" href="product.jsp">NEW</a>
+                        <a class="category" href="">NEW</a>
                     </li>
                 </ul>
             </li>
             <li>
-                <a class="category" >ARCHIVE</a>
+                <a class="category" href="">ARCHIVE</a>
             </li>
             <li>
-                <a class="category" href="community.jsp">COMMUNITY</a>
+                <a class="category" href="">COMMUNITY</a>
             </li>
         </ul>
     </div>
@@ -552,12 +546,6 @@ html, body {
 
                             <!-- 회원-등록된 배송지 정보 -->
 
-                            <!-- <div class="select_recipients_area hide"> -->
-                                <!-- <div class="select_recipients" data-tap-display="select">배송지선택</div>
-                                <div class="select_recipients" data-tap-display="edit">신규입력</div> -->
-                            <!-- </div> -->
-                            <!-- <div id="div-order-recipients" class="view_recipients_area recipients_list hide"></div> -->
-
                             <div class="info_cont  ">    <!--recipients_edit hide 제거-->
                                 <ul class="form_list">
                                     <li class="half">
@@ -571,21 +559,21 @@ html, body {
                                     </li>
                                     <li class="half">
                                         <label for="address[zipcode]">배송지</label>
-                                        
-                                        <!-- <input type="number" name="address[zipcode]" id="zipcode" placeholder="우편번호" readonly>
-                                        <input type="hidden" name="address[nation_code]" id="nation_code" value="KOR">
-                                        <input type="hidden" name="address[state]" id="state" value="">
-                                        <input type="hidden" name="address[city]" id="city" value="">
-                                        <input type="hidden" name="address[street]" id="street" value="">
-                                        <button id="btn-search-address" type="button" class="btn_resp btn_search">주소 검색</button> -->
-                                    <div class="manghal">    
+
                                         <input type="text" id="sample6_postcode" placeholder="우편번호" readonly>&nbsp;&nbsp;
-                                        <input type="button" onclick="sample6_execDaumPostcode()" value="우편번호 찾기">&nbsp;&nbsp;
-                                        
-                                        <input type="text" id="sample6_address" placeholder="주소" readonly>&nbsp;&nbsp;
-                                        <input type="text" id="sample6_detailAddress" placeholder="상세주소">&nbsp;&nbsp;
+                                        <input type="button" onclick="sample6_execDaumPostcode()" value="우편번호 찾기">
+                                    </li>
+                                    <li class="half">
+                                    	<label></label>
+                                        <input type="text" id="sample6_address" placeholder="주소" readonly>
+                                    </li>
+                                    <li class="half">
+                                    	<label></label>    
+                                        <input type="text" id="sample6_detailAddress" placeholder="상세주소">
+                                    </li>
+                                    <li class="half">
+                                    	<label></label>    
                                         <input type="text" id="sample6_extraAddress" placeholder="참고항목">
-                                    </div>
                                     </li>
                                 </ul>
                             </div>
@@ -673,7 +661,8 @@ html, body {
         <span>COPYRIGHT (c) (주)2렇게잘하조 ALL RIGHTS RESERVED.</span>
     </p>
 </footer>	
-<script src="/join.js"></script>
+<script src="join.js"></script>
 <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 </body>
 </html>
+<!-- 1.11 주소검색 api 프론트 수정/ jsp 예전껄로 되어 있어서 수정 중 / 필요 없는 주석 삭제-->
