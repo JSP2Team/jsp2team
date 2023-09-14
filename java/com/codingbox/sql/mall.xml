@@ -10,8 +10,8 @@
 	</insert>
 	
 	<!-- 로그인 -->
-	<select id="login" parameterType="hashmap" resultType="com.codingbox.DTO.UserDTO">
-		SELECT * FROM USERS
+	<select id="login" parameterType="hashmap" resultType="_int">
+		SELECT count(*) FROM USERS
 		WHERE USER_ID = #{userid} AND USER_PWD = #{userpw}
 	</select>
 	
@@ -19,6 +19,10 @@
 		SELECT count(*) FROM USERS
 		WHERE USER_ID = #{userid}
 	</select>
+	
+	<select id="getUserInfo" resultType="com.codingbox.DTO.UserDTO">
+        SELECT * FROM users WHERE USER_ID = #{userid}
+    </select>
 </mapper>
 
 

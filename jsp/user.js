@@ -124,39 +124,54 @@ function logincheck() {
     frm.submit();
 }
 
-window.onload = function () {
-    // 세션에서 사용자 정보 객체 가져오기
-    const userObj = <%= session.getAttribute("session_id") %>;
-
-    // 사용자 아이디를 가져올 수 있는지 확인
-    if (userObj && userObj.getUserid) {
-        const userid = userObj.getUserid();
-
-        // 사용자 아이디를 헤더에 표시
-        const header_userid = document.querySelector('.header_userid');
-        if (userid) {
-            header_userid.textContent = userid + ' 님 환영합니다.';
-            header_userid.style.display = 'inline-block';
-
-            // 로그인 상태일 때의 버튼 설정
-            const loginButton = document.querySelector('.header_login');
-            const joinButton = document.querySelector('.header_join');
-            const logoutButton = document.querySelector('.header_logout');
-            const header_wel = document.querySelector('.header_wel');
-            const header_come = document.querySelector('.header_come');
-
-            loginButton.style.display = 'none';
-            joinButton.style.display = 'none';
-            logoutButton.style.display = 'inline-block';
-            header_wel.style.display = 'none';
-            header_come.style.display = 'inline-block';
-        } else {
-            header_userid.style.display = 'none';
-        }
+ function logout() {
+        // 여기에 로그아웃 로직을 추가하세요.
+        // 예를 들어, 세션을 종료하고 로그인 상태를 초기화하는 등의 작업을 수행합니다.
+	document.cookie = "session_id=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+        // 로그아웃 후 페이지를 다시 로드할 수 있습니다.
+        window.location.reload();
     }
 
-    // 나머지 헤더 요소와 관련된 코드는 여기에 계속 추가하세요.
-}
+    // 세션에서 사용자 정보 객체 가져오기
+    let session = '<%= session.getAttribute("user") %>';
+	let userObj = '<%= session.getAttribute("user") %>';
+	
+        // 사용자 아이디를 가져올 수 있는지 확인
+      if (userObj.getUserid) {
+    const userName = userObj.getUser_name();
+	consle.log(userName)
+    // 사용자 아이디를 헤더에 표시
+    if (userName != null) {
+        // 로그인 상태일 때의 버튼 설정
+        const loginButton = document.querySelector('.header_login');
+        const joinButton = document.querySelector('.header_join');
+        const logoutButton = document.querySelector('.header_logout');
+        const header_wel = document.querySelector('.header_wel');
+        const header_come = document.querySelector('.header_come');
+
+        loginButton.style.display = 'none';
+        joinButton.style.display = 'none';
+        header_wel.style.display = 'none';
+        header_come.style.display = 'inline-block';
+
+        // 로그아웃 버튼 설정
+        logoutButton.style.display = 'inline-block';
+        logoutButton.value = '로그아웃';
+    } 
+	else {
+	    // 로그인되어 있지 않을 때의 버튼 설정
+	    const loginButton = document.querySelector('.header_login');
+	    const joinButton = document.querySelector('.header_join');
+	    const logoutButton = document.querySelector('.header_logout');
+	    const header_wel = document.querySelector('.header_wel');
+	    const header_come = document.querySelector('.header_come');
+	
+	    loginButton.style.display = 'inline-block';
+	    joinButton.style.display = 'inline-block';
+	    logoutButton.style.display = 'none';
+	    header_wel.style.display = 'inline-block';
+	    header_come.style.display = 'none';
+	}
 
 
 function checkId(userid){
@@ -233,3 +248,4 @@ function checkId(userid){
             }
         }).open();
     }
+}
