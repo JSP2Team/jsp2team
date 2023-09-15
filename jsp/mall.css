@@ -11,7 +11,7 @@ html, body {
 .header{
     display: flex; /* Flexbox를 사용하여 가로 정렬을 설정합니다. */
     justify-content: right; /* 가운데 정렬을 설정합니다. */
-    color: #1337b1;
+    color: #6B95BB;
 }
 
 .header_wel{
@@ -28,22 +28,22 @@ html, body {
 }
 
 .header_login:link{
-    color: #1337b1;
+    color: #6B95BB;
     text-decoration-line: none;
 }
 
 .header_login:visited{
-    color: #1337b1;
+    color: #6B95BB;
     text-decoration-line: none;
 }
 
 .header_join:link{
-    color: #1337b1;
+    color: #6B95BB;
     text-decoration-line: none;
 }
 
 .header_join:visited{
-    color: #1337b1;
+    color: #6B95BB;
     text-decoration-line: none;
 }
 
@@ -66,14 +66,14 @@ html, body {
     width: 20px;
     height: 20px;
     margin-top: auto;
-    filter: invert(14%) sepia(33%) saturate(7348%) hue-rotate(225deg) brightness(111%) contrast(99%);
+    filter: invert(54%) sepia(76%) saturate(220%) hue-rotate(167deg) brightness(91%) contrast(89%);
     text-decoration-line: none;
 }
 
 .cart_icon_img{
     width: 20px;
     height: 20px;
-    filter: invert(14%) sepia(33%) saturate(7348%) hue-rotate(225deg) brightness(111%) contrast(99%);
+    filter: invert(54%) sepia(76%) saturate(220%) hue-rotate(167deg) brightness(91%) contrast(89%);
     text-decoration-line: none;
 }
 
@@ -116,12 +116,12 @@ html, body {
     width: 20px;
     height: 20px;
     background: none;
-    border: 2px solid #1337b1;
+    border: 2px solid #6B95BB;
     border-radius: 50px;
     box-sizing: border-box;
     font-family: Comic Sans MS;
     font-size: 26px;
-    color: #1337b1;
+    color: #6B95BB;
     outline: none;
     transition: .5s;
     
@@ -138,7 +138,7 @@ html, body {
     transform: translate(-50%,-50%);
     font-size: 13px;
     font-weight: bold;
-    color: #1337b1;
+    color: #6B95BB;
     transition: .2s;
 }
 .box:hover i{
@@ -152,8 +152,8 @@ html, body {
 }
 
 .main_logo_img{
-    width: 291px;
-    height: 116px;
+    width: 200px;
+    height: 180px;
 }
 /* 헤더 로고 */
 
@@ -164,7 +164,7 @@ html, body {
 
 .category{
     text-decoration: none;
-    color: #1337b1;
+    color: #6B95BB;
     margin: auto;
 }
 
@@ -287,7 +287,7 @@ html, body {
         margin: 0 auto;
         width: 11em;
         height: 4em;
-        border: 1px solid #1337b1;
+        border: 1px solid #6B95BB;
         border-radius: 100%;;
 }
 
@@ -296,7 +296,7 @@ html, body {
         font-size: 25px;
         line-height: 0.5    ;
         font-weight: 600;
-        color: #1337b1;
+        color: #6B95BB;
 }
 /*메인 뉴브랜드 로고*/
 
@@ -328,7 +328,7 @@ html, body {
 
 .img_into{
     text-align: left;
-    color: #1337b1;
+    color: #6B95BB;
 }
 /*메인 뉴브랜드 제품*/
 
@@ -346,9 +346,9 @@ footer{
     bottom: 0px;
 	left: 0;
 	position: relative;
-	border-top:  1px solid #1337b1;
+	border-top:  1px solid #6B95BB;
 	padding-top: 15px;
-	background-color: #1337b1;
+	background-color: #6B95BB;
 	font-size: 11px;
 }
 
