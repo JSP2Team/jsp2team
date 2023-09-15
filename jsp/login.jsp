@@ -549,6 +549,20 @@ footer p span{
     </p>
 </footer>	
 
+<script>
+    let id = $('#id');
+    let pw = $('#pw');
+    let btn = $('#btn');
+
+    $(btn).on('click', function() {
+        if ($(id).val() == "") {
+            alert('아이디를 입력하세요');
+        } else if ($(pw).val() == "") {
+            alert('비밀번호를 입력하세요')
+        }
+    });
+</script>
+
 <script src="user.js"></script>
 </body>
 </html>

@@ -8,7 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
+
 
 import com.codingbox.action.ActionForward;
 
@@ -25,7 +25,6 @@ public class JoinFrontControll extends HttpServlet{
 		String requestURI = request.getRequestURI();
 		String responseURI = null;
 		ActionForward forward = null;
-	
 		
 		if(requestURI.equals("/mall/jsp/join.bo")) {
 			forward = new JoinAction().execute(request, response);

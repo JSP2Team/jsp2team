@@ -410,32 +410,13 @@ footer p span{
     <div class="logo_area">
         <div class="header">
             <ul class="login_section">
-           <% if (userDTO == 0) { %>
-        <li class="header_wel">Welcome!</li>
-                &nbsp;&nbsp;
-        <li>
-            <a class="header_login" href="login.jsp">login</a>
-        </li>
-        &nbsp;&nbsp;
-        <!-- 회원가입 -->
-        <li>
-            <a class="header_join" href="join.jsp">join</a>
-        </li>
-                &nbsp;&nbsp;
-<% } else { %>
-        <li class="header_come"> 환영합니다.</li>
-                &nbsp;&nbsp;
-        <li>
-             <a href="./" onclick="logout()">logout</a>
-        </li>
-                &nbsp;&nbsp;
-<% } %>
-
-                <%-- <li class="header_wel">Welcome!</li>
+                <li class="header_wel">Welcome!</li>
 			        <li class="header_come" style="display: none;">
+				        <%= session.getAttribute("user_name") %>
+				        님 환영합니다.
 			        </li>
 			        <li>
-			        	<div class="header_come"><%= session.getAttribute("user_name") %>님 환영합니다.</div>
+			        	<a><%= session.getAttribute("user_name") %></a>
 			        </li>
 			        &nbsp;&nbsp;
 			        <!-- 로그인 -->
@@ -451,7 +432,7 @@ footer p span{
 			        <li>
 			            <input type="button" class="header_logout" value="logout" style="display: none;" onclick="logout();"/>
 			        </li>
-			     &nbsp;&nbsp; --%>
+			     &nbsp;&nbsp;
                 <!-- 마이페이지 -->
                 <li>
                     <a class="my_icon" href="mypage.jsp">
@@ -713,7 +694,11 @@ footer p span{
         showSlides(); // 이전 슬라이드 표시
     }
     //슬라이드 화면 전환
+
+
+
+
 </script>
-<script src="user.js"></script>
+
 </body>
 </html>
