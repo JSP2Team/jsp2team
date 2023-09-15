@@ -23,26 +23,6 @@
 	<select id="getUserInfo" resultType="com.codingbox.DTO.UserDTO">
         SELECT * FROM users WHERE USER_ID = #{userid}
     </select>
-
-	<!-- 후기 -->
-	<insert id="addReply" parameterType="replydto">
-		INSERT INTO productReivews VALUES
-		(productReivews_seq.nextval, #{user_id}, #{pr_content}, sysdate)
-	</insert>
-	
-	<select id="getReplys" parameterType="_int"
-		resultType="replydto">
-		SELECT * FROM productReivews WHERE pr_key = #{pr_key}
-	</select>
-	
-	<select id="updateReply" parameterType="hashmap">
-		UPDATE productReivews SET REPLYCONTENT = #{pr_content}
-		WHERE pr_key = #{pr_key}
-	</select>
-	
-	<delete id="deleteReply" parameterType="_int">
-		DELETE FROM productReivews WHERE pr_key = #{pr_key}
-	</delete>
 </mapper>
 
 

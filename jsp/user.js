@@ -3,6 +3,8 @@
  */
 
 // 회원가입 폼 value 확인하는 자바스크립트
+
+
  function sendit(){
 	 
 	 let frm = document.joinForm;
@@ -101,10 +103,10 @@
  //로그인시 validation check
 
 function logincheck() {
-    let frm = document.frm;
+    let frm = document.forms['loginInfo'];
     let userid = frm.userid;
     let userpw = frm.userpw;
-    
+
     // 아이디 "", alert
     if (userid.value == "") {
         alert("아이디를 입력하세요.");
@@ -119,59 +121,30 @@ function logincheck() {
         return false;
     }
 
-    
-
+    // 로그인 시도
     frm.submit();
+} 
+    function logout() {
+    // AJAX 요청을 보냅니다.
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", "logout.bo", true);
+    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+            // 로그아웃이 성공하면 페이지를 다시 로드합니다.
+            window.location.reload();
+        }
+    };
+
+    // POST 요청을 보냅니다.
+    xhr.send();
 }
 
- function logout() {
-        // 여기에 로그아웃 로직을 추가하세요.
-        // 예를 들어, 세션을 종료하고 로그인 상태를 초기화하는 등의 작업을 수행합니다.
-	document.cookie = "session_id=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-        // 로그아웃 후 페이지를 다시 로드할 수 있습니다.
-        window.location.reload();
-    }
 
-    // 세션에서 사용자 정보 객체 가져오기
-    let session = '<%= session.getAttribute("user") %>';
-	let userObj = '<%= session.getAttribute("user") %>';
-	
-        // 사용자 아이디를 가져올 수 있는지 확인
-      if (userObj.getUserid) {
-    const userName = userObj.getUser_name();
-	consle.log(userName)
-    // 사용자 아이디를 헤더에 표시
-    if (userName != null) {
-        // 로그인 상태일 때의 버튼 설정
-        const loginButton = document.querySelector('.header_login');
-        const joinButton = document.querySelector('.header_join');
-        const logoutButton = document.querySelector('.header_logout');
-        const header_wel = document.querySelector('.header_wel');
-        const header_come = document.querySelector('.header_come');
 
-        loginButton.style.display = 'none';
-        joinButton.style.display = 'none';
-        header_wel.style.display = 'none';
-        header_come.style.display = 'inline-block';
 
-        // 로그아웃 버튼 설정
-        logoutButton.style.display = 'inline-block';
-        logoutButton.value = '로그아웃';
-    } 
-	else {
-	    // 로그인되어 있지 않을 때의 버튼 설정
-	    const loginButton = document.querySelector('.header_login');
-	    const joinButton = document.querySelector('.header_join');
-	    const logoutButton = document.querySelector('.header_logout');
-	    const header_wel = document.querySelector('.header_wel');
-	    const header_come = document.querySelector('.header_come');
-	
-	    loginButton.style.display = 'inline-block';
-	    joinButton.style.display = 'inline-block';
-	    logoutButton.style.display = 'none';
-	    header_wel.style.display = 'inline-block';
-	    header_come.style.display = 'none';
-	}
+
 
 
 function checkId(userid){
@@ -246,6 +219,4 @@ function checkId(userid){
                 // 커서를 상세주소 필드로 이동한다.
                 document.getElementById("sample6_detailAddress").focus();
             }
-        }).open();
-    }
-}
+        }).open();  }

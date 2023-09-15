@@ -33,6 +33,8 @@ public class JoinFrontControll extends HttpServlet{
 			forward = new ActionForward(false, "/mall/jsp/login.jsp");
 		} else if(requestURI.equals("/mall/jsp/loginOk.bo")) {
 			forward = new loginOkAction().execute(request, response);
+		} else if(requestURI.equals("/mall/jsp/logout.bo")) {
+			forward = new logoutAction().execute(request, response);
 		}
 		
 		// 일괄처리

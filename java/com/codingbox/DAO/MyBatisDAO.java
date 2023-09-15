@@ -63,20 +63,20 @@ public class MyBatisDAO {
 	      
 	   }
 
-	public boolean login(String userid, String userpw) {
-		boolean result = false;
+	public int login(String userid, String userpw) {
+		int result = 0;
 		
 		HashMap<String, String> datas = new HashMap<>();
 		datas.put("userid", userid);
 		datas.put("userpw", userpw);
 		
 		if((Integer)sqlSession.selectOne("Mall.login",datas) == 1) {
-			result = true;
+			result = 1;
 		}
 		return result;
 	}
 
-	public UserDTO getUserInfo(String userid) {
+	public UserDTO getUserInfo(String userid, String userpw) {
 	    UserDTO user = null;
 	    try{
 	        user = sqlSession.selectOne("Mall.getUserInfo", userid);
