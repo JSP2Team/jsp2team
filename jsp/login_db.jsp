@@ -10,6 +10,8 @@
 <title>Insert title here</title>
 </head>
 <body>
+
+
    <%
    		MyBatisDAO mdao = new MyBatisDAO();
         String userid = request.getParameter("userid");
@@ -17,6 +19,8 @@
       
         UserDTO member = mdao.login(userid, userpw);
          
+        
+        
         if(member != null ) {    //로그인성공
             session.setAttribute("session_id", member) ;
             // DB 조회
@@ -34,9 +38,7 @@
       </script>
       
    <% } %>
-   <script>
-    const userid = <%= session.getAttribute("session_id").getUserid() %>;
-</script>
- 
+   
+ <script src="user.js"></script>
 </body>
 </html>

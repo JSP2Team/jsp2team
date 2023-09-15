@@ -2,6 +2,8 @@ package com.codingbox.DAO;
 
 import java.util.HashMap;
 
+import javax.servlet.http.HttpSession;
+
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 
@@ -48,8 +50,9 @@ public class MyBatisDAO {
 		
 		return result;
 	}
-	public UserDTO login( String userid, String userpw ) {
+	public UserDTO login1( String userid, String userpw ) {
 	      
+		
 	      HashMap<String, String> datas = new HashMap<>();
 	      datas.put("userid", userid);
 	      datas.put("userpw", userpw);
@@ -82,7 +85,6 @@ public class MyBatisDAO {
 	    }
 	    return user;
 	}
-	
 	
 }
 

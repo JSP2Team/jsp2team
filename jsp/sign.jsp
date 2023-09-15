@@ -1,269 +1,21 @@
- <%@ page language="java" contentType="text/html; charset=UTF-8"
+<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>  
+    <%
+	   	int userDTO = 0;
+	   	
+	   	if (session.getAttribute("user") != null) {
+   		  //세션의 값을 가져오기
+   		userDTO = (int)session.getAttribute("user");
+   		}
+   		
+   	%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <style>
- 
-/*헤더*/
-.header{
-    display: flex; /* Flexbox를 사용하여 가로 정렬을 설정합니다. */
-    justify-content: right; /* 가운데 정렬을 설정합니다. */
-    color: #1337b1;
-}
 
-.header_wel{
-    font-size: 15px;
-    
-}
-
-.header_login{
-    font-size: 15px;
-}
-
-.header_join{
-    font-size: 15px;
-}
-
-.header_login:link{
-    color: #1337b1;
-    text-decoration-line: none;
-}
-
-.header_login:visited{
-    color: #1337b1;
-    text-decoration-line: none;
-}
-
-.header_join:link{
-    color: #1337b1;
-    text-decoration-line: none;
-}
-
-.header_join:visited{
-    color: #1337b1;
-    text-decoration-line: none;
-}
-
-.login_section{
-    list-style: none;
-    display: flex;
-}
-
-.logo_area {
-    max-width: 1280px;
-    padding-left: 10px;
-    padding-right: 10px;
-    margin-left: auto;
-    margin-right: auto;
-    /* padding-top: 20px; */
-}
-/*헤더*/
-
-/*헤더 상단 아이콘*/
-.my_icon_img{
-    width: 20px;
-    height: 20px;
-    margin-top: auto;
-    filter: invert(14%) sepia(33%) saturate(7348%) hue-rotate(225deg) brightness(111%) contrast(99%);
-    text-decoration-line: none;
-}
-
-.cart_icon_img{
-    width: 20px;
-    height: 20px;
-    filter: invert(14%) sepia(33%) saturate(7348%) hue-rotate(225deg) brightness(111%) contrast(99%);
-    text-decoration-line: none;
-}
-
-.btn_search_open_img{
-    width: 20px;
-    height: 20px;
-    text-decoration-line: none;
-}
-
-.my_icon{
-    text-decoration-line: none; 
-}
-
-.cart_icon{
-    text-decoration-line: none; 
-}
-
-.btn_search_open{
-    text-decoration-line: none; 
-}
-/*헤더 상단 아이콘*/
-
-/* 검색버튼 */
-.header_search{
-    margin: 0; 
-    padding: 0;
-    height: 20px;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-direction: column;
-    align-content: center;
-}
-.box{
-    position: relative;
-}
-
-.input {
-    padding: 10px;
-    width: 20px;
-    height: 20px;
-    background: none;
-    border: 2px solid #1337b1;
-    border-radius: 50px;
-    box-sizing: border-box;
-    font-family: Comic Sans MS;
-    font-size: 26px;
-    color: #1337b1;
-    outline: none;
-    transition: .5s;
-    
-}
-.box:hover input{
-    width: 150px;
-    background: azure;
-    border-radius: 10px;
-}
-.box i{
-   position: absolute;
-    top: 45%;
-    right: -1px;
-    transform: translate(-50%,-50%);
-    font-size: 13px;
-    font-weight: bold;
-    color: #1337b1;
-    transition: .2s;
-}
-.box:hover i{
-    opacity: 0;
-    z-index: -1;
-}
-
-/* 헤더 로고 */
-#main_logo{
-    text-align: center;
-}
-
-.main_logo_img{
-    width: 291px;
-    height: 116px;
-}
-/* 헤더 로고 */
-
-/* 헤더 카테고리 */
-.menu{
-    text-align: center;
-}
-
-.category{
-    text-decoration: none;
-    color: #1337b1;
-    margin: auto;
-}
-
-.menu ul,li{
-    list-style-type: none;
-}
-
-/* 헤더 카테고리 */
-
-.menu>ul>li{
-    display: inline-block;
-    width: 80px;
-    height: 30px;
-    text-align: center;
-    line-height: 30px;
-    font-weight: bold;
-    font-size: 25px;
-    position: relative;
-    margin-right: 100px;
-}
-
-.menu ul ul{
-    display: none;
-    margin: 0;
-    padding: 0;
-    background-color: aliceblue;
-    
-}
-
-.menu ul ul li{
-    width: 150px;
-    height: 40px;
-    font-size: 18px;
-    border-top: 2px solid #9e9e9e;
-}
-
-.menu ul ul li:hover{
-    background-color: dodgerblue;
-}
-
-.menu ul li:hover ul{
-    display: block;
-    text-align: left;
-    line-height: 30px;
-    position: absolute;
-}
-
-/*footer*/
-#wrap {
-min-height: 100vh; /* 화면 높이와 동일한 최소 높이 설정 */
-position: relative; /* 상대 위치 설정 */
-}
-
-footer{
-	margin-left:0;
-	width: 100%;
-	height: 200px;		/*내용물에 따라 값 설정*/
-    bottom: 0px;
-	left: 0;
-	position: relative;
-	border-top:  1px solid #1337b1;
-	padding-top: 15px;
-	background-color: #1337b1;
-	font-size: 11px;
-}
-
-.footer{
-	color: whitesmoke;
-	display: flex;
-	margin-left: 90px;
-}
-	
-footer a{
-	display: block;
-	padding-right: 28px;
-	margin-bottom: 20px;
-	color: whitesmoke; font-size: 13px;
-	text-decoration: none;
-	font-weight: bold;
-	margin-left: 10px;
-}
-	
-	
-	
-footer p{
-	display: inline-block;
-	color: whitesmoke; font-size: 13px;
-	text-decoration: none;	
-}
-	
-footer p span{
-	display: inline-block;
-	font-family: 'Noto Sans KR', sans-serif;
-    margin-left: 100px;
-	margin-bottom: 10px;	
-}
 .module_wrap{
     padding: 50px;
 }
@@ -327,6 +79,7 @@ html, body {
 }
 
 </style>
+<link rel="stylesheet" href="mall.css">
 <link rel="stylesheet" href="community.css">
 
 <link rel="stylesheet" type="text/css" href="../asset/css/modules/module_mypage.css"/>
@@ -344,7 +97,7 @@ html, body {
             .level1_bnr_wrap .level1_bnr{bottom: 85px;}
             #skinLayoutWrap{padding-bottom: 70px;}
         }
-    </style>
+   </style>
 
 		
 </head>
@@ -354,18 +107,26 @@ html, body {
     <div class="logo_area">
         <div class="header">
             <ul class="login_section">
-                <li class="header_wel">Welcome!</li>
-                &nbsp;&nbsp;
-                <!-- 로그인 -->
-                <li>
-                    <a class="header_login" href="login.jsp">login</a>
-                </li>
-                &nbsp;&nbsp;
-                <!-- 회원가입 -->
-                <li >
-                    <a class="header_join" href="join.jsp">join</a>
-                </li>
-                &nbsp;&nbsp;
+                           <% if (userDTO == 0) { %>
+			        <li class="header_wel">Welcome!</li>
+			                &nbsp;&nbsp;
+			        <li>
+			            <a class="header_login" href="login.jsp">login</a>
+			        </li>
+			        &nbsp;&nbsp;
+			        <!-- 회원가입 -->
+			        <li>
+			            <a class="header_join" href="join.jsp">join</a>
+			        </li>
+			                &nbsp;&nbsp;
+			<% } else { %>
+			        <li class="header_come"> 환영합니다.</li>
+			                &nbsp;&nbsp;
+			        <li>
+			             <a href="./" onclick="logout()">logout</a>
+			        </li>
+			                &nbsp;&nbsp;
+			<% } %>
                 <!-- 마이페이지 -->
                 <li>
                     <a class="my_icon" href="mypage.jsp">
@@ -509,27 +270,26 @@ html, body {
 
             <div class="order_body payment">
                 <h3 class="sub_tit">주문 상품</h3>
-                <form action="${pageContext.request.contextPath}/jsp/sign.si" method="post" name="frm-order-form" id="frm-order-form" >
+                <form name="frm-order-form" id="frm-order-form">
                     
-<!--                     <input type="hidden" name="_token" value="G0cuB0qK9avsl81b7VZsOwsLpRyhDkKSRbGRmCxK"> -->
+                    <input type="hidden" name="_token" value="G0cuB0qK9avsl81b7VZsOwsLpRyhDkKSRbGRmCxK">
 
                     
-<!--                     <input type="hidden" name="member_seq" value="7"> -->
+                    <input type="hidden" name="member_seq" value="7">
                                             
-<!--                     <input type="hidden" id="payment_waiting_days" value="3"> -->
+                    <input type="hidden" id="payment_waiting_days" value="3">
 
                     
-<!--                     <input type="hidden" name="page_opened_date" value="2023-09-07 14:05:18"> -->
+                    <input type="hidden" name="page_opened_date" value="2023-09-07 14:05:18">
 
                     <div id="div-order-products" class="list_board list_prod">
                         <ul class="thead">
                             <li class="item_order">상품정보</li>
                             <li class="item_count" style="width:100px;">수량</li>
-
+                            <!-- <li class="item_count" style="width:160px;">할인</li> -->
                             <li class="item_count" style="width:160px;">상품금액</li>
                         </ul>
-                    </div>
-                    <!--// list_board -->
+                    </div><!--// list_board -->
 
                     <div id="div-orderer-info" class="payment_info">
                         <div class="info_area">
@@ -538,13 +298,13 @@ html, body {
                                 <ul class="form_list">
                                     <li class="half">
                                         <label for="orderer_name">이름</label>
-                                        <input type="text" placeholder="이름" name="order_name" data-field="member_name" data-attr="value"></li>
+                                        <input type="text" placeholder="이름" name="orderer_name" data-field="member_name" data-attr="value"></li>
                                     <li class="half">
                                         <label for="orderer_phone">연락처</label>
                                       
-                                        <input type="text" class="onlyNumberInput" name="order_tel" placeholder="- 없이 숫자만 입력" data-field="member_phone" data-attr="value" data-onlyNumberType="regOnlyNumber">
+                                        <input type="text" class="onlyNumberInput" name="orderer_phone" placeholder="- 없이 숫자만 입력" data-field="member_phone" data-attr="value" data-onlyNumberType="regOnlyNumber">
                                     </li>
-                                    <li class="half">
+                                    <li>
                                         <label for="orderer_email">이메일</label>
                                         <input type="email" name="orderer_email" placeholder="이메일주소" data-field="member_email" data-attr="value">
                                     </li>
@@ -649,7 +409,7 @@ html, body {
                                             <button type="button" class="btn_agree_detail btn-show-layer" data-key="member_agree">보기</button>
                                         </p>
                                     </div>
-                                    <div id="create_order_button_lay" class="wrap_btn_payment"><button type="submit" id="PaymentLibrary_PayButton" class="payment-lib-pay-button">결제하기</button></div>
+                                    <div id="create_order_button_lay" class="wrap_btn_payment"><button type="button" id="PaymentLibrary_PayButton" class="payment-lib-pay-button">결제하기</button></div>
                                 </div>
                             </div><!--// price_box -->
                         </div><!--// price_area -->
