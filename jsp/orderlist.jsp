@@ -1,5 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%
+	  	int userDTO = 0;
+	  	
+	  	if (session.getAttribute("user") != null) {
+	  		  //세션의 값을 가져오기
+	  		userDTO = (int)session.getAttribute("user");
+	  		}
+   		
+   	%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -285,18 +294,26 @@ footer p span{
     <div class="logo_area">
         <div class="header">
             <ul class="login_section">
-                <li class="header_wel">Welcome!</li>
-                &nbsp;&nbsp;
-                <!-- 로그인 -->
-                <li>
-                    <a class="header_login" href="login.jsp">login</a>
-                </li>
-                &nbsp;&nbsp;
-                <!-- 회원가입 -->
-                <li >
-                    <a class="header_join" href="join.jsp">join</a>
-                </li>
-                &nbsp;&nbsp;
+                           <% if (userDTO == 0) { %>
+			        <li class="header_wel">Welcome!</li>
+			                &nbsp;&nbsp;
+			        <li>
+			            <a class="header_login" href="login.jsp">login</a>
+			        </li>
+			        &nbsp;&nbsp;
+			        <!-- 회원가입 -->
+			        <li>
+			            <a class="header_join" href="join.jsp">join</a>
+			        </li>
+			                &nbsp;&nbsp;
+			<% } else { %>
+			        <li class="header_come"> 환영합니다.</li>
+			                &nbsp;&nbsp;
+			        <li>
+			             <a href="./" onclick="logout()">logout</a>
+			        </li>
+			                &nbsp;&nbsp;
+			<% } %>
                 <!-- 마이페이지 -->
                 <li>
                     <a class="my_icon" href="mypage.jsp">

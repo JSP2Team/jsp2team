@@ -49,11 +49,9 @@ public class UserDAO {
 	    	   member = new UserDTO();
 	    	   member.setUserid(rs.getString(1));
 	    	   member.setUserpw(rs.getString(2));
-//	    	   member.setEmail(rs.getString(3));
-//	    	   member.setUsername(rs.getString(4));
-//	    	   member.setUsertel(rs.getString(5));
-//	    	   member.setRegdate(rs.getString(6));
-//	    	   member.setWithdrawl(rs.getBoolean(7));
+	    	   member.setEmail(rs.getString(3));
+	    	   member.setUser_name(rs.getString(4));
+	    	   member.setUsertel(rs.getString(5));
 	    	   
 	       }
 	       } catch (SQLException | NamingException e) {
