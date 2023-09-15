@@ -100,13 +100,13 @@
         <p>
             <a href="main.jsp">
                 <b>
-                    <img class="main_logo_img" src="../asset/file/1890799720.png">
+                    <img class="main_logo_img" src="../asset/file/logo2.png">
                 </b>
             </a>
         </p>
     </div>
     &nbsp;
-    <!-- 헤더 카테고리 -->
+    <!-- 헤더 카테고리 --> 
     <div class="menu">
         <ul>
             <li>
