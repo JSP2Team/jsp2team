@@ -1,6 +1,15 @@
 <%@page import="com.codingbox.DTO.UserDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%
+            	int userDTO = 0;
+            	
+            	if (session.getAttribute("user") != null) {
+            		  //세션의 값을 가져오기
+            		userDTO = (int)session.getAttribute("user");
+            		}
+            		
+            	%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -381,6 +390,7 @@ footer p span{
         }
 </script>
 <script src="https://kit.fontawesome.com/d69fb28507.js" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
 <div id="wrap">
@@ -388,7 +398,28 @@ footer p span{
     <div class="logo_area">
         <div class="header">
             <ul class="login_section">
-                <li class="header_wel">Welcome!</li>
+            	<!--로그인 전 화면  -->
+				<%if (userDTO == 0) {%>
+				  <ul>
+				  	<li class="header_wel">Welcome!</li>
+				    <li>
+                    <a class="header_login" href="login.jsp">login</a>
+                	</li>
+                	&nbsp;&nbsp;
+                	<!-- 회원가입 -->
+                	<li >
+                    	<a class="header_join" href="join.jsp">join</a>
+                	</li>
+				  </ul>
+				<!--로그인 후 화면  -->
+				<%} else if (userDTO > 0) {%>
+				  <ul>
+				    <li class="header_come" style="display: none;">  님 환영합니다.</li>
+				    <input type="button" class="header_logout" value="logout" href="./"  onclick="logout();"/>
+				  </ul>
+				<%};%>
+            	
+                <%-- <li class="header_wel">Welcome!</li>
                 <%
 		   		UserDTO member = (UserDTO)session.getAttribute("session_id") ;
 		      
@@ -409,7 +440,7 @@ footer p span{
                 <li >
                     <input type="button" class="header_logout" value="logout" href="./" style="display: none;" onclick="logout();"/>
                 </li>
-                &nbsp;&nbsp;
+                &nbsp;&nbsp; --%>
                 <!-- 마이페이지 -->
                 <li>
                     <a class="my_icon" href="mypage.jsp">
@@ -479,7 +510,7 @@ footer p span{
 
 <section class="login-form" align="center">
     <h1>로그인</h1>
-    <form action="login_db.jsp" name="loginInfo" onsubmit="logincheck()" method="post">
+    <form action="loginOk.bo" name="loginInfo" method="post">
     
           <div class="int-area" align="center">
             <input type="text" name="userid" id="userid" autocomplete="off" required>
@@ -497,9 +528,8 @@ footer p span{
         </div>
 
         <div class="btn-area">
-		<button id="btn" type="submit">LOGIN</button>
-		<!-- <input type="button" class="button" value="LOGIN" onclick="logincheck();" /> -->
-        </div>
+			<input type="button" value="LOGIN" onclick="logincheck();" />       
+		 </div>
     </form>
     
 </section>

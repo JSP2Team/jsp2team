@@ -1,6 +1,15 @@
 <%@page import="com.codingbox.DTO.UserDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+     <%
+	   	int userDTO = 0;
+	   	
+	   	if (session.getAttribute("user") != null) {
+   		  //세션의 값을 가져오기
+   		userDTO = (int)session.getAttribute("user");
+   		}
+   		
+   	%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -393,6 +402,7 @@ footer p span{
 
 </style>
 <script src="https://kit.fontawesome.com/d69fb28507.js" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
 <div id="wrap">
@@ -401,7 +411,13 @@ footer p span{
         <div class="header">
             <ul class="login_section">
                 <li class="header_wel">Welcome!</li>
-			        <li class="header_come" style="display: none;"></li>
+			        <li class="header_come" style="display: none;">
+				        <%= session.getAttribute("user_name") %>
+				        님 환영합니다.
+			        </li>
+			        <li>
+			        	<a><%= session.getAttribute("user_name") %></a>
+			        </li>
 			        &nbsp;&nbsp;
 			        <!-- 로그인 -->
 			        <li>
@@ -416,8 +432,6 @@ footer p span{
 			        <li>
 			            <input type="button" class="header_logout" value="logout" style="display: none;" onclick="logout();"/>
 			        </li>
-			        <!-- 사용자 userid 표시 -->
-			        <li class="header_userid"></li>
 			     &nbsp;&nbsp;
                 <!-- 마이페이지 -->
                 <li>

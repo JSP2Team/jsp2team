@@ -3,6 +3,8 @@
  */
 
 // 회원가입 폼 value 확인하는 자바스크립트
+
+
  function sendit(){
 	 
 	 let frm = document.joinForm;
@@ -101,10 +103,10 @@
  //로그인시 validation check
 
 function logincheck() {
-    let frm = document.frm;
+    let frm = document.forms['loginInfo'];
     let userid = frm.userid;
     let userpw = frm.userpw;
-    
+
     // 아이디 "", alert
     if (userid.value == "") {
         alert("아이디를 입력하세요.");
@@ -119,44 +121,30 @@ function logincheck() {
         return false;
     }
 
-    
-
+    // 로그인 시도
     frm.submit();
-}
+} 
+    function logout() {
+    // AJAX 요청을 보냅니다.
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", "logout.bo", true);
+    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 
-window.onload = function () {
-    // 세션에서 사용자 정보 객체 가져오기
-    const userObj = <%= session.getAttribute("session_id") %>;
-
-    // 사용자 아이디를 가져올 수 있는지 확인
-    if (userObj && userObj.getUserid) {
-        const userid = userObj.getUserid();
-
-        // 사용자 아이디를 헤더에 표시
-        const header_userid = document.querySelector('.header_userid');
-        if (userid) {
-            header_userid.textContent = userid + ' 님 환영합니다.';
-            header_userid.style.display = 'inline-block';
-
-            // 로그인 상태일 때의 버튼 설정
-            const loginButton = document.querySelector('.header_login');
-            const joinButton = document.querySelector('.header_join');
-            const logoutButton = document.querySelector('.header_logout');
-            const header_wel = document.querySelector('.header_wel');
-            const header_come = document.querySelector('.header_come');
-
-            loginButton.style.display = 'none';
-            joinButton.style.display = 'none';
-            logoutButton.style.display = 'inline-block';
-            header_wel.style.display = 'none';
-            header_come.style.display = 'inline-block';
-        } else {
-            header_userid.style.display = 'none';
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+            // 로그아웃이 성공하면 페이지를 다시 로드합니다.
+            window.location.reload();
         }
-    }
+    };
 
-    // 나머지 헤더 요소와 관련된 코드는 여기에 계속 추가하세요.
+    // POST 요청을 보냅니다.
+    xhr.send();
 }
+
+
+
+
+
 
 
 function checkId(userid){
@@ -231,5 +219,4 @@ function checkId(userid){
                 // 커서를 상세주소 필드로 이동한다.
                 document.getElementById("sample6_detailAddress").focus();
             }
-        }).open();
-    }
+        }).open();  }
