@@ -94,6 +94,9 @@ public class UserDAO {
 
 
 
+import com.codingbox.DTO.UserDTO;
+
+public class UserDAO {
 
 	SqlSessionFactory factory = SqlMapConfig.getFactory();
 	SqlSession sqlSession;
