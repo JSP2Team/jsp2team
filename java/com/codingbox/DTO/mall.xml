@@ -15,6 +15,11 @@
 		WHERE USER_ID = #{userid} AND USER_PWD = #{userpw}
 	</select>
 	
+	<select id="findid" parameterType="hashmap" resultType="com.codingbox.DTO.UserDTO">
+		SELECT * FROM USERS
+		WHERE USER_NAME = #{user_name} AND USER_TEL = #{usertel}
+	</select>
+	
 	<select id="checkId" parameterType="string" resultType="_int">
 		SELECT count(*) FROM USERS
 		WHERE USER_ID = #{userid}
@@ -40,12 +45,7 @@
 		DELETE FROM productReivews WHERE pr_key = #{pr_key}
 	</delete>
 	
-	<select id="findId" parameterType="com.codingbox.DTO.UserDTO" resultType="java.lang.String">
-    SELECT USER_ID FROM USERS WHERE USER_NAME = #{user_name} AND USER_TEL = #{usertel}
-	</select>
-	<select id="findPw" parameterType="com.codingbox.DTO.UserDTO" resultType="java.lang.String">
-	    SELECT USER_PWD FROM USERS WHERE USER_ID = #{userid} AND USER_NAME = #{user_name} AND USER_TEL = #{usertel}
-	</select>
+	
 </mapper>
 
 

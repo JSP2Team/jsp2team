@@ -8,7 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
+
 
 import com.codingbox.action.ActionForward;
 
@@ -25,16 +25,14 @@ public class JoinFrontControll extends HttpServlet{
 		String requestURI = request.getRequestURI();
 		String responseURI = null;
 		ActionForward forward = null;
-	
-		
 		if(requestURI.equals("/mall/jsp/join.bo")) {
 			forward = new JoinAction().execute(request, response);
 		} else if(requestURI.equals("/mall/jsp/login.bo")) {
 			forward = new ActionForward(false, "/mall/jsp/login.jsp");
-		} else if(requestURI.equals("/mall/jsp/loginOk.bo")) {
-			forward = new loginOkAction().execute(request, response);
-		} else if(requestURI.equals("/mall/jsp/logout.bo")) {
-			forward = new logoutAction().execute(request, response);
+		} else if(requestURI.equals("/mall/jsp/findid.bo")) {
+			forward = new FindIdAction().execute(request, response);
+		} else if(requestURI.equals("/mall/jsp/findpw.bo")) {
+			forward = new FindPwAction().execute(request, response);
 		}
 		
 		// 일괄처리

@@ -286,24 +286,24 @@ footer p span{
                 &nbsp;&nbsp;
                 <!-- 로그인 -->
                 <li>
-                    <a class="header_login" href="login.jsp">login</a>
+                    <a class="header_login" href="">login</a>
                 </li>
                 &nbsp;&nbsp;
                 <!-- 회원가입 -->
                 <li >
-                    <a class="header_join" href="join.jsp">join</a>
+                    <a class="header_join" href="">join</a>
                 </li>
                 &nbsp;&nbsp;
                 <!-- 마이페이지 -->
                 <li>
-                    <a class="my_icon" href="mypage.jsp">
-                        <img class="my_icon_img" src="../asset/file/icon_my_black.png">
+                    <a class="my_icon" href="">
+                        <img class="my_icon_img" src="../asset/file/icon-my-black.jpg">
                     </a>
                 </li>
                 &nbsp;&nbsp;
                 <!-- 장바구니 -->
                 <li>
-                    <a class="cart_icon" href="cart.jsp">
+                    <a class="cart_icon" href="">
                         <img class="cart_icon_img" src="../asset/file/icon_cart_black.png">
                     </a>
                 </li>
@@ -325,7 +325,7 @@ footer p span{
         <!-- 헤더 로고 -->
     <div id="main_logo">
         <p>
-            <a href="main.jsp">
+            <a href="./asd.html">
                 <b>
                     <img class="main_logo_img" src="../asset/file/1890799720.png">
                 </b>
@@ -337,24 +337,24 @@ footer p span{
     <div class="menu">
         <ul>
             <li>
-                <a class="category" >ABOUT</a>
+                <a class="category" href="">ABOUT</a>
             </li>
             <li>
-                <a class="category" href="product.jsp">SHOP</a>
+                <a class="category" href="">SHOP</a>
                 <ul>
                     <li>
-                        <a class="category" href="product.jsp">BEST</a>
+                        <a class="category" href="">BEST</a>
                     </li>
                     <li>
-                        <a class="category" href="product.jsp">NEW</a>
+                        <a class="category" href="">NEW</a>
                     </li>
                 </ul>
             </li>
             <li>
-                <a class="category" >ARCHIVE</a>
+                <a class="category" href="">ARCHIVE</a>
             </li>
             <li>
-                <a class="category" href="community.jsp">COMMUNITY</a>
+                <a class="category" href="">COMMUNITY</a>
             </li>
         </ul>
     </div>

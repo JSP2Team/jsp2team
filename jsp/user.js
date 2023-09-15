@@ -3,8 +3,6 @@
  */
 
 // 회원가입 폼 value 확인하는 자바스크립트
-
-
  function sendit(){
 	 
 	 let frm = document.joinForm;
@@ -101,54 +99,32 @@
  }
  
  //로그인시 validation check
-
-function logincheck() {
-    let frm = document.forms['loginInfo'];
-    let userid = frm.userid;
-    let userpw = frm.userpw;
-
-    // 아이디 "", alert
-    if (userid.value == "") {
-        alert("아이디를 입력하세요.");
-        userid.focus();
-        return false;
-    }
-
-    // 비밀번호 "", alert
-    if (userpw.value == "") {
-        alert("비밀번호를 입력하세요.");
-        userpw.focus();
-        return false;
-    }
-
-    // 로그인 시도
-    frm.submit();
-} 
-    function logout() {
-    // AJAX 요청을 보냅니다.
-    var xhr = new XMLHttpRequest();
-    xhr.open("POST", "logout.bo", true);
-    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-
-    xhr.onreadystatechange = function () {
-        if (xhr.readyState === 4 && xhr.status === 200) {
-            // 로그아웃이 성공하면 페이지를 다시 로드합니다.
-            window.location.reload();
-        }
-    };
-
-    // POST 요청을 보냅니다.
-    xhr.send();
+function logincheck(){
+	
+	let frm = document.frm;
+	let userid = frm.userid
+	let userpw = frm.userpw
+	
+	// 아이디 "", alert
+	if( userid.value == ""){
+		alert("아이디를 입력하세요.");
+		userid.focus();
+		return false;
+	}
+	
+	// 비밀번호 "", alert
+	if( userpw.value == ""){
+		alert("비밀번호를 입력하세요.");
+		userpw.focus();
+		return false;
+	}
+	
+	frm.submit();
 }
 
-
-
-
-
-
-
+//아이디 중복체크
 function checkId(userid){
-        //alert(userid);
+	//alert(userid);
 	if(userid == ""){
 		alert("아이디를 입력해주세요.");
 		userid.focus();
@@ -160,20 +136,21 @@ function checkId(userid){
 		xhr.send();
 		xhr.onreadystatechange = function() {
 			// 응답
-			if( xhr.readyState === XMLHttpRequest.DONE &&
-					xhr.status === 200){
+			if( xhr.readyState = XMLHttpRequest.DONE &&
+					xhr.status == 200){
 				if( xhr.responseText.trim() == "ok" ){
 					//ok
-					alert("사용할 수 있는 아이디 입니다.");
+					document.getElementById("text").innerHTML
+						=	"사용할 수 있는 아이디 입니다.";
 				}else{
 					// not-ok
-					alert("사용할 수 없는 아이디 입니다.");
+					document.getElementById("text").innerHTML
+						=	"사용할 수 없는 아이디 입니다.";
 				}
 			}
 		}
 	}
 }
-
 	 function Postcode() {
         new daum.Postcode({
             oncomplete: function(data) {
@@ -219,4 +196,5 @@ function checkId(userid){
                 // 커서를 상세주소 필드로 이동한다.
                 document.getElementById("sample6_detailAddress").focus();
             }
-        }).open();  }
+        }).open();
+    }
