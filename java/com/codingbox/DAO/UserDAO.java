@@ -1,6 +1,7 @@
 package com.codingbox.DAO;
 
 import java.sql.Connection;
+
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -49,9 +50,7 @@ public class UserDAO {
 	    	   member = new UserDTO();
 	    	   member.setUserid(rs.getString(1));
 	    	   member.setUserpw(rs.getString(2));
-	    	   member.setEmail(rs.getString(3));
-	    	   member.setUser_name(rs.getString(4));
-	    	   member.setUsertel(rs.getString(5));
+
 	    	   
 	       }
 	       } catch (SQLException | NamingException e) {
@@ -71,9 +70,33 @@ public class UserDAO {
 		
 	}
 	
+	public boolean findid(String user_name, String usertel) {
+	    boolean found = false;
+
+	    try {
+	        String sql = "SELECT USER_ID FROM USERS WHERE USER_NAME = ? AND USER_TEL = ?";
+	        pstm = conn.prepareStatement(sql);
+	        pstm.setString(1, user_name);
+	        pstm.setString(2, usertel);
+
+	        rs = pstm.executeQuery();
+
+	        found = rs.next();
+
+	    } catch (Exception e) {
+	        e.printStackTrace();
+	    }
+	    return found;
+	}
+
+
+	
 
 
 
+import com.codingbox.DTO.UserDTO;
+
+public class UserDAO {
 
 	SqlSessionFactory factory = SqlMapConfig.getFactory();
 	SqlSession sqlSession;
@@ -113,6 +136,32 @@ public class UserDAO {
 		
 		return result;
 	}
+
+	public String findId(UserDTO udto) throws Exception {
+	    String user_id = null; // 기본값 설정
+
+	    try {
+	        user_id = sqlSession.selectOne("Mall.findId", udto);
+	    } catch (Exception e) {
+	        e.printStackTrace();
+	    }
+
+	    return user_id;
+	}
+
+	public String findPw(UserDTO udto) throws Exception{
+		String user_pw = null; // 기본값 설정
+
+	    try {
+	        user_pw = sqlSession.selectOne("Mall.findPw", udto);
+	    } catch (Exception e) {
+	        e.printStackTrace();
+	    }
+
+	    return user_pw;
+	}
+	
+	
 	
 	
 }
