@@ -1,0 +1,126 @@
+/* -- import Roboto Font ---------------------------- */
+@import "https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic&subset=latin,cyrillic";
+
+/* -- You can use this tables in Bootstrap (v3) projects. -- */
+@import "//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css";
+
+/* 헤더 스타일 설정 */
+.header {
+    display: flex;
+    justify-content: right;
+    color: #6B95BB;
+    padding: 10px 20px;
+}
+
+/* -- Demo style ------------------------------- */
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+#demo {
+    margin: 20px auto;
+    max-width: 960px;
+}
+
+#demo h1 {
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+    letter-spacing: 0;
+    font-weight: 300;
+    color: #212121;
+    text-transform: inherit;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+#demo h2 {
+    font-size: 1.5rem;
+    line-height: 2.8rem;
+    letter-spacing: 0.01rem;
+    font-weight: 400;
+    color: #212121;
+    text-align: center;
+}
+
+/* -- Material Design Table style -------------- */
+.table {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 2rem;
+    background-color: #fff;
+}
+
+/* -- Condensed table w/ half padding -------------- */
+.table-condensed > thead > tr > th,
+.table-condensed > tbody > tr > th,
+.table-condensed > tfoot > tr > th,
+.table-condensed > thead > tr > td,
+.table-condensed > tbody > tr > td,
+.table-condensed > tfoot > tr > td {
+    padding: 0.8rem; /* 1.6rem의 절반 크기 */
+}
+
+/* -- Bordered version -------------- */
+.table-bordered {
+    border: 0;
+}
+
+/* Zebra-striping - Default zebra-stripe styles (alternating gray and transparent backgrounds) */
+.table-striped > tbody > tr:nth-child(odd) {
+    background-color: #fde0dc;
+}
+
+/* Hover effect */
+.table-hover > tbody > tr:hover {
+    background-color: #f9bdbb;
+}
+
+/* Responsive tables (vertical) */
+.table-responsive-vertical {
+    @media screen and (max-width: 768px) {
+        /* Tighten up spacing */
+        .table {
+            margin-bottom: 0;
+            background-color: transparent;
+        }
+
+        /* Special overrides for shadows */
+        .shadow-z-1 {
+            -webkit-box-shadow: none;
+            -moz-box-shadow: none;
+            box-shadow: none;
+        }
+
+        /* Special overrides for the bordered tables */
+        .table-bordered {
+            border: 0;
+        }
+
+        /* Special overrides for the striped tables */
+        .table-striped {
+            > tbody > tr > td,
+            > tbody > tr:nth-child(odd) {
+                background-color: table-bg;
+            }
+            > tbody > tr > td:nth-child(odd) {
+                background-color: #fde0dc;
+            }
+        }
+
+        /* Special overrides for hover tables */
+        .table-hover {
+            > tbody > tr:hover > td,
+            > tbody > tr:hover {
+                background-color: table-bg;
+            }
+            > tbody > tr > td:hover {
+                background-color: #f9bdbb;
+            }
+        }
+    }
+}
+
+/* CSS/LESS Color variations - Omitted for brevity */
+
+/* End of CSS */

@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+ 
+/*헤더*/
+.header{
+    display: flex; /* Flexbox를 사용하여 가로 정렬을 설정합니다. */
+    justify-content: right; /* 가운데 정렬을 설정합니다. */
+    color: #1337b1;
+}
+
+.header_wel{
+    font-size: 15px;
+    
+}
+
+.header_login{
+    font-size: 15px;
+}
+
+.header_join{
+    font-size: 15px;
+}
+
+.header_login:link{
+    color: #1337b1;
+    text-decoration-line: none;
+}
+
+.header_login:visited{
+    color: #1337b1;
+    text-decoration-line: none;
+}
+
+.header_join:link{
+    color: #1337b1;
+    text-decoration-line: none;
+}
+
+.header_join:visited{
+    color: #1337b1;
+    text-decoration-line: none;
+}
+
+.login_section{
+    list-style: none;
+    display: flex;
+}
+
+.logo_area {
+    max-width: 1280px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/*헤더*/
+
+/*헤더 상단 아이콘*/
+.my_icon_img{
+    width: 20px;
+    height: 20px;
+    margin-top: auto;
+    text-decoration-line: none;
+}
+
+.cart_icon_img{
+    width: 20px;
+    height: 20px;
+    text-decoration-line: none;
+}
+
+.btn_search_open_img{
+    width: 20px;
+    height: 20px;
+    text-decoration-line: none;
+}
+
+.my_icon{
+    text-decoration-line: none; 
+}
+
+.cart_icon{
+    text-decoration-line: none; 
+}
+
+.btn_search_open{
+    text-decoration-line: none; 
+}
+/*헤더 상단 아이콘*/
+
+/* 검색버튼 */
+.header_search{
+    margin: 0; 
+    padding: 0;
+    height: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    align-content: center;
+}
+.box{
+    position: relative;
+}
+
+.input {
+    padding: 10px;
+    width: 20px;
+    height: 20px;
+    background: none;
+    border: 2px solid #1337b1;
+    border-radius: 50px;
+    box-sizing: border-box;
+    font-family: Comic Sans MS;
+    font-size: 26px;
+    color: #1337b1;
+    outline: none;
+    transition: .5s;
+    
+}
+.box:hover input{
+    width: 150px;
+    background: azure;
+    border-radius: 10px;
+}
+.box i{
+   position: absolute;
+    top: 45%;
+    right: -1px;
+    transform: translate(-50%,-50%);
+    font-size: 13px;
+    font-weight: bold;
+    color: #1337b1;
+    transition: .2s;
+}
+.box:hover i{
+    opacity: 0;
+    z-index: -1;
+}
+
+/* 헤더 로고 */
+#main_logo{
+    text-align: center;
+}
+
+.main_logo_img{
+    width: 291px;
+    height: 116px;
+}
+/* 헤더 로고 */
+
+/* 헤더 카테고리 */
+.gnb {
+  display: flex; /* Flexbox를 사용하여 가로 정렬을 설정합니다. */
+  justify-content: center; /* 가운데 정렬을 설정합니다. */
+  color: #1337b1;
+}
+
+.gnbmenu {
+  list-style: none; /* 목록 표시 스타일 제거 */
+  padding: 0; /* 내부 간격 제거 */
+  display: flex; /* 가로로 정렬을 위해 다시 Flexbox를 사용합니다. */
+}
+
+.btn_depth2_view {
+  margin: 0 50px; /* 각 항목 사이의 여백을 설정합니다. */
+  font-size: 20px;
+}
+
+.btn_depth2_view:link{
+    color: #1337b1;
+    text-decoration-line: none;
+}
+
+.btn_depth2_view:visited{
+    color: #1337b1;
+    text-decoration-line: none;
+}
+
+.logo_hr{
+    color: #9e9e9e;
+}
+/* 헤더 카테고리 */
+
+/* 슬라이드 화면 */
+.Slidesbackground {
+    margin: 0;
+    padding: 0;
+
+}
+.slideshow-image{
+    border-radius:0%;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.mySlides {
+    border-radius:0%;
+    width: 1560px;
+    height: 685px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.slideshow-container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin: auto;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+/* 슬라이드 화면 */
+
+/* 슬라이드 버튼 */
+#container { width: 1560px; margin: auto; }
+.slide_wrap { position: relative; width: 1560px; height: 685px; margin: auto; padding-top: 30px; padding-bottom: 30px; }
+.slide_box { width: 100%; margin: auto;  } 
+.slide_content { display: table; float: left; width: 400px; height: 400px; }
+.slide_content > p { display: table-cell; vertical-align: middle; text-align: center; font-size: 100px; font-weight: bold; color: #555; }
+.slide_btn_box > button { position: absolute; top: 50%; margin-top: -45px; width: 60px; height: 60px; font-size: 50px; color: #999; background: none; border: 0px solid #ddd; cursor: pointer; }
+.slide_btn_box > .slide_btn_prev { left: 0px; }
+.slide_btn_box > .slide_btn_next { right: 0px; }
+.slide_pagination { position: absolute; left: 50%; bottom: 0; list-style: none; margin: 0; padding: 0; transform: translateX(-50%); }
+.slide_pagination .dot { display: inline-block; width: 15px; height: 15px; margin: 0 5px; overflow: hidden; background: #ddd; border-radius: 50%; transition: 0.3s; }
+.slide_pagination .dot.dot_active { background: #333; }
+.slide_pagination .dot a { display: block; width: 100%; height: 100%; }
+/* 슬라이드 버튼 */
+
+/*메인 뉴브랜드*/
+.new_design{
+        background-color: #eef1f6;
+        padding-top: 50px;
+}
+
+/*메인 뉴브랜드 로고*/
+.new_design_radius{
+        margin: 0 auto;
+        width: 11em;
+        height: 4em;
+        border: 1px solid #1337b1;
+        border-radius: 100%;;
+}
+
+.new_design_logo{
+        text-align: center;
+        font-size: 25px;
+        line-height: 0.5    ;
+        font-weight: 600;
+        color: #1337b1;
+}
+/*메인 뉴브랜드 로고*/
+
+/*메인 뉴브랜드 제품*/
+.new_design_img{
+        display: flex;
+        justify-content: space-between;
+        margin-left: 150px;
+        margin-right: 150px;
+        text-align: center;
+}
+
+.new_design_img2{
+        display: flex;
+        justify-content: space-between;
+        margin-left: 150px;
+        margin-right: 150px;
+        text-align: center;
+}
+
+.product_img{
+        width: 380px;
+        height: 532px;   
+}
+
+.new_design_hr{
+    width: 380px;
+}
+
+.img_into{
+    text-align: left;
+    color: #1337b1;
+}
+/*메인 뉴브랜드 제품*/
+
+/*풋터*/
+footer {
+    width: 100%;
+    height: 240px; /* footer의 높이 */
+    position: absolute;  
+    bottom: 0;
+    left: 0;
+    background-color: rgb(19, 55, 177);
+}
+/*풋터*/
+
+
+</style>
+<script src="https://kit.fontawesome.com/d69fb28507.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<header>
+    <div class="logo_area">
+        <div class="header">
+            <ul class="login_section">
+                <li class="header_wel">Welcome!</li>
+                &nbsp;&nbsp;
+                <li>
+                    <a class="header_login" href="">login</a>
+                </li>
+                &nbsp;&nbsp;
+                <li >
+                    <a class="header_join" href="">join</a>
+                </li>
+                &nbsp;&nbsp;
+                <li>
+                    <a class="my_icon" href="">
+                        <img class="my_icon_img" src="./asset/file/icon_my_black.png">
+                    </a>
+                </li>
+                &nbsp;&nbsp;
+                <li>
+                    <a class="cart_icon" href="">
+                        <img class="cart_icon_img" src="./asset/file/icon_cart_black.png">
+                    </a>
+                </li>
+                &nbsp;&nbsp;
+                <li class="header_search">
+                    <div class="box">
+                        <form name="search">
+                            <input type="text" class="input" name="txt" onmouseout="this.value = ''; this.blur();">
+                        </form>
+                        <i class="fas fa-search"></i>
+                    
+                    </div>
+                    
+                </li>
+            </ul>
+        </div>
+    </div>
+        <div id="main_logo">
+            <p>
+                <a href="./asd.html">
+                    <b>
+                        <img class="main_logo_img" src="./asset/file/logo.png">
+                    </b>
+                </a>
+            </p>
+        </div>
+        &nbsp;
+        <div class="gnb">
+        <ul class="gnbmenu">
+            <li>
+                <a class="btn_depth2_view" href="">ABOUT</a>
+            </li>
+            <li>
+                <a class="btn_depth2_view" href="">SHOP</a>
+            </li>
+            <li>
+                <a class="btn_depth2_view" href="">ARCHIVE</a>
+            </li>
+            <li>
+                <a class="btn_depth2_view" href="">COMMUNITY</a>
+            </li>
+        </div>
+        </ul>
+    </div>
+    <hr class="logo_hr">
+</header>
+
+<div id="slide001">
+    <div id="container">
+        <div class="slide_wrap">
+          <div class="slide_box">
+            <div class="slide_list clearfix">
+                <span class="slideshow-container">
+                    <div class="Slidesbackground">
+                        <div class="mySlides fade">
+                            <img src="C:/Users/KITCOOP/OneDrive/바탕 화면/project/main/asset/file/slide_B047_a.jpg" class="slideshow-image">
+                        </div>
+                        <div class="mySlides fade">
+                            <img src="C:/Users/KITCOOP/OneDrive/바탕 화면/project/main/asset/file/slide_B047_b.jpg" class="slideshow-image">
+                        </div>
+                        <div class="mySlides fade">
+                            <img src="C:/Users/KITCOOP/OneDrive/바탕 화면/project/main/asset/file/slide_B047_c.jpg" class="slideshow-image">
+                        </div>
+                    </div>
+                    <!-- // .slide_list -->
+                </span>
+            </div>
+            <!-- // .slide_box -->
+            <div class="slide_btn_box">
+                <button type="button" class="slide_btn_prev" onclick="prevSlide()">&lt;</button>
+                <button type="button" class="slide_btn_next" onclick="nextSlide()">&gt;</button>
+            </div>
+            <!-- // .slide_btn_box -->
+            <ul class="slide_pagination"></ul>
+          <!-- // .slide_pagination -->
+        </div>
+        <!-- // .slide_wrap -->
+    </div>
+    <!-- // .container -->
+</div>
+<!-- .slide001 -->
+
+<div class="new_design">
+    <div class="new_design_radius">
+        <p class="new_design_logo">
+            New Design
+        </p>
+    </div>
+    <br>
+    &nbsp;
+    <div class="new_design_img">
+        <span class="new_design_img_1">
+            <img class="product_img" src="C:/Users/KITCOOP/OneDrive/바탕 화면/project/main/asset/file/1707399047.jpg">
+            <div class="img_into">
+                <p>[Case] twenty,twenty two.2022</p>
+                <hr>
+                <p>14000원</p>
+            </div>
+        </span>
+        <span class="new_design_img_2">
+            <img class="product_img" src="C:/Users/KITCOOP/OneDrive/바탕 화면/project/main/asset/file/899726633.jpg">
+            <div class="img_into">
+                <p>[Case] twenty,twenty two.2022</p>
+                <hr>
+                <p>14000원</p>
+            </div>
+        </span>
+        <span class="new_design_img_3">
+            <img class="product_img" src="C:/Users/KITCOOP/OneDrive/바탕 화면/project/main/asset/file/593865757.jpg">
+            <div class="img_into">
+                <p>[Case] twenty,twenty two.2022</p>
+                <hr class="new_design_hr">
+                <p>14000원</p>
+            </div>
+        </span>
+        <span class="new_design_img_4">
+            <img class="product_img" src="C:/Users/KITCOOP/OneDrive/바탕 화면/project/main/asset/file/954436149.jpg">
+            <div class="img_into">
+                <p>[Case] twenty,twenty two.2022</p>
+                <hr>
+                <p>14000원</p>
+            </div>
+        </span>
+        </div>
+        <div class="new_design_img2">
+        <span class="new_design_img_5">
+            <img class="product_img" src="C:/Users/KITCOOP/OneDrive/바탕 화면/project/main/asset/file/1182597835.jpg">
+            <div class="img_into">
+                <p>[Case] twenty,twenty two.2022</p>
+                <hr>
+                <p>14000원</p>
+            </div>
+        </span>
+        <span class="new_design_img_6">
+            <img class="product_img" src="C:/Users/KITCOOP/OneDrive/바탕 화면/project/main/asset/file/1745298579.jpg">
+            <div class="img_into">
+                <p>[Case] twenty,twenty two.2022</p>
+                <hr>
+                <p>14000원</p>
+            </div>
+        </span>
+        <span class="new_design_img_7">
+            <img class="product_img" src="C:/Users/KITCOOP/OneDrive/바탕 화면/project/main/asset/file/1933718975.jpg">
+            <div class="img_into">
+                <p>[Case] twenty,twenty two.2022</p>
+                <hr>
+                <p>14000원</p>
+            </div>
+        </span>
+        <span class="new_design_img_8">
+            <img class="product_img" src="C:/Users/KITCOOP/OneDrive/바탕 화면/project/main/asset/file/builderProductA_A018_a.jpg">
+            <div class="img_into">
+                <p>[Case] twenty,twenty two.2022</p>
+                <hr>
+                <p>14000원</p>
+            </div>
+        </span>
+    </div>
+</div>
+    <!-- <footer class="footer">
+
+    </footer> -->
+    <script>
+        //슬라이드 화면 전환
+        var slideIndex = 0;
+        var slideInterval = 5000; // 이미지 전환 간격 (5초)
+        var intervalId; // 이미지 전환 간격을 조절하기 위한 변수
+    
+        showSlides(); // 슬라이드 쇼 시작
+    
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+    
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1;
+            }
+            slides[slideIndex - 1].style.display = "block";
+    
+            // 이미지 전환 간격을 고정하면서 다음 슬라이드 표시
+            intervalId = setTimeout(showSlides, slideInterval);
+        }
+    
+        // 다음 슬라이드로 이동
+        function nextSlide() {
+            clearTimeout(intervalId); // 이미지 전환 간격 타이머 제거
+            var slides = document.getElementsByClassName("mySlides");
+            if (slideIndex < slides.length) {
+                slideIndex++;
+            } else {
+                slideIndex = 1;
+            }
+            showSlides(); // 다음 슬라이드 표시
+        }
+    
+        // 이전 슬라이드로 이동
+        function prevSlide() {
+            clearTimeout(intervalId); // 이미지 전환 간격 타이머 제거
+            var slides = document.getElementsByClassName("mySlides");
+            if (slideIndex > 1) {
+                slideIndex--;
+            } else {
+                slideIndex = slides.length;
+            }
+            showSlides(); // 이전 슬라이드 표시
+        }
+        //슬라이드 화면 전환
+
+        // 검색버튼
+       
+
+    </script>
+</body>
+</html>
